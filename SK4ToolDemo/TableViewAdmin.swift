@@ -58,9 +58,18 @@ class TableViewAdmin: SK4TableViewAdmin {
 //			self?.itemArray.removeAtIndex(indexPath.row)
 //			self?.tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
 
-			if let ws = self {
-				print(ws.itemArray[indexPath.row])
+//			if let ws = self {
+//				print(ws.itemArray[indexPath.row])
+//			}
+
+			if let str = self?.itemArray[indexPath.row] {
+				let ac = SK4AlertController(title: "Print", message: str)
+				ac.addCancel("Cancel")
+
+				let vc = ac.getAlertController()
+				self?.parent.presentViewController(vc, animated: true, completion: nil)
 			}
+
 		}
 
 		printAction.backgroundColor = UIColor.greenColor()
