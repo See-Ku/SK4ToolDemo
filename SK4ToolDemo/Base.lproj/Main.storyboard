@@ -7,7 +7,7 @@
         <!--SK4ToolDemo-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SK4ToolDemo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MainMenuViewController" customModule="SK4ToolDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -41,12 +41,54 @@
                     </view>
                     <navigationItem key="navigationItem" title="SK4ToolDemo" id="6CZ-Ie-OVo"/>
                     <connections>
-                        <outlet property="tableView" destination="NIW-2x-tIV" id="kxc-HH-ELt"/>
+                        <outlet property="tableView" destination="NIW-2x-tIV" id="fZm-eK-1b6"/>
+                        <segue destination="5DV-cK-0qY" kind="show" identifier="TableViewAdmin" id="abT-E8-mSq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="713" y="-336"/>
+        </scene>
+        <!--TableViewAdmin Demo-->
+        <scene sceneID="zOK-lk-LLd">
+            <objects>
+                <viewController id="5DV-cK-0qY" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="dP8-Cs-eib"/>
+                        <viewControllerLayoutGuide type="bottom" id="xcg-Gx-k8i"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="a9m-0p-Psi">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="bMo-sO-Rzk">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" id="Dx8-TR-hAh">
+                                        <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Dx8-TR-hAh" id="md4-g7-4zm">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="bMo-sO-Rzk" firstAttribute="top" secondItem="a9m-0p-Psi" secondAttribute="top" id="XSS-t4-0Ok"/>
+                            <constraint firstItem="bMo-sO-Rzk" firstAttribute="leading" secondItem="a9m-0p-Psi" secondAttribute="leading" id="qNN-hY-FeL"/>
+                            <constraint firstAttribute="trailing" secondItem="bMo-sO-Rzk" secondAttribute="trailing" id="sF0-OV-ZT0"/>
+                            <constraint firstItem="xcg-Gx-k8i" firstAttribute="top" secondItem="bMo-sO-Rzk" secondAttribute="bottom" id="yLp-k5-sX3"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="TableViewAdmin Demo" id="hsO-In-lUx"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="J3H-NW-DXU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1436" y="-336"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="UNi-Ov-BDP">
