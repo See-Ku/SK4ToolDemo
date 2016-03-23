@@ -34,5 +34,33 @@ public func sk4BarButtonItem(system system: UIBarButtonSystemItem, target: AnyOb
 	return UIBarButtonItem(barButtonSystemItem: system, target: target, action: action)
 }
 
+/// UINavigationBar/UIToolbarから、UIBarButtonItemに対応するUIControlを取得
+public func sk4BarButtonToControl(item: AnyObject, toolbar: UIView?) -> UIControl? {
+
+	guard let toolbar = toolbar else { return nil }
+
+	for child in toolbar.subviews {
+
+		// UIControlならターゲットをチェック
+		if let ctrl = child as? UIControl {
+			for target in ctrl.allTargets() {
+				if target === item {
+					return ctrl
+				}
+			}
+		}
+
+		// 念のため、孫Viewまでチェック
+		if let ctrl = sk4BarButtonToControl(item, toolbar: child) {
+			return ctrl
+		}
+	}
+
+	return nil
+}
+
+
+
+
 
 // eof

@@ -21,6 +21,7 @@
 		87BB46771CA2CCB900F0BC50 /* SK4AlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87BB46761CA2CCB900F0BC50 /* SK4AlertController.swift */; };
 		87BB46791CA2CF5100F0BC50 /* SK4LeakCheck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87BB46781CA2CF5100F0BC50 /* SK4LeakCheck.swift */; };
 		87BB467B1CA353A000F0BC50 /* AlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87BB467A1CA353A000F0BC50 /* AlertViewController.swift */; };
+		87BB467E1CA35E7300F0BC50 /* SK4ActionSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87BB467D1CA35E7300F0BC50 /* SK4ActionSheet.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,7 @@
 		87BB46761CA2CCB900F0BC50 /* SK4AlertController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SK4AlertController.swift; path = gui/SK4AlertController.swift; sourceTree = "<group>"; };
 		87BB46781CA2CF5100F0BC50 /* SK4LeakCheck.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SK4LeakCheck.swift; path = core/SK4LeakCheck.swift; sourceTree = "<group>"; };
 		87BB467A1CA353A000F0BC50 /* AlertViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertViewController.swift; sourceTree = "<group>"; };
+		87BB467D1CA35E7300F0BC50 /* SK4ActionSheet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SK4ActionSheet.swift; path = gui/SK4ActionSheet.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +150,7 @@
 			children = (
 				87BB46781CA2CF5100F0BC50 /* SK4LeakCheck.swift */,
 				87BB46761CA2CCB900F0BC50 /* SK4AlertController.swift */,
+				87BB467D1CA35E7300F0BC50 /* SK4ActionSheet.swift */,
 				87BB46741CA2BEAE00F0BC50 /* SK4ToolKit.swift */,
 				87BB466C1CA2A8E300F0BC50 /* SK4TableViewAdmin.swift */,
 			);
@@ -293,6 +296,7 @@
 				87BB463F1CA2A86F00F0BC50 /* AppDelegate.swift in Sources */,
 				87BB46771CA2CCB900F0BC50 /* SK4AlertController.swift in Sources */,
 				87BB46731CA2AFC600F0BC50 /* TableViewAdmin.swift in Sources */,
+				87BB467E1CA35E7300F0BC50 /* SK4ActionSheet.swift in Sources */,
 				87BB466F1CA2AE7C00F0BC50 /* TableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
