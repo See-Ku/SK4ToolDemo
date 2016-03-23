@@ -84,13 +84,7 @@
                             <constraint firstItem="xcg-Gx-k8i" firstAttribute="top" secondItem="bMo-sO-Rzk" secondAttribute="bottom" id="yLp-k5-sX3"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="TableViewAdmin Demo" id="hsO-In-lUx">
-                        <barButtonItem key="rightBarButtonItem" systemItem="edit" id="RxE-ih-W7L">
-                            <connections>
-                                <action selector="onEdit:" destination="5DV-cK-0qY" id="xQ9-yA-FOy"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="TableViewAdmin Demo" id="hsO-In-lUx"/>
                     <connections>
                         <outlet property="tableView" destination="bMo-sO-Rzk" id="Z79-qd-dCT"/>
                     </connections>

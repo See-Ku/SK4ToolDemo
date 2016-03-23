@@ -17,6 +17,7 @@
 		87BB466F1CA2AE7C00F0BC50 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87BB466E1CA2AE7C00F0BC50 /* TableViewController.swift */; };
 		87BB46711CA2AE9900F0BC50 /* MainMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87BB46701CA2AE9900F0BC50 /* MainMenuViewController.swift */; };
 		87BB46731CA2AFC600F0BC50 /* TableViewAdmin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87BB46721CA2AFC600F0BC50 /* TableViewAdmin.swift */; };
+		87BB46751CA2BEAE00F0BC50 /* SK4ToolKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87BB46741CA2BEAE00F0BC50 /* SK4ToolKit.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		87BB466E1CA2AE7C00F0BC50 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		87BB46701CA2AE9900F0BC50 /* MainMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainMenuViewController.swift; sourceTree = "<group>"; };
 		87BB46721CA2AFC600F0BC50 /* TableViewAdmin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewAdmin.swift; sourceTree = "<group>"; };
+		87BB46741CA2BEAE00F0BC50 /* SK4ToolKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SK4ToolKit.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 		87BB463D1CA2A86F00F0BC50 /* SK4ToolDemo */ = {
 			isa = PBXGroup;
 			children = (
+				87BB46741CA2BEAE00F0BC50 /* SK4ToolKit.swift */,
 				87BB466C1CA2A8E300F0BC50 /* SK4TableViewAdmin.swift */,
 				87BB463E1CA2A86F00F0BC50 /* AppDelegate.swift */,
 				87BB46701CA2AE9900F0BC50 /* MainMenuViewController.swift */,
@@ -266,6 +269,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				87BB466D1CA2A8E300F0BC50 /* SK4TableViewAdmin.swift in Sources */,
+				87BB46751CA2BEAE00F0BC50 /* SK4ToolKit.swift in Sources */,
 				87BB46711CA2AE9900F0BC50 /* MainMenuViewController.swift in Sources */,
 				87BB463F1CA2A86F00F0BC50 /* AppDelegate.swift in Sources */,
 				87BB46731CA2AFC600F0BC50 /* TableViewAdmin.swift in Sources */,

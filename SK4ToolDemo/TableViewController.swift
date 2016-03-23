@@ -12,34 +12,33 @@ class TableViewController: UIViewController {
 
 	@IBOutlet weak var tableView: UITableView!
 
-
-	@IBAction func onEdit(sender: AnyObject) {
-		let flag = !tableView.editing
-		tableView.setEditing(flag, animated: true)
-	}
-
 	var tableViewAdmin: TableViewAdmin!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
 		tableViewAdmin = TableViewAdmin(tableView: tableView, parent: self)
-    }
+
+		setupBar(false)
+	}
+
+	func setupBar(edit: Bool) {
+		let type: UIBarButtonSystemItem = edit ? .Done : .Edit
+		let btn = sk4BarButtonItem(system: type, target: self, action: #selector(onEdit))
+		navigationItem.rightBarButtonItem = btn
+	}
+
+	func onEdit() {
+		let flag = !tableView.editing
+		tableView.setEditing(flag, animated: true)
+		setupBar(flag)
+	}
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
+
+// eof
