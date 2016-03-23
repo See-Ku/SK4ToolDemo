@@ -8,11 +8,30 @@
 
 import UIKit
 
+class TableAdmin: SK4TableViewAdmin {
+
+	let itemArray = ["TableViewAdmin Demo"]
+
+	override func numberOfRows(section: Int) -> Int {
+		return itemArray.count
+	}
+
+	override func cellForRow(cell: UITableViewCell, indexPath: NSIndexPath) {
+		cell.textLabel?.text = itemArray[indexPath.row]
+	}
+}
+
+
 class ViewController: UIViewController {
+
+	@IBOutlet weak var tableView: UITableView!
+
+	var tableAdmin: TableAdmin!
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		// Do any additional setup after loading the view, typically from a nib.
+
+		tableAdmin = TableAdmin(tableView: tableView, parent: self)
 	}
 
 	override func didReceiveMemoryWarning() {

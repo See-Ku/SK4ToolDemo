@@ -14,6 +14,7 @@
 		87BB46491CA2A86F00F0BC50 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87BB46471CA2A86F00F0BC50 /* LaunchScreen.storyboard */; };
 		87BB46541CA2A86F00F0BC50 /* SK4ToolDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87BB46531CA2A86F00F0BC50 /* SK4ToolDemoTests.swift */; };
 		87BB465F1CA2A86F00F0BC50 /* SK4ToolDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87BB465E1CA2A86F00F0BC50 /* SK4ToolDemoUITests.swift */; };
+		87BB466D1CA2A8E300F0BC50 /* SK4TableViewAdmin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87BB466C1CA2A8E300F0BC50 /* SK4TableViewAdmin.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		87BB465A1CA2A86F00F0BC50 /* SK4ToolDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SK4ToolDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		87BB465E1CA2A86F00F0BC50 /* SK4ToolDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SK4ToolDemoUITests.swift; sourceTree = "<group>"; };
 		87BB46601CA2A86F00F0BC50 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		87BB466C1CA2A8E300F0BC50 /* SK4TableViewAdmin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SK4TableViewAdmin.swift; path = gui/SK4TableViewAdmin.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +99,7 @@
 		87BB463D1CA2A86F00F0BC50 /* SK4ToolDemo */ = {
 			isa = PBXGroup;
 			children = (
+				87BB466C1CA2A8E300F0BC50 /* SK4TableViewAdmin.swift */,
 				87BB463E1CA2A86F00F0BC50 /* AppDelegate.swift */,
 				87BB46401CA2A86F00F0BC50 /* ViewController.swift */,
 				87BB46421CA2A86F00F0BC50 /* Main.storyboard */,
@@ -256,6 +259,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				87BB466D1CA2A8E300F0BC50 /* SK4TableViewAdmin.swift in Sources */,
 				87BB46411CA2A86F00F0BC50 /* ViewController.swift in Sources */,
 				87BB463F1CA2A86F00F0BC50 /* AppDelegate.swift in Sources */,
 			);
@@ -349,7 +353,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -389,7 +393,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
