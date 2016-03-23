@@ -37,6 +37,10 @@ class TableViewAdmin: SK4TableViewAdmin {
 		cell.textLabel?.text = itemArray[indexPath.row]
 	}
 
+	override func accessoryButtonTapped(indexPath: NSIndexPath) {
+		printItem(indexPath)
+	}
+
 	override func canEditRow(indexPath: NSIndexPath) -> Bool {
 		return true
 	}
@@ -81,4 +85,15 @@ class TableViewAdmin: SK4TableViewAdmin {
 		itemArray.insert(tmp, atIndex: dst.row)
 	}
 
+	// /////////////////////////////////////////////////////////////
+
+	func printItem(indexPath: NSIndexPath) {
+		let str = itemArray[indexPath.row]
+		let ac = SK4AlertController(title: "Item", message: str)
+		ac.addDefault("OK")
+		ac.presentAlertController(parent)
+	}
+
 }
+
+// eof
