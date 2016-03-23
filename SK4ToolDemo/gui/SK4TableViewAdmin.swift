@@ -30,6 +30,11 @@ public class SK4TableViewAdmin: NSObject, UITableViewDelegate, UITableViewDataSo
 	public convenience init(tableView: UITableView, parent: UIViewController) {
 		self.init()
 
+		setup(tableView: tableView, parent: parent)
+	}
+
+	/// 初期化
+	public func setup(tableView tableView: UITableView, parent: UIViewController) {
 		self.tableView = tableView
 		self.parent = parent
 

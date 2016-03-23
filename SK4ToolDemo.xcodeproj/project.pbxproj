@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		87BB463F1CA2A86F00F0BC50 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87BB463E1CA2A86F00F0BC50 /* AppDelegate.swift */; };
-		87BB46411CA2A86F00F0BC50 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87BB46401CA2A86F00F0BC50 /* ViewController.swift */; };
 		87BB46441CA2A86F00F0BC50 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87BB46421CA2A86F00F0BC50 /* Main.storyboard */; };
 		87BB46461CA2A86F00F0BC50 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 87BB46451CA2A86F00F0BC50 /* Assets.xcassets */; };
 		87BB46491CA2A86F00F0BC50 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87BB46471CA2A86F00F0BC50 /* LaunchScreen.storyboard */; };
@@ -17,6 +16,7 @@
 		87BB466D1CA2A8E300F0BC50 /* SK4TableViewAdmin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87BB466C1CA2A8E300F0BC50 /* SK4TableViewAdmin.swift */; };
 		87BB466F1CA2AE7C00F0BC50 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87BB466E1CA2AE7C00F0BC50 /* TableViewController.swift */; };
 		87BB46711CA2AE9900F0BC50 /* MainMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87BB46701CA2AE9900F0BC50 /* MainMenuViewController.swift */; };
+		87BB46731CA2AFC600F0BC50 /* TableViewAdmin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87BB46721CA2AFC600F0BC50 /* TableViewAdmin.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +39,6 @@
 /* Begin PBXFileReference section */
 		87BB463B1CA2A86F00F0BC50 /* SK4ToolDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SK4ToolDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		87BB463E1CA2A86F00F0BC50 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		87BB46401CA2A86F00F0BC50 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		87BB46431CA2A86F00F0BC50 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		87BB46451CA2A86F00F0BC50 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		87BB46481CA2A86F00F0BC50 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -53,6 +52,7 @@
 		87BB466C1CA2A8E300F0BC50 /* SK4TableViewAdmin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SK4TableViewAdmin.swift; path = gui/SK4TableViewAdmin.swift; sourceTree = "<group>"; };
 		87BB466E1CA2AE7C00F0BC50 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		87BB46701CA2AE9900F0BC50 /* MainMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainMenuViewController.swift; sourceTree = "<group>"; };
+		87BB46721CA2AFC600F0BC50 /* TableViewAdmin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewAdmin.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,9 +105,9 @@
 			children = (
 				87BB466C1CA2A8E300F0BC50 /* SK4TableViewAdmin.swift */,
 				87BB463E1CA2A86F00F0BC50 /* AppDelegate.swift */,
-				87BB46401CA2A86F00F0BC50 /* ViewController.swift */,
 				87BB46701CA2AE9900F0BC50 /* MainMenuViewController.swift */,
 				87BB466E1CA2AE7C00F0BC50 /* TableViewController.swift */,
+				87BB46721CA2AFC600F0BC50 /* TableViewAdmin.swift */,
 				87BB46421CA2A86F00F0BC50 /* Main.storyboard */,
 				87BB46451CA2A86F00F0BC50 /* Assets.xcassets */,
 				87BB46471CA2A86F00F0BC50 /* LaunchScreen.storyboard */,
@@ -267,8 +267,8 @@
 			files = (
 				87BB466D1CA2A8E300F0BC50 /* SK4TableViewAdmin.swift in Sources */,
 				87BB46711CA2AE9900F0BC50 /* MainMenuViewController.swift in Sources */,
-				87BB46411CA2A86F00F0BC50 /* ViewController.swift in Sources */,
 				87BB463F1CA2A86F00F0BC50 /* AppDelegate.swift in Sources */,
+				87BB46731CA2AFC600F0BC50 /* TableViewAdmin.swift in Sources */,
 				87BB466F1CA2AE7C00F0BC50 /* TableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

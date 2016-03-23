@@ -52,7 +52,7 @@
         <!--TableViewAdmin Demo-->
         <scene sceneID="zOK-lk-LLd">
             <objects>
-                <viewController id="5DV-cK-0qY" sceneMemberID="viewController">
+                <viewController id="5DV-cK-0qY" customClass="TableViewController" customModule="SK4ToolDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="dP8-Cs-eib"/>
                         <viewControllerLayoutGuide type="bottom" id="xcg-Gx-k8i"/>
@@ -84,7 +84,16 @@
                             <constraint firstItem="xcg-Gx-k8i" firstAttribute="top" secondItem="bMo-sO-Rzk" secondAttribute="bottom" id="yLp-k5-sX3"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="TableViewAdmin Demo" id="hsO-In-lUx"/>
+                    <navigationItem key="navigationItem" title="TableViewAdmin Demo" id="hsO-In-lUx">
+                        <barButtonItem key="rightBarButtonItem" systemItem="edit" id="RxE-ih-W7L">
+                            <connections>
+                                <action selector="onEdit:" destination="5DV-cK-0qY" id="xQ9-yA-FOy"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="bMo-sO-Rzk" id="Z79-qd-dCT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J3H-NW-DXU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

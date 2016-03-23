@@ -10,10 +10,20 @@ import UIKit
 
 class TableViewController: UIViewController {
 
+	@IBOutlet weak var tableView: UITableView!
+
+
+	@IBAction func onEdit(sender: AnyObject) {
+		let flag = !tableView.editing
+		tableView.setEditing(flag, animated: true)
+	}
+
+	var tableViewAdmin: TableViewAdmin!
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+		tableViewAdmin = TableViewAdmin(tableView: tableView, parent: self)
     }
 
     override func didReceiveMemoryWarning() {
