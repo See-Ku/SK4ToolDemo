@@ -10,6 +10,8 @@ import UIKit
 
 class TableViewAdmin: SK4TableViewAdmin {
 
+	let check = SK4LeakCheck(name: "TableViewAdmin")
+
 	var itemArray: [String] = [
 		"black",
 		"white",
@@ -43,33 +45,23 @@ class TableViewAdmin: SK4TableViewAdmin {
 		return true
 	}
 
-	/// Cellのアクションを使って削除
+	/// Cellのアクションを使って操作
 	override func editActionsForRow(indexPath: NSIndexPath) -> [UITableViewRowAction]? {
 
 		// 削除
-		let deleteAction = UITableViewRowAction(style: .Destructive, title: "Delete") { [weak self] action, indexPath in
-			self?.itemArray.removeAtIndex(indexPath.row)
-			self?.tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
+		let deleteAction = UITableViewRowAction(style: .Destructive, title: "Delete") { action, indexPath in
+			self.itemArray.removeAtIndex(indexPath.row)
+			self.tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
 		}
 
-//		del.backgroundColor = UIColor.redColor()
+		// 表示
+		let printAction = UITableViewRowAction(style: .Normal, title: "Print") { action, indexPath in
+			let str = self.itemArray[indexPath.row]
+			let ac = SK4AlertController(title: "Print", message: str)
+			ac.addDefault("OK")
+			ac.presentAlertController(self.parent)
 
-		let printAction = UITableViewRowAction(style: .Normal, title: "Print") { [weak self] action, indexPath in
-//			self?.itemArray.removeAtIndex(indexPath.row)
-//			self?.tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
-
-//			if let ws = self {
-//				print(ws.itemArray[indexPath.row])
-//			}
-
-			if let str = self?.itemArray[indexPath.row] {
-				let ac = SK4AlertController(title: "Print", message: str)
-				ac.addCancel("Cancel")
-
-				let vc = ac.getAlertController()
-				self?.parent.presentViewController(vc, animated: true, completion: nil)
-			}
-
+			self.tableView.reloadRowsAtIndexPaths([indexPath], withRowAnimation: .None)
 		}
 
 		printAction.backgroundColor = UIColor.greenColor()

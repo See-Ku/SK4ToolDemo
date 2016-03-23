@@ -19,6 +19,7 @@
 		87BB46731CA2AFC600F0BC50 /* TableViewAdmin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87BB46721CA2AFC600F0BC50 /* TableViewAdmin.swift */; };
 		87BB46751CA2BEAE00F0BC50 /* SK4ToolKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87BB46741CA2BEAE00F0BC50 /* SK4ToolKit.swift */; };
 		87BB46771CA2CCB900F0BC50 /* SK4AlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87BB46761CA2CCB900F0BC50 /* SK4AlertController.swift */; };
+		87BB46791CA2CF5100F0BC50 /* SK4LeakCheck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87BB46781CA2CF5100F0BC50 /* SK4LeakCheck.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		87BB46721CA2AFC600F0BC50 /* TableViewAdmin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewAdmin.swift; sourceTree = "<group>"; };
 		87BB46741CA2BEAE00F0BC50 /* SK4ToolKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SK4ToolKit.swift; sourceTree = "<group>"; };
 		87BB46761CA2CCB900F0BC50 /* SK4AlertController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SK4AlertController.swift; path = gui/SK4AlertController.swift; sourceTree = "<group>"; };
+		87BB46781CA2CF5100F0BC50 /* SK4LeakCheck.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SK4LeakCheck.swift; path = core/SK4LeakCheck.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +109,7 @@
 		87BB463D1CA2A86F00F0BC50 /* SK4ToolDemo */ = {
 			isa = PBXGroup;
 			children = (
+				87BB46781CA2CF5100F0BC50 /* SK4LeakCheck.swift */,
 				87BB46761CA2CCB900F0BC50 /* SK4AlertController.swift */,
 				87BB46741CA2BEAE00F0BC50 /* SK4ToolKit.swift */,
 				87BB466C1CA2A8E300F0BC50 /* SK4TableViewAdmin.swift */,
@@ -273,6 +276,7 @@
 			files = (
 				87BB466D1CA2A8E300F0BC50 /* SK4TableViewAdmin.swift in Sources */,
 				87BB46751CA2BEAE00F0BC50 /* SK4ToolKit.swift in Sources */,
+				87BB46791CA2CF5100F0BC50 /* SK4LeakCheck.swift in Sources */,
 				87BB46711CA2AE9900F0BC50 /* MainMenuViewController.swift in Sources */,
 				87BB463F1CA2A86F00F0BC50 /* AppDelegate.swift in Sources */,
 				87BB46771CA2CCB900F0BC50 /* SK4AlertController.swift in Sources */,
