@@ -9,7 +9,7 @@
 import XCTest
 
 class SK4ToolDemoUITests: XCTestCase {
-        
+/*
     override func setUp() {
         super.setUp()
         
@@ -32,5 +32,7 @@ class SK4ToolDemoUITests: XCTestCase {
         // Use recording to get started writing UI tests.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
     }
-    
+*/
 }
+
+// eof
