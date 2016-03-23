@@ -10,8 +10,7 @@ import UIKit
 
 class MainMenuTableAdmin: SK4TableViewAdmin {
 
-	let itemArray = ["TableViewAdmin Demo", "AlertController Demo"]
-	let segueArray = ["TableViewAdmin", "AlertController"]
+	let itemArray = ["TableViewAdmin", "AlertController"]
 
 	override func numberOfRows(section: Int) -> Int {
 		return itemArray.count
@@ -22,7 +21,7 @@ class MainMenuTableAdmin: SK4TableViewAdmin {
 	}
 
 	override func didSelectRow(indexPath: NSIndexPath) {
-		let segue = segueArray[indexPath.row]
+		let segue = itemArray[indexPath.row]
 		parent.performSegueWithIdentifier(segue, sender: nil)
 	}
 }
@@ -41,6 +40,17 @@ class MainMenuViewController: UIViewController {
 
 		navigationItem.backBarButtonItem = sk4BarButtonItem(title: "")
     }
+
+	override func viewWillAppear(animated: Bool) {
+		super.viewWillAppear(animated)
+
+		tableAdmin.viewWillAppear()
+	}
+
+	override func viewWillDisappear(animated: Bool) {
+		super.viewWillDisappear(animated)
+
+	}
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

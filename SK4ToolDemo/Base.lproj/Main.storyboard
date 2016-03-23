@@ -86,9 +86,9 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GNg-5p-wRx">
-                                <rect key="frame" x="20" y="160" width="560" height="21"/>
+                                <rect key="frame" x="20" y="180" width="560" height="21"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="Ryq-9a-H6v"/>
+                                    <constraint firstAttribute="height" constant="21" id="Y5q-UZ-vZr"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -97,12 +97,12 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="GNg-5p-wRx" firstAttribute="leading" secondItem="boo-V8-iFK" secondAttribute="leadingMargin" id="2Hc-tJ-1nM"/>
+                            <constraint firstItem="GNg-5p-wRx" firstAttribute="trailing" secondItem="boo-V8-iFK" secondAttribute="trailingMargin" id="7rA-Ad-3yc"/>
+                            <constraint firstItem="GNg-5p-wRx" firstAttribute="top" secondItem="Oez-00-eER" secondAttribute="bottom" constant="28" id="8Ej-3g-MTW"/>
+                            <constraint firstItem="GNg-5p-wRx" firstAttribute="leading" secondItem="boo-V8-iFK" secondAttribute="leadingMargin" id="CLB-Sw-9eQ"/>
                             <constraint firstItem="7cO-MG-LXd" firstAttribute="leading" secondItem="boo-V8-iFK" secondAttribute="leadingMargin" id="ETm-fn-mkG"/>
-                            <constraint firstItem="GNg-5p-wRx" firstAttribute="top" secondItem="Oez-00-eER" secondAttribute="bottom" constant="8" id="PZg-Xe-jIt"/>
                             <constraint firstItem="Oez-00-eER" firstAttribute="leading" secondItem="boo-V8-iFK" secondAttribute="leadingMargin" id="lNb-fn-Bsw"/>
                             <constraint firstItem="7cO-MG-LXd" firstAttribute="top" secondItem="Uga-2s-1nS" secondAttribute="bottom" constant="20" id="oQX-0z-RDb"/>
-                            <constraint firstItem="GNg-5p-wRx" firstAttribute="trailing" secondItem="boo-V8-iFK" secondAttribute="trailingMargin" id="s2s-JI-ldv"/>
                             <constraint firstItem="Oez-00-eER" firstAttribute="top" secondItem="7cO-MG-LXd" secondAttribute="bottom" constant="8" id="yFF-Mk-vst"/>
                         </constraints>
                     </view>

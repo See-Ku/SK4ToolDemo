@@ -35,10 +35,10 @@ class AlertViewController: UIViewController {
 	@IBAction func onCancelOK(sender: AnyObject) {
 		let ac = SK4AlertController(title: "AlertController", message: "Cancel or OK")
 		ac.addCancel("Cancel") { action in
-			self.selectLabel.text = "Cancel"
+			self.selectLabel.text = "-> Cancel"
 		}
 		ac.addDefault("OK") { action in
-			self.selectLabel.text = "OK"
+			self.selectLabel.text = "-> OK"
 		}
 		ac.presentAlertController(self)
 	}
@@ -46,10 +46,10 @@ class AlertViewController: UIViewController {
 	@IBAction func onCancelDestructive(sender: AnyObject) {
 		let ac = SK4AlertController(title: "AlertController", message: "Cancel or Destructive")
 		ac.addCancel("Cancel") { action in
-			self.selectLabel.text = "Cancel"
+			self.selectLabel.text = "-> Cancel"
 		}
 		ac.addDestructive("Destructive") { action in
-			self.selectLabel.text = "Destructive"
+			self.selectLabel.text = "-> Destructive"
 		}
 		ac.presentAlertController(self)
 	}

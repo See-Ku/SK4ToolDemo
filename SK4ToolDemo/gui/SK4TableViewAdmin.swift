@@ -71,6 +71,9 @@ public class SK4TableViewAdmin: NSObject, UITableViewDelegate, UITableViewDataSo
 
 	/// ViewControllerが表示になる
 	public func viewWillAppear() {
+		if let index = tableView.indexPathForSelectedRow {
+			tableView.deselectRowAtIndexPath(index, animated: true)
+		}
 	}
 
 	/// ViewControllerが非表示になる
@@ -108,7 +111,7 @@ public class SK4TableViewAdmin: NSObject, UITableViewDelegate, UITableViewDataSo
 
 	/// Cellが選択された
 	public func didSelectRow(indexPath: NSIndexPath) {
-		tableView.deselectRowAtIndexPath(indexPath, animated: true)
+//		tableView.deselectRowAtIndexPath(indexPath, animated: true)
 	}
 
 	/// アクセサリをがタップされた
