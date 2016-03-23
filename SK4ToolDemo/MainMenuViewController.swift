@@ -10,8 +10,8 @@ import UIKit
 
 class MainMenuTableAdmin: SK4TableViewAdmin {
 
-	let itemArray = ["TableViewAdmin Demo"]
-	let segueArray = ["TableViewAdmin"]
+	let itemArray = ["TableViewAdmin Demo", "AlertController Demo"]
+	let segueArray = ["TableViewAdmin", "AlertController"]
 
 	override func numberOfRows(section: Int) -> Int {
 		return itemArray.count
@@ -38,6 +38,8 @@ class MainMenuViewController: UIViewController {
         super.viewDidLoad()
 
 		tableAdmin = MainMenuTableAdmin(tableView: tableView, parent: self)
+
+		navigationItem.backBarButtonItem = sk4BarButtonItem(title: "")
     }
 
     override func didReceiveMemoryWarning() {

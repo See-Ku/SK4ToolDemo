@@ -20,6 +20,7 @@
 		87BB46751CA2BEAE00F0BC50 /* SK4ToolKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87BB46741CA2BEAE00F0BC50 /* SK4ToolKit.swift */; };
 		87BB46771CA2CCB900F0BC50 /* SK4AlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87BB46761CA2CCB900F0BC50 /* SK4AlertController.swift */; };
 		87BB46791CA2CF5100F0BC50 /* SK4LeakCheck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87BB46781CA2CF5100F0BC50 /* SK4LeakCheck.swift */; };
+		87BB467B1CA353A000F0BC50 /* AlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87BB467A1CA353A000F0BC50 /* AlertViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		87BB46741CA2BEAE00F0BC50 /* SK4ToolKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SK4ToolKit.swift; sourceTree = "<group>"; };
 		87BB46761CA2CCB900F0BC50 /* SK4AlertController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SK4AlertController.swift; path = gui/SK4AlertController.swift; sourceTree = "<group>"; };
 		87BB46781CA2CF5100F0BC50 /* SK4LeakCheck.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SK4LeakCheck.swift; path = core/SK4LeakCheck.swift; sourceTree = "<group>"; };
+		87BB467A1CA353A000F0BC50 /* AlertViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,14 +111,12 @@
 		87BB463D1CA2A86F00F0BC50 /* SK4ToolDemo */ = {
 			isa = PBXGroup;
 			children = (
-				87BB46781CA2CF5100F0BC50 /* SK4LeakCheck.swift */,
-				87BB46761CA2CCB900F0BC50 /* SK4AlertController.swift */,
-				87BB46741CA2BEAE00F0BC50 /* SK4ToolKit.swift */,
-				87BB466C1CA2A8E300F0BC50 /* SK4TableViewAdmin.swift */,
+				87BB467C1CA354E300F0BC50 /* sk4 */,
 				87BB463E1CA2A86F00F0BC50 /* AppDelegate.swift */,
 				87BB46701CA2AE9900F0BC50 /* MainMenuViewController.swift */,
 				87BB466E1CA2AE7C00F0BC50 /* TableViewController.swift */,
 				87BB46721CA2AFC600F0BC50 /* TableViewAdmin.swift */,
+				87BB467A1CA353A000F0BC50 /* AlertViewController.swift */,
 				87BB46421CA2A86F00F0BC50 /* Main.storyboard */,
 				87BB46451CA2A86F00F0BC50 /* Assets.xcassets */,
 				87BB46471CA2A86F00F0BC50 /* LaunchScreen.storyboard */,
@@ -141,6 +141,17 @@
 				87BB46601CA2A86F00F0BC50 /* Info.plist */,
 			);
 			path = SK4ToolDemoUITests;
+			sourceTree = "<group>";
+		};
+		87BB467C1CA354E300F0BC50 /* sk4 */ = {
+			isa = PBXGroup;
+			children = (
+				87BB46781CA2CF5100F0BC50 /* SK4LeakCheck.swift */,
+				87BB46761CA2CCB900F0BC50 /* SK4AlertController.swift */,
+				87BB46741CA2BEAE00F0BC50 /* SK4ToolKit.swift */,
+				87BB466C1CA2A8E300F0BC50 /* SK4TableViewAdmin.swift */,
+			);
+			name = sk4;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -278,6 +289,7 @@
 				87BB46751CA2BEAE00F0BC50 /* SK4ToolKit.swift in Sources */,
 				87BB46791CA2CF5100F0BC50 /* SK4LeakCheck.swift in Sources */,
 				87BB46711CA2AE9900F0BC50 /* MainMenuViewController.swift in Sources */,
+				87BB467B1CA353A000F0BC50 /* AlertViewController.swift in Sources */,
 				87BB463F1CA2A86F00F0BC50 /* AppDelegate.swift in Sources */,
 				87BB46771CA2CCB900F0BC50 /* SK4AlertController.swift in Sources */,
 				87BB46731CA2AFC600F0BC50 /* TableViewAdmin.swift in Sources */,
@@ -508,6 +520,7 @@
 				87BB46651CA2A86F00F0BC50 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		87BB46661CA2A86F00F0BC50 /* Build configuration list for PBXNativeTarget "SK4ToolDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -516,6 +529,7 @@
 				87BB46681CA2A86F00F0BC50 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		87BB46691CA2A86F00F0BC50 /* Build configuration list for PBXNativeTarget "SK4ToolDemoUITests" */ = {
 			isa = XCConfigurationList;
@@ -524,6 +538,7 @@
 				87BB466B1CA2A86F00F0BC50 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
