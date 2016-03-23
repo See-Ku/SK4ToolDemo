@@ -43,4 +43,41 @@ class TableViewAdmin: SK4TableViewAdmin {
 		return true
 	}
 
+	/// Cellのアクションを使って削除
+	override func editActionsForRow(indexPath: NSIndexPath) -> [UITableViewRowAction]? {
+
+		// 削除
+		let deleteAction = UITableViewRowAction(style: .Destructive, title: "Delete") { [weak self] action, indexPath in
+			self?.itemArray.removeAtIndex(indexPath.row)
+			self?.tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
+		}
+
+//		del.backgroundColor = UIColor.redColor()
+
+		let printAction = UITableViewRowAction(style: .Normal, title: "Print") { [weak self] action, indexPath in
+//			self?.itemArray.removeAtIndex(indexPath.row)
+//			self?.tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
+
+			if let ws = self {
+				print(ws.itemArray[indexPath.row])
+			}
+		}
+
+		printAction.backgroundColor = UIColor.greenColor()
+
+		return [deleteAction, printAction]
+	}
+
+	/// 旧来の流れ（？）で削除
+	override func commitEditingDelete(indexPath: NSIndexPath) {
+		itemArray.removeAtIndex(indexPath.row)
+		tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
+	}
+
+	override func moveRow(src: NSIndexPath, dst: NSIndexPath) {
+		let tmp = itemArray[src.row]
+		itemArray.removeAtIndex(src.row)
+		itemArray.insert(tmp, atIndex: dst.row)
+	}
+
 }

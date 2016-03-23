@@ -127,6 +127,11 @@ public class SK4TableViewAdmin: NSObject, UITableViewDelegate, UITableViewDataSo
 		return false
 	}
 
+	/// Cellのアクションを設定
+	public func editActionsForRow(indexPath: NSIndexPath) -> [UITableViewRowAction]? {
+		return nil
+	}
+
 	/// Cellの削除を反映
 	public func commitEditingDelete(indexPath: NSIndexPath) {
 	}
@@ -192,6 +197,10 @@ public class SK4TableViewAdmin: NSObject, UITableViewDelegate, UITableViewDataSo
 
 	public func tableView(tableView: UITableView, canMoveRowAtIndexPath indexPath: NSIndexPath) -> Bool {
 		return canMoveRow(indexPath)
+	}
+
+	public func tableView(tableView: UITableView, editActionsForRowAtIndexPath indexPath: NSIndexPath) -> [UITableViewRowAction]? {
+		return editActionsForRow(indexPath)
 	}
 
 	public func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
