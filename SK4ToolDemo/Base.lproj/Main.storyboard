@@ -49,6 +49,7 @@
                         <segue destination="Qh1-gB-nWV" kind="show" identifier="ActionSheet" id="hCT-qx-cKs"/>
                         <segue destination="X86-bH-01h" kind="show" identifier="BorderButton" id="9iy-Vb-4dv"/>
                         <segue destination="ixZ-LL-fyO" kind="show" identifier="Toolbar" id="YYc-Xy-Lnf"/>
+                        <segue destination="XrV-Rg-5tW" kind="show" identifier="OverlayIndicator" id="eM4-fT-Mua"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -72,7 +73,58 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="i4z-oS-XWr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1545" y="-364"/>
+            <point key="canvasLocation" x="1617" y="-1060"/>
+        </scene>
+        <!--OverlayIndicator-->
+        <scene sceneID="zTj-bE-ksO">
+            <objects>
+                <viewController id="XrV-Rg-5tW" customClass="OverlayIndicatorViewController" customModule="SK4ToolDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="aSz-hZ-lXJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="3So-bE-p8g"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="nab-9E-IoI">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fJJ-HH-l0h">
+                                <rect key="frame" x="20" y="108" width="120" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="WUC-ru-XFe"/>
+                                    <constraint firstAttribute="width" constant="120" id="hoS-qA-Y5T"/>
+                                </constraints>
+                                <state key="normal" title="Start Indicator"/>
+                                <connections>
+                                    <action selector="onStartIndicator:" destination="XrV-Rg-5tW" eventType="touchUpInside" id="7le-XS-MZv"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stop" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Yx-8Q-zwN">
+                                <rect key="frame" x="20" y="289" width="560" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="m2h-0p-8Z3"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="fJJ-HH-l0h" firstAttribute="leading" secondItem="nab-9E-IoI" secondAttribute="leadingMargin" id="871-IL-tBr"/>
+                            <constraint firstItem="fJJ-HH-l0h" firstAttribute="top" secondItem="aSz-hZ-lXJ" secondAttribute="bottom" constant="44" id="DwP-Am-CA3"/>
+                            <constraint firstItem="4Yx-8Q-zwN" firstAttribute="centerY" secondItem="nab-9E-IoI" secondAttribute="centerY" id="R4d-fm-PTj"/>
+                            <constraint firstItem="4Yx-8Q-zwN" firstAttribute="trailing" secondItem="nab-9E-IoI" secondAttribute="trailingMargin" id="XwD-fQ-lp4"/>
+                            <constraint firstItem="4Yx-8Q-zwN" firstAttribute="leading" secondItem="nab-9E-IoI" secondAttribute="leadingMargin" id="qZ7-Ob-BTG"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="OverlayIndicator" id="c3M-Mw-Yvd"/>
+                    <connections>
+                        <outlet property="statusLabel" destination="4Yx-8Q-zwN" id="TaX-8m-yYm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YBz-oU-A2X" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1516" y="-338"/>
         </scene>
         <!--AlertController-->
         <scene sceneID="CX5-fG-qAu">

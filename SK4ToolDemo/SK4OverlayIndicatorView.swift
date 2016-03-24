@@ -11,6 +11,8 @@ import UIKit
 /// 全画面に覆い被さるIndicatorクラス　※キャンセル対応
 public class SK4OverlayIndicatorView: UIView {
 
+	let check = SK4LeakCheck(name: "SK4OverlayIndicatorView")
+
 	// /////////////////////////////////////////////////////////////
 	// MARK: - プロパティ＆初期化
 
@@ -51,7 +53,7 @@ public class SK4OverlayIndicatorView: UIView {
 
 	// /////////////////////////////////////////////////////////////
 
-	/// 全画面を覆うインジケーターを開始備　※必ず、finishIndicator()とペアで使用する
+	/// 全画面を覆うインジケーターを開始備　※必ず、stopIndicator()とペアで使用する
 	func startIndicator(cancel: (()->Void)?) {
 		if let parent = sk4GetWindow() {
 			canceled = false
@@ -72,9 +74,11 @@ public class SK4OverlayIndicatorView: UIView {
 
 	/// インジケーターを停止
 	func stopIndicator() {
-		indicator.stopAnimating()
-		indicator = nil
-		removeFromSuperview()
+		if let indicator = indicator {
+			indicator.stopAnimating()
+			removeFromSuperview()
+			self.indicator = nil
+		}
 	}
 
 	// /////////////////////////////////////////////////////////////
