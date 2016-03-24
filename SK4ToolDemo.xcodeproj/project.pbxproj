@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		871F9E871CA3B91D005295FC /* OverlayIndicatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 871F9E861CA3B91D005295FC /* OverlayIndicatorViewController.swift */; };
 		871F9E891CA3BA6D005295FC /* SK4Dispatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 871F9E881CA3BA6D005295FC /* SK4Dispatch.swift */; };
+		871F9E8B1CA3BCF7005295FC /* SK4StopWatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 871F9E8A1CA3BCF7005295FC /* SK4StopWatch.swift */; };
 		878402171CA36269001C3E0F /* ActionSheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 878402161CA36269001C3E0F /* ActionSheetViewController.swift */; };
 		878402191CA39AC7001C3E0F /* SK4BorderButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 878402181CA39AC7001C3E0F /* SK4BorderButton.swift */; };
 		8784021B1CA39BDE001C3E0F /* BorderButtonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8784021A1CA39BDE001C3E0F /* BorderButtonViewController.swift */; };
@@ -51,6 +52,7 @@
 /* Begin PBXFileReference section */
 		871F9E861CA3B91D005295FC /* OverlayIndicatorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OverlayIndicatorViewController.swift; sourceTree = "<group>"; };
 		871F9E881CA3BA6D005295FC /* SK4Dispatch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SK4Dispatch.swift; path = core/SK4Dispatch.swift; sourceTree = "<group>"; };
+		871F9E8A1CA3BCF7005295FC /* SK4StopWatch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SK4StopWatch.swift; path = core/SK4StopWatch.swift; sourceTree = "<group>"; };
 		878402161CA36269001C3E0F /* ActionSheetViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActionSheetViewController.swift; sourceTree = "<group>"; };
 		878402181CA39AC7001C3E0F /* SK4BorderButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SK4BorderButton.swift; path = gui/SK4BorderButton.swift; sourceTree = "<group>"; };
 		8784021A1CA39BDE001C3E0F /* BorderButtonViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BorderButtonViewController.swift; sourceTree = "<group>"; };
@@ -166,6 +168,7 @@
 		87BB467C1CA354E300F0BC50 /* sk4 */ = {
 			isa = PBXGroup;
 			children = (
+				871F9E8A1CA3BCF7005295FC /* SK4StopWatch.swift */,
 				878402181CA39AC7001C3E0F /* SK4BorderButton.swift */,
 				87BB46781CA2CF5100F0BC50 /* SK4LeakCheck.swift */,
 				87BB46761CA2CCB900F0BC50 /* SK4AlertController.swift */,
@@ -321,6 +324,7 @@
 				8784021B1CA39BDE001C3E0F /* BorderButtonViewController.swift in Sources */,
 				87BB463F1CA2A86F00F0BC50 /* AppDelegate.swift in Sources */,
 				87BB46771CA2CCB900F0BC50 /* SK4AlertController.swift in Sources */,
+				871F9E8B1CA3BCF7005295FC /* SK4StopWatch.swift in Sources */,
 				87BB46731CA2AFC600F0BC50 /* TableViewAdmin.swift in Sources */,
 				87BB467E1CA35E7300F0BC50 /* SK4ActionSheet.swift in Sources */,
 				871F9E871CA3B91D005295FC /* OverlayIndicatorViewController.swift in Sources */,
