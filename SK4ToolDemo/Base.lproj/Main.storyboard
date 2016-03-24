@@ -3,6 +3,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
     </dependencies>
     <scenes>
         <!--SK4ToolDemo-->
@@ -45,6 +46,7 @@
                         <outlet property="tableView" destination="NIW-2x-tIV" id="fZm-eK-1b6"/>
                         <segue destination="5DV-cK-0qY" kind="show" identifier="TableViewAdmin" id="abT-E8-mSq"/>
                         <segue destination="YJO-5K-luc" kind="show" identifier="AlertController" id="nwu-8i-APS"/>
+                        <segue destination="Qh1-gB-nWV" kind="show" identifier="ActionSheet" id="hCT-qx-cKs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -133,7 +135,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="w97-lz-hUn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1462" y="-336"/>
+            <point key="canvasLocation" x="2094" y="-1152"/>
         </scene>
         <!--TableViewAdmin Demo-->
         <scene sceneID="zOK-lk-LLd">
@@ -178,6 +180,65 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J3H-NW-DXU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1408" y="-1138"/>
+        </scene>
+        <!--ActionSheet-->
+        <scene sceneID="xdR-QE-NgV">
+            <objects>
+                <viewController id="Qh1-gB-nWV" customClass="ActionSheetViewController" customModule="SK4ToolDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="WKz-TD-t5y"/>
+                        <viewControllerLayoutGuide type="bottom" id="lLV-sk-N7A"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Ewd-wr-ns0">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="556"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="23k-72-hgs">
+                                <rect key="frame" x="20" y="515" width="560" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="K1K-qv-8Jv"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="lLV-sk-N7A" firstAttribute="top" secondItem="23k-72-hgs" secondAttribute="bottom" constant="20" id="ETv-nt-aOM"/>
+                            <constraint firstItem="23k-72-hgs" firstAttribute="leading" secondItem="Ewd-wr-ns0" secondAttribute="leadingMargin" id="JNP-pk-fWu"/>
+                            <constraint firstItem="23k-72-hgs" firstAttribute="trailing" secondItem="Ewd-wr-ns0" secondAttribute="trailingMargin" id="ouY-It-TWi"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems>
+                        <barButtonItem title="Item" id="sgZ-25-Cy9"/>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="RCX-Cd-qTC"/>
+                        <barButtonItem title="Item" id="etU-vc-N9M"/>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="PKd-Gw-592"/>
+                        <barButtonItem title="Item" id="nvd-Wv-FGw"/>
+                    </toolbarItems>
+                    <navigationItem key="navigationItem" title="ActionSheet" id="Tct-uG-jok">
+                        <rightBarButtonItems>
+                            <barButtonItem systemItem="add" id="AMg-ai-QbL">
+                                <connections>
+                                    <action selector="onAdd:" destination="Qh1-gB-nWV" id="cIp-ex-Syf"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem systemItem="action" id="Wlc-P0-hFd">
+                                <connections>
+                                    <action selector="onAction:" destination="Qh1-gB-nWV" id="YXE-vs-EMc"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics" translucent="NO"/>
+                    <connections>
+                        <outlet property="selectLabel" destination="23k-72-hgs" id="oah-yf-FFq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8qD-bJ-SFR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1527" y="-336"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="UNi-Ov-BDP">

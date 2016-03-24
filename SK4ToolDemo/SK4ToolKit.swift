@@ -34,6 +34,7 @@ public func sk4BarButtonItem(system system: UIBarButtonSystemItem, target: AnyOb
 	return UIBarButtonItem(barButtonSystemItem: system, target: target, action: action)
 }
 
+/*
 /// UINavigationBar/UIToolbarから、UIBarButtonItemに対応するUIControlを取得
 public func sk4BarButtonToControl(item: AnyObject, toolbar: UIView?) -> UIControl? {
 
@@ -58,7 +59,7 @@ public func sk4BarButtonToControl(item: AnyObject, toolbar: UIView?) -> UIContro
 
 	return nil
 }
-
+*/
 
 
 

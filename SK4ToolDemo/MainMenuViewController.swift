@@ -10,7 +10,7 @@ import UIKit
 
 class MainMenuTableAdmin: SK4TableViewAdmin {
 
-	let itemArray = ["TableViewAdmin", "AlertController"]
+	let itemArray = ["TableViewAdmin", "AlertController", "ActionSheet"]
 
 	override func numberOfRows(section: Int) -> Int {
 		return itemArray.count

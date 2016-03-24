@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		878402171CA36269001C3E0F /* ActionSheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 878402161CA36269001C3E0F /* ActionSheetViewController.swift */; };
 		87BB463F1CA2A86F00F0BC50 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87BB463E1CA2A86F00F0BC50 /* AppDelegate.swift */; };
 		87BB46441CA2A86F00F0BC50 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87BB46421CA2A86F00F0BC50 /* Main.storyboard */; };
 		87BB46461CA2A86F00F0BC50 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 87BB46451CA2A86F00F0BC50 /* Assets.xcassets */; };
@@ -42,6 +43,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		878402161CA36269001C3E0F /* ActionSheetViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActionSheetViewController.swift; sourceTree = "<group>"; };
 		87BB463B1CA2A86F00F0BC50 /* SK4ToolDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SK4ToolDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		87BB463E1CA2A86F00F0BC50 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		87BB46431CA2A86F00F0BC50 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -119,6 +121,7 @@
 				87BB466E1CA2AE7C00F0BC50 /* TableViewController.swift */,
 				87BB46721CA2AFC600F0BC50 /* TableViewAdmin.swift */,
 				87BB467A1CA353A000F0BC50 /* AlertViewController.swift */,
+				878402161CA36269001C3E0F /* ActionSheetViewController.swift */,
 				87BB46421CA2A86F00F0BC50 /* Main.storyboard */,
 				87BB46451CA2A86F00F0BC50 /* Assets.xcassets */,
 				87BB46471CA2A86F00F0BC50 /* LaunchScreen.storyboard */,
@@ -298,6 +301,7 @@
 				87BB46731CA2AFC600F0BC50 /* TableViewAdmin.swift in Sources */,
 				87BB467E1CA35E7300F0BC50 /* SK4ActionSheet.swift in Sources */,
 				87BB466F1CA2AE7C00F0BC50 /* TableViewController.swift in Sources */,
+				878402171CA36269001C3E0F /* ActionSheetViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

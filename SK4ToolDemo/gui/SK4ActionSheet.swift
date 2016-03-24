@@ -20,6 +20,9 @@ public class SK4ActionSheet: SK4AlertController {
 	/// popover表示で使うsourceRect
 	public var sourceRect = CGRect()
 
+	/// popover表示で使うbarButtonItem
+	public var barButtonItem: UIBarButtonItem?
+
 	/// 初期化
 	override public init() {
 		super.init()
@@ -31,34 +34,22 @@ public class SK4ActionSheet: SK4AlertController {
 	// MARK: - 表示する位置を指定
 
 	/// ActionSheetを表示する位置を指定
-	public func setSourceView(item: AnyObject, vc: UIViewController) {
+	public func setSourceView(item: AnyObject, parent: UIViewController) {
 
-		//　NavigationBarのコントロールか？
-		if let view = sk4BarButtonToControl(item, toolbar: vc.navigationController?.navigationBar) {
-			setSourceView(view)
+		// UIBarButtonItemか？
+		if let bar = item as? UIBarButtonItem {
+			barButtonItem = bar
 			return
 		}
 
-		//　Toolbarのコントロールか？
-		if let view = sk4BarButtonToControl(item, toolbar: vc.navigationController?.toolbar) {
-			setSourceView(view, under: false)
-			return
-		}
-
-		// その他のコントロールか？
-		if let view = sk4BarButtonToControl(item, toolbar: vc.view) {
-			setSourceView(view)
-			return
-		}
-
-		// 実はViewなのか？
+		// UIViewか？
 		if let view = item as? UIView {
 			setSourceView(view)
 			return
 		}
 
 		// 最悪、全画面を対象に表示
-		setSourceView(vc.view)
+		setSourceView(parent.view)
 	}
 
 	/// ActionSheetを表示する位置を指定
@@ -77,6 +68,7 @@ public class SK4ActionSheet: SK4AlertController {
 		let alert = super.getAlertController()
 		alert.popoverPresentationController?.sourceView = sourceView
 		alert.popoverPresentationController?.sourceRect = sourceRect
+		alert.popoverPresentationController?.barButtonItem = barButtonItem
 		return alert
 	}
 
