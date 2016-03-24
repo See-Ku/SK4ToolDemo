@@ -30,11 +30,27 @@ public class SK4ActionSheet: SK4AlertController {
 		style = .ActionSheet
 	}
 
+	/// 初期化
+//	public convenience init(item: AnyObject) {
+//		self.init()
+//		setSourceView(item, parent: nil)
+//	}
+
+	/// 初期化
+	public convenience init(item: AnyObject, title: String? = nil, message: String? = nil) {
+		self.init()
+
+		self.title = title
+		self.message = message
+
+		setSourceItem(item)
+	}
+
 	// /////////////////////////////////////////////////////////////
 	// MARK: - 表示する位置を指定
 
 	/// ActionSheetを表示する位置を指定
-	public func setSourceView(item: AnyObject, parent: UIViewController) {
+	public func setSourceItem(item: AnyObject) {
 
 		// UIBarButtonItemか？
 		if let bar = item as? UIBarButtonItem {
@@ -47,9 +63,6 @@ public class SK4ActionSheet: SK4AlertController {
 			setSourceView(view)
 			return
 		}
-
-		// 最悪、全画面を対象に表示
-		setSourceView(parent.view)
 	}
 
 	/// ActionSheetを表示する位置を指定

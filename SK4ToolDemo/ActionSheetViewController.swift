@@ -15,30 +15,74 @@ class ActionSheetViewController: UIViewController {
 	@IBOutlet weak var selectLabel: UILabel!
 
 	@IBAction func onAdd(sender: AnyObject) {
-
-		let ac = SK4ActionSheet()
-		ac.setSourceView(sender, parent: self)
-
-//		ac.barButtonItem = sender as? UIBarButtonItem
+		let ac = SK4ActionSheet(item: sender)
 
 		ac.addDestructive("Destructive") { action in
 			self.selectLabel.text = "Add: Destructive"
-		}
-
-		ac.addCancel("Cancel") { action in
-			self.selectLabel.text = "Add: Cancel"
 		}
 
 		ac.addDefault("Default") { action in
 			self.selectLabel.text = "Add: Default"
 		}
 
+		ac.addCancel("Cancel") { action in
+			self.selectLabel.text = "Add: Cancel"
+		}
+
 		ac.presentAlertController(self)
 	}
 
 	@IBAction func onAction(sender: AnyObject) {
+		dispActionSheet(sender, name: "Action")
 	}
 
+	@IBAction func onLeft(sender: AnyObject) {
+		dispActionSheet(sender, name: "Left")
+	}
+
+	@IBAction func onCenter(sender: AnyObject) {
+		dispActionSheet(sender, name: "Center")
+	}
+
+	@IBAction func onRight(sender: AnyObject) {
+		dispActionSheet(sender, name: "Right")
+	}
+
+	func dispActionSheet(sender: AnyObject, name: String) {
+		let ac = SK4ActionSheet(item: sender)
+
+		ac.addDestructive("Destructive") { action in
+			self.selectLabel.text = "\(name) -> Destructive"
+		}
+
+		ac.addDefault("Default") { action in
+			self.selectLabel.text = "\(name) -> Default"
+		}
+
+		ac.addCancel("Cancel") { action in
+			self.selectLabel.text = "\(name) -> Cancel"
+		}
+
+		ac.presentAlertController(self)
+	}
+
+
+
+
+
+	// /////////////////////////////////////////////////////////////
+
+	override func viewWillAppear(animated: Bool) {
+		super.viewWillAppear(animated)
+
+		navigationController?.toolbarHidden = false
+	}
+
+	override func viewWillDisappear(animated: Bool) {
+		super.viewWillDisappear(animated)
+
+		navigationController?.toolbarHidden = true
+	}
 
     override func viewDidLoad() {
         super.viewDidLoad()

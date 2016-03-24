@@ -211,11 +211,23 @@
                         </constraints>
                     </view>
                     <toolbarItems>
-                        <barButtonItem title="Item" id="sgZ-25-Cy9"/>
+                        <barButtonItem title="Left" id="sgZ-25-Cy9">
+                            <connections>
+                                <action selector="onLeft:" destination="Qh1-gB-nWV" id="rDk-DJ-rm7"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="RCX-Cd-qTC"/>
-                        <barButtonItem title="Item" id="etU-vc-N9M"/>
+                        <barButtonItem title="Center" id="etU-vc-N9M">
+                            <connections>
+                                <action selector="onCenter:" destination="Qh1-gB-nWV" id="Yhe-OU-rf7"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="PKd-Gw-592"/>
-                        <barButtonItem title="Item" id="nvd-Wv-FGw"/>
+                        <barButtonItem title="Right" id="nvd-Wv-FGw">
+                            <connections>
+                                <action selector="onRight:" destination="Qh1-gB-nWV" id="dGM-S1-1eU"/>
+                            </connections>
+                        </barButtonItem>
                     </toolbarItems>
                     <navigationItem key="navigationItem" title="ActionSheet" id="Tct-uG-jok">
                         <rightBarButtonItems>
