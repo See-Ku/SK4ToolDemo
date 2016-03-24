@@ -23,8 +23,8 @@ public class SK4ActionSheet: SK4AlertController {
 	/// popover表示で使うbarButtonItem
 	public var barButtonItem: UIBarButtonItem?
 
+	/// popover表示で使うpermittedArrowDirections
 	public var permittedArrowDirections = UIPopoverArrowDirection.Any
-
 
 	/// 初期化
 	override public init() {
@@ -32,12 +32,6 @@ public class SK4ActionSheet: SK4AlertController {
 
 		style = .ActionSheet
 	}
-
-	/// 初期化
-//	public convenience init(item: AnyObject) {
-//		self.init()
-//		setSourceView(item, parent: nil)
-//	}
 
 	/// 初期化
 	public convenience init(item: AnyObject, title: String? = nil, message: String? = nil) {
@@ -70,18 +64,15 @@ public class SK4ActionSheet: SK4AlertController {
 
 	/// ActionSheetを表示する位置を指定　※矢印の向きは自動で判定
 	public func setSourceView(view: UIView) {
-
 		sourceView = view
 		sourceRect.size = CGSize()
 		sourceRect.origin.x = view.bounds.midX
 		sourceRect.origin.y = view.bounds.midY
 
-		var base = view.frame
-		if let sv = view.superview {
-			base = sv.bounds
-		}
+		guard let sv = view.superview else { return }
 
 		let pos = view.center
+		let base = sv.bounds
 
 		if pos.y < base.height / 3 {
 			sourceRect.origin.y = view.bounds.maxY
@@ -103,17 +94,6 @@ public class SK4ActionSheet: SK4AlertController {
 			sourceRect.origin.y = view.bounds.maxY
 			permittedArrowDirections = .Up
 		}
-	}
-
-
-	/// ActionSheetを表示する位置を指定
-	public func setSourceView(view: UIView, under: Bool = true) {
-		sourceView = view
-		sourceRect.size = CGSize()
-//		sourceRect.origin.x = view.frame.width / 2
-//		sourceRect.origin.y = under ? view.frame.height : 0
-		sourceRect.origin.x = view.bounds.midX
-		sourceRect.origin.y = view.bounds.midY
 	}
 
 	// /////////////////////////////////////////////////////////////

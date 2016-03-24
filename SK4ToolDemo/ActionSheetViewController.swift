@@ -48,6 +48,13 @@ class ActionSheetViewController: UIViewController {
 		dispActionSheet(sender, name: "Right")
 	}
 
+	@IBAction func onButton(sender: AnyObject) {
+		guard let btn = sender as? UIButton else { return }
+		guard let title = btn.currentTitle else { return }
+
+		dispActionSheet(sender, name: title)
+	}
+
 	func dispActionSheet(sender: AnyObject, name: String) {
 		let ac = SK4ActionSheet(item: sender)
 
@@ -65,78 +72,7 @@ class ActionSheetViewController: UIViewController {
 
 		ac.presentAlertController(self)
 	}
-
-
-
-	// /////////////////////////////////////////////////////////////
-
-	@IBAction func onButton(sender: AnyObject) {
-
-		guard let btn = sender as? UIButton else { return }
-		guard let title = btn.currentTitle else { return }
-
-/*
-		let dir: UIPopoverArrowDirection
-
-		switch title {
-		case "←↑":
-			fallthrough
-
-		case "↑→":
-			fallthrough
-
-		case "↑":
-			dir = .Up
-
-		case "←":
-			dir = .Left
-
-		case "→":
-			dir = .Right
-
-		case "←↓":
-			fallthrough
-
-		case "↓→":
-			fallthrough
-
-		case "↓":
-			dir = .Down
-
-		default:
-			dir = [.Any]
-			print("ng")
-		}
-*/
-
-		let ac = SK4ActionSheet(item: sender)
-
-//		ac.setSourceView(btn, dir: .Any)
-
-		ac.addDestructive("Destructive") { action in
-			self.selectLabel.text = "\(title) -> Destructive"
-		}
-
-		ac.addDefault("Default") { action in
-			self.selectLabel.text = "\(title) -> Default"
-		}
-
-		ac.addCancel("Cancel") { action in
-			self.selectLabel.text = "\(title) -> Cancel"
-		}
-
-		ac.presentAlertController(self)
-
-
-//		dispActionSheet(sender, name: "Button")
-	}
-
-
-
-
-
-
-
+	
 	// /////////////////////////////////////////////////////////////
 
 	override func viewWillAppear(animated: Bool) {
