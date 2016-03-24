@@ -47,5 +47,23 @@ public func sk4AlertView(title title: String?, message: String?, vc: UIViewContr
 }
 
 
+////////////////////////////////////////////////////////////////
+// MARK: - GUI関係
+
+/// UIWindowを取得　※UIWindowにaddSubview()した場合、removeFromSuperview()が必要になる
+public func sk4GetWindow() -> UIWindow? {
+	let app = UIApplication.sharedApplication()
+	if let win = app.keyWindow {
+		return win
+	}
+
+	if app.windows.count != 0 {
+		return app.windows[0]
+	}
+
+	return nil
+}
+
+
 
 // eof
