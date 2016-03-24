@@ -24,7 +24,7 @@ class TableViewController: UIViewController {
 
 	func setupBar(edit: Bool) {
 		let type: UIBarButtonSystemItem = edit ? .Done : .Edit
-		let btn = sk4BarButtonItem(system: type, target: self, action: #selector(onEdit))
+		let btn = sk4BarButtonItem(system: type, target: self, action: #selector(TableViewController.onEdit))
 		navigationItem.rightBarButtonItem = btn
 	}
 

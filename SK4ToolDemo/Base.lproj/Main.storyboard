@@ -48,11 +48,31 @@
                         <segue destination="YJO-5K-luc" kind="show" identifier="AlertController" id="nwu-8i-APS"/>
                         <segue destination="Qh1-gB-nWV" kind="show" identifier="ActionSheet" id="hCT-qx-cKs"/>
                         <segue destination="X86-bH-01h" kind="show" identifier="BorderButton" id="9iy-Vb-4dv"/>
+                        <segue destination="ixZ-LL-fyO" kind="show" identifier="Toolbar" id="YYc-Xy-Lnf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="713" y="-336"/>
+        </scene>
+        <!--Toolbar-->
+        <scene sceneID="IOc-J1-pJg">
+            <objects>
+                <viewController id="ixZ-LL-fyO" customClass="ToolbarViewController" customModule="SK4ToolDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Y0A-QG-kDd"/>
+                        <viewControllerLayoutGuide type="bottom" id="KAO-2n-q88"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="R7d-l1-XOk">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Toolbar" id="fm9-Jz-mQT"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="i4z-oS-XWr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1545" y="-364"/>
         </scene>
         <!--AlertController-->
         <scene sceneID="CX5-fG-qAu">
@@ -136,7 +156,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="w97-lz-hUn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2094" y="-1152"/>
+            <point key="canvasLocation" x="2122" y="-1776"/>
         </scene>
         <!--TableViewAdmin Demo-->
         <scene sceneID="zOK-lk-LLd">
@@ -180,7 +200,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J3H-NW-DXU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1408" y="-1138"/>
+            <point key="canvasLocation" x="1436" y="-1762"/>
         </scene>
         <!--BorderButton-->
         <scene sceneID="Zp1-y3-xSV">
@@ -278,7 +298,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Q78-Fk-1FD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1472" y="-349"/>
+            <point key="canvasLocation" x="3520" y="-1785"/>
         </scene>
         <!--ActionSheet-->
         <scene sceneID="xdR-QE-NgV">
@@ -466,7 +486,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8qD-bJ-SFR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2795" y="-1152"/>
+            <point key="canvasLocation" x="2823" y="-1776"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="UNi-Ov-BDP">
