@@ -10,29 +10,31 @@ import UIKit
 
 class BorderButtonViewController: UIViewController {
 
+	let check = SK4LeakCheck(name: "BorderButtonViewController")
 
 	@IBAction func onNormalButton(sender: AnyObject) {
-		print(#function)
-
+		sk4AlertView(title: "Button", message: "Normal Button", vc: self)
 	}
 
 	@IBAction func onBorderButton(sender: AnyObject) {
-		print(#function)
+		sk4AlertView(title: "Button", message: "Border Button", vc: self)
 	}
 
 	@IBAction func onButton2(sender: AnyObject) {
-		print(#function)
+		sk4AlertView(title: "Button", message: "Button2", vc: self)
 	}
 
 	@IBAction func onAlertController(sender: AnyObject) {
-		print(#function)
+		let ac = SK4AlertController(title: "Alert", message: "AlertController")
+		ac.addDefault("OK")
+		ac.presentAlertController(self)
 	}
 
 	@IBAction func onActionSheet(sender: AnyObject) {
-		print(#function)
+		let ac = SK4ActionSheet(item: sender, title: "Alert", message: "ActionSheet")
+		ac.addDefault("OK")
+		ac.presentAlertController(self)
 	}
-
-
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,16 +46,7 @@ class BorderButtonViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
+
+// eof

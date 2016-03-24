@@ -34,33 +34,17 @@ public func sk4BarButtonItem(system system: UIBarButtonSystemItem, target: AnyOb
 	return UIBarButtonItem(barButtonSystemItem: system, target: target, action: action)
 }
 
-/*
-/// UINavigationBar/UIToolbarから、UIBarButtonItemに対応するUIControlを取得
-public func sk4BarButtonToControl(item: AnyObject, toolbar: UIView?) -> UIControl? {
 
-	guard let toolbar = toolbar else { return nil }
+// /////////////////////////////////////////////////////////////
+// MARK: - UIAlertController
 
-	for child in toolbar.subviews {
-
-		// UIControlならターゲットをチェック
-		if let ctrl = child as? UIControl {
-			for target in ctrl.allTargets() {
-				if target === item {
-					return ctrl
-				}
-			}
-		}
-
-		// 念のため、孫Viewまでチェック
-		if let ctrl = sk4BarButtonToControl(item, toolbar: child) {
-			return ctrl
-		}
-	}
-
-	return nil
+/// シンプルな形式のUIAlertControllerを表示
+public func sk4AlertView(title title: String?, message: String?, vc: UIViewController, handler: ((UIAlertAction!) -> Void)? = nil) {
+	let alert = UIAlertController(title: title, message: message, preferredStyle: .Alert)
+	let action = UIAlertAction(title: "OK", style: .Default, handler: handler)
+	alert.addAction(action)
+	vc.presentViewController(alert, animated: true, completion: nil)
 }
-*/
-
 
 
 
