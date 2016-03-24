@@ -47,6 +47,7 @@
                         <segue destination="5DV-cK-0qY" kind="show" identifier="TableViewAdmin" id="abT-E8-mSq"/>
                         <segue destination="YJO-5K-luc" kind="show" identifier="AlertController" id="nwu-8i-APS"/>
                         <segue destination="Qh1-gB-nWV" kind="show" identifier="ActionSheet" id="hCT-qx-cKs"/>
+                        <segue destination="X86-bH-01h" kind="show" identifier="BorderButton" id="9iy-Vb-4dv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -180,6 +181,104 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J3H-NW-DXU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1408" y="-1138"/>
+        </scene>
+        <!--BorderButton-->
+        <scene sceneID="Zp1-y3-xSV">
+            <objects>
+                <viewController id="X86-bH-01h" customClass="BorderButtonViewController" customModule="SK4ToolDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="z66-zO-J6g"/>
+                        <viewControllerLayoutGuide type="bottom" id="BuU-fs-kiW"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Pyl-nN-ido">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EiN-eG-F1f">
+                                <rect key="frame" x="20" y="80" width="120" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="4Ma-9L-q3A"/>
+                                    <constraint firstAttribute="height" constant="30" id="4bb-8H-8kC"/>
+                                </constraints>
+                                <state key="normal" title="Normal Button"/>
+                                <connections>
+                                    <action selector="onNormalButton:" destination="X86-bH-01h" eventType="touchUpInside" id="Iu7-de-u1r"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FqA-M1-kbe" customClass="SK4BorderButton" customModule="SK4ToolDemo" customModuleProvider="target">
+                                <rect key="frame" x="20" y="118" width="120" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="9Zi-LW-LR7"/>
+                                    <constraint firstAttribute="width" constant="120" id="Ii0-5A-Rie"/>
+                                </constraints>
+                                <state key="normal" title="Border Button"/>
+                                <connections>
+                                    <action selector="onBorderButton:" destination="X86-bH-01h" eventType="touchUpInside" id="y5y-xk-T8A"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="chB-ba-zK1" customClass="SK4BorderButton" customModule="SK4ToolDemo" customModuleProvider="target">
+                                <rect key="frame" x="148" y="118" width="120" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.9745729179" blue="0.69497675270000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="SKw-cC-HhW"/>
+                                    <constraint firstAttribute="width" constant="120" id="btf-m7-bWV"/>
+                                </constraints>
+                                <color key="tintColor" red="0.0" green="0.50196081400000003" blue="0.25098040700000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Button 2"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="onButton2:" destination="X86-bH-01h" eventType="touchUpInside" id="Z1z-wr-Doa"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8xx-a6-1Kx">
+                                <rect key="frame" x="20" y="276" width="120" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="4IM-LA-Hc5"/>
+                                    <constraint firstAttribute="width" constant="120" id="NBV-Ui-x6F"/>
+                                </constraints>
+                                <state key="normal" title="AlertController"/>
+                                <connections>
+                                    <action selector="onAlertController:" destination="X86-bH-01h" eventType="touchUpInside" id="ki6-k8-Swg"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="btE-ee-GZU">
+                                <rect key="frame" x="148" y="276" width="120" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="IfX-nu-l25"/>
+                                    <constraint firstAttribute="width" constant="120" id="gSL-bb-zwg"/>
+                                </constraints>
+                                <state key="normal" title="ActionSheet"/>
+                                <connections>
+                                    <action selector="onActionSheet:" destination="X86-bH-01h" eventType="touchUpInside" id="Js4-7J-eDU"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="FqA-M1-kbe" firstAttribute="top" secondItem="EiN-eG-F1f" secondAttribute="bottom" constant="8" id="1kz-tl-Jm3"/>
+                            <constraint firstItem="8xx-a6-1Kx" firstAttribute="leading" secondItem="Pyl-nN-ido" secondAttribute="leadingMargin" id="5Oe-vm-RlC"/>
+                            <constraint firstItem="btE-ee-GZU" firstAttribute="top" secondItem="chB-ba-zK1" secondAttribute="bottom" constant="128" id="6W1-Z0-YCK"/>
+                            <constraint firstItem="EiN-eG-F1f" firstAttribute="leading" secondItem="Pyl-nN-ido" secondAttribute="leadingMargin" id="DdG-nR-qHn"/>
+                            <constraint firstItem="8xx-a6-1Kx" firstAttribute="top" secondItem="FqA-M1-kbe" secondAttribute="bottom" constant="128" id="F5A-Az-kxI"/>
+                            <constraint firstItem="btE-ee-GZU" firstAttribute="leading" secondItem="8xx-a6-1Kx" secondAttribute="trailing" constant="8" id="PoQ-aR-BPL"/>
+                            <constraint firstItem="FqA-M1-kbe" firstAttribute="leading" secondItem="Pyl-nN-ido" secondAttribute="leadingMargin" id="ZSs-3h-Fih"/>
+                            <constraint firstItem="chB-ba-zK1" firstAttribute="top" secondItem="z66-zO-J6g" secondAttribute="bottom" constant="54" id="pBR-lu-SH6"/>
+                            <constraint firstItem="chB-ba-zK1" firstAttribute="leading" secondItem="FqA-M1-kbe" secondAttribute="trailing" constant="8" id="tgg-iI-5J3"/>
+                            <constraint firstItem="EiN-eG-F1f" firstAttribute="top" secondItem="z66-zO-J6g" secondAttribute="bottom" constant="16" id="wkg-eC-2py"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="BorderButton" id="Vec-5c-Vun"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Q78-Fk-1FD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1472" y="-349"/>
         </scene>
         <!--ActionSheet-->
         <scene sceneID="xdR-QE-NgV">
@@ -367,7 +466,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8qD-bJ-SFR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1527" y="-336"/>
+            <point key="canvasLocation" x="2795" y="-1152"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="UNi-Ov-BDP">

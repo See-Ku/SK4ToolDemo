@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		878402171CA36269001C3E0F /* ActionSheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 878402161CA36269001C3E0F /* ActionSheetViewController.swift */; };
+		878402191CA39AC7001C3E0F /* SK4BorderButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 878402181CA39AC7001C3E0F /* SK4BorderButton.swift */; };
+		8784021B1CA39BDE001C3E0F /* BorderButtonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8784021A1CA39BDE001C3E0F /* BorderButtonViewController.swift */; };
 		87BB463F1CA2A86F00F0BC50 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87BB463E1CA2A86F00F0BC50 /* AppDelegate.swift */; };
 		87BB46441CA2A86F00F0BC50 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87BB46421CA2A86F00F0BC50 /* Main.storyboard */; };
 		87BB46461CA2A86F00F0BC50 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 87BB46451CA2A86F00F0BC50 /* Assets.xcassets */; };
@@ -44,6 +46,8 @@
 
 /* Begin PBXFileReference section */
 		878402161CA36269001C3E0F /* ActionSheetViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActionSheetViewController.swift; sourceTree = "<group>"; };
+		878402181CA39AC7001C3E0F /* SK4BorderButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SK4BorderButton.swift; path = gui/SK4BorderButton.swift; sourceTree = "<group>"; };
+		8784021A1CA39BDE001C3E0F /* BorderButtonViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BorderButtonViewController.swift; sourceTree = "<group>"; };
 		87BB463B1CA2A86F00F0BC50 /* SK4ToolDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SK4ToolDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		87BB463E1CA2A86F00F0BC50 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		87BB46431CA2A86F00F0BC50 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -118,6 +122,7 @@
 				87BB467C1CA354E300F0BC50 /* sk4 */,
 				87BB463E1CA2A86F00F0BC50 /* AppDelegate.swift */,
 				87BB46701CA2AE9900F0BC50 /* MainMenuViewController.swift */,
+				8784021A1CA39BDE001C3E0F /* BorderButtonViewController.swift */,
 				87BB466E1CA2AE7C00F0BC50 /* TableViewController.swift */,
 				87BB46721CA2AFC600F0BC50 /* TableViewAdmin.swift */,
 				87BB467A1CA353A000F0BC50 /* AlertViewController.swift */,
@@ -151,6 +156,7 @@
 		87BB467C1CA354E300F0BC50 /* sk4 */ = {
 			isa = PBXGroup;
 			children = (
+				878402181CA39AC7001C3E0F /* SK4BorderButton.swift */,
 				87BB46781CA2CF5100F0BC50 /* SK4LeakCheck.swift */,
 				87BB46761CA2CCB900F0BC50 /* SK4AlertController.swift */,
 				87BB467D1CA35E7300F0BC50 /* SK4ActionSheet.swift */,
@@ -291,11 +297,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				878402191CA39AC7001C3E0F /* SK4BorderButton.swift in Sources */,
 				87BB466D1CA2A8E300F0BC50 /* SK4TableViewAdmin.swift in Sources */,
 				87BB46751CA2BEAE00F0BC50 /* SK4ToolKit.swift in Sources */,
 				87BB46791CA2CF5100F0BC50 /* SK4LeakCheck.swift in Sources */,
 				87BB46711CA2AE9900F0BC50 /* MainMenuViewController.swift in Sources */,
 				87BB467B1CA353A000F0BC50 /* AlertViewController.swift in Sources */,
+				8784021B1CA39BDE001C3E0F /* BorderButtonViewController.swift in Sources */,
 				87BB463F1CA2A86F00F0BC50 /* AppDelegate.swift in Sources */,
 				87BB46771CA2CCB900F0BC50 /* SK4AlertController.swift in Sources */,
 				87BB46731CA2AFC600F0BC50 /* TableViewAdmin.swift in Sources */,
