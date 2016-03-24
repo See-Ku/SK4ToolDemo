@@ -25,6 +25,52 @@ public class SK4OverlayIndicatorView: UIView {
 	/// 内部で使用するインジケーター
 	var indicator: UIActivityIndicatorView!
 
+/*
+	override init(frame: CGRect) {
+		super.init(frame: frame)
+	}
+
+	required init?(coder aDecoder: NSCoder) {
+		fatalError("init(coder:) has not been implemented")
+	}
+*/
+/*
+	init() {
+		super.init(frame: CGRect())
+
+	}
+*/
+/*
+	/// 初期化＆開始
+	convenience public init() {
+		self.init(frame: CGRect())
+
+		setup()
+		startIndicator(nil)
+	}
+*/
+/*
+	init() {
+		super.init(frame: CGRect())
+
+	}
+*/
+
+/*
+	/// 初期化＆開始
+	public init(cancel: (()->Void)? = nil) {
+		super.init(frame: CGRect())
+
+		setup()
+		startIndicator(cancel)
+	}
+	
+	required public init?(coder aDecoder: NSCoder) {
+		fatalError("init(coder:) has not been implemented")
+//		assertionFailure("You need override me!")
+	}
+*/
+
 	/// 初期化＆開始
 	convenience public init() {
 		self.init(frame: CGRect())
@@ -34,12 +80,13 @@ public class SK4OverlayIndicatorView: UIView {
 	}
 
 	/// 初期化＆開始
-	convenience public init(cancel: (()->Void)?) {
-		self.init(frame: CGRectZero)
+	convenience public init(cancel: (()->Void)? = nil) {
+		self.init(frame: CGRect())
 
 		setup()
 		startIndicator(cancel)
 	}
+
 
 	/// 終了＆破棄
 	deinit {

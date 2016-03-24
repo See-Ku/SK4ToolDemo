@@ -24,7 +24,7 @@ class OverlayIndicatorViewController: UIViewController {
 		sk4AsyncGlobal() {
 
 			// 時間のかかる処理
-			for _ in 0..<50 {
+			for _ in 0..<100 {
 				sk4Sleep(0.2)
 
 				// 画面の更新
