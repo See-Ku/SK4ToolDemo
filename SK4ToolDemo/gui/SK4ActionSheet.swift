@@ -23,6 +23,9 @@ public class SK4ActionSheet: SK4AlertController {
 	/// popover表示で使うbarButtonItem
 	public var barButtonItem: UIBarButtonItem?
 
+	public var permittedArrowDirections = UIPopoverArrowDirection.Any
+
+
 	/// 初期化
 	override public init() {
 		super.init()
@@ -65,12 +68,52 @@ public class SK4ActionSheet: SK4AlertController {
 		}
 	}
 
+	/// ActionSheetを表示する位置を指定　※矢印の向きは自動で判定
+	public func setSourceView(view: UIView) {
+
+		sourceView = view
+		sourceRect.size = CGSize()
+		sourceRect.origin.x = view.bounds.midX
+		sourceRect.origin.y = view.bounds.midY
+
+		var base = view.frame
+		if let sv = view.superview {
+			base = sv.bounds
+		}
+
+		let pos = view.center
+
+		if pos.y < base.height / 3 {
+			sourceRect.origin.y = view.bounds.maxY
+			permittedArrowDirections = .Up
+
+		} else if pos.y > (base.height * 2) / 3 {
+			sourceRect.origin.y = 0
+			permittedArrowDirections = .Down
+
+		} else if pos.x < base.width / 3 {
+			sourceRect.origin.x = view.bounds.maxX
+			permittedArrowDirections = .Left
+
+		} else if pos.x > (base.width * 2) / 3 {
+			sourceRect.origin.x = 0
+			permittedArrowDirections = .Right
+
+		} else {
+			sourceRect.origin.y = view.bounds.maxY
+			permittedArrowDirections = .Up
+		}
+	}
+
+
 	/// ActionSheetを表示する位置を指定
 	public func setSourceView(view: UIView, under: Bool = true) {
 		sourceView = view
 		sourceRect.size = CGSize()
-		sourceRect.origin.x = view.frame.width / 2
-		sourceRect.origin.y = under ? view.frame.height : 0
+//		sourceRect.origin.x = view.frame.width / 2
+//		sourceRect.origin.y = under ? view.frame.height : 0
+		sourceRect.origin.x = view.bounds.midX
+		sourceRect.origin.y = view.bounds.midY
 	}
 
 	// /////////////////////////////////////////////////////////////
@@ -82,6 +125,7 @@ public class SK4ActionSheet: SK4AlertController {
 		alert.popoverPresentationController?.sourceView = sourceView
 		alert.popoverPresentationController?.sourceRect = sourceRect
 		alert.popoverPresentationController?.barButtonItem = barButtonItem
+		alert.popoverPresentationController?.permittedArrowDirections = permittedArrowDirections
 		return alert
 	}
 
