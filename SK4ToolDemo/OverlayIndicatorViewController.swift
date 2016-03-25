@@ -16,8 +16,13 @@ class OverlayIndicatorViewController: UIViewController {
 
 	@IBAction func onStartIndicator(sender: AnyObject) {
 
+
 		// インジケーターを作成・開始
-		let av = SK4OverlayIndicatorView()
+//		let av = SK4OverlayIndicatorView()
+
+//		SK4OverlayIndicatorView.show()
+//		SK4OverlayIndicatorView.show("Please wait...")
+		SK4OverlayIndicatorView.show("計算中...", cancelLabel: "Cancel")
 
 		let sw = SK4StopWatch()
 
@@ -33,15 +38,16 @@ class OverlayIndicatorViewController: UIViewController {
 				}
 
 				// キャンセルに対応
-				if av.canceled {
+				if SK4OverlayIndicatorView.canceled {
 					break
 				}
 			}
 
 			// 終了後の処理
 			sk4AsyncMain() {
-				av.stopIndicator()
-				if av.canceled {
+//				av.stopIndicator()
+				SK4OverlayIndicatorView.hide()
+				if SK4OverlayIndicatorView.canceled {
 					self.statusLabel.text = "Canceled"
 				} else {
 					self.statusLabel.text = "Finish"
