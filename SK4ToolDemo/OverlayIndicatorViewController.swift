@@ -16,25 +16,21 @@ class OverlayIndicatorViewController: UIViewController {
 
 	@IBAction func onStartIndicator(sender: AnyObject) {
 
-
-		// インジケーターを作成・開始
-//		let av = SK4OverlayIndicator()
-
-//		SK4OverlayIndicator.show()
-//		SK4OverlayIndicator.show("Please wait...")
-		SK4OverlayIndicator.show("計算中...", cancelLabel: "Cancel")
+		// インジケーターを開始
+		SK4OverlayIndicator.show("Please wait...", cancelLabel: "Cancel")
 
 		let sw = SK4StopWatch()
 
 		sk4AsyncGlobal() {
 
 			// 時間のかかる処理
-			for _ in 0..<100 {
+			for i in 0..<100 {
 				sk4Sleep(0.1)
 
 				// 画面の更新
 				sk4AsyncMain() {
 					self.statusLabel.text = "indicator: \(sw.totalSecond()) sec"
+					SK4OverlayIndicator.updateMessage("count \(i)")
 				}
 
 				// キャンセルに対応
@@ -45,7 +41,6 @@ class OverlayIndicatorViewController: UIViewController {
 
 			// 終了後の処理
 			sk4AsyncMain() {
-//				av.stopIndicator()
 				SK4OverlayIndicator.hide()
 				if SK4OverlayIndicator.canceled {
 					self.statusLabel.text = "Canceled"
