@@ -24,14 +24,16 @@ public class SK4OverlayIndicatorView {
 		iv.setup(message, cancelLabel: cancelLabel, cancelExec: cancelExec)
 		iv.startIndicator()
 		innerView = iv
-
-
-
 	}
 
 	/// Indicatorを隠す
 	class func hide() {
-
+		if let iv = innerView {
+			iv.stopIndicator()
+//			indicator.stopAnimating()
+//			removeFromSuperview()
+//			self.indicator = nil
+		}
 	}
 
 	/// true: キャンセルされた
@@ -51,7 +53,6 @@ public class SK4OverlayIndicatorView {
 
 class SK4OverlayIndicatorInnerView: UIView {
 
-//	var allView: UIView!
 	var baseView: UIView!
 	var indicatorView: UIActivityIndicatorView!
 	var messagelabel: UILabel?
@@ -61,17 +62,23 @@ class SK4OverlayIndicatorInnerView: UIView {
 	func startIndicator() {
 		if let parent = sk4GetWindow() {
 			frame = parent.bounds
-			autoresizingMask = [.FlexibleWidth, .FlexibleHeight]
 			parent.addSubview(self)
-
-//			indicator = makeIndicator()
-//			addSubview(indicator)
 
 			indicatorView.startAnimating()
 		} else {
 			assertionFailure("Get window error.")
 		}
 	}
+
+	/// インジケーターを停止
+	func stopIndicator() {
+		if let indicatorView = indicatorView {
+			indicatorView.stopAnimating()
+			removeFromSuperview()
+		}
+	}
+
+
 
 	var useMessage = false
 
@@ -80,6 +87,7 @@ class SK4OverlayIndicatorInnerView: UIView {
 		self.useMessage = (message != nil)
 
 		backgroundColor = UIColor(white: 0.0, alpha: 0.2)
+		autoresizingMask = [.FlexibleWidth, .FlexibleHeight]
 
 		makeBaseView()
 		makeIndicatorView()
@@ -105,25 +113,21 @@ class SK4OverlayIndicatorInnerView: UIView {
 		guard let title = title else { return }
 
 		let btn = UIButton(type: UIButtonType.System)
-		btn.setTitle(title, forState: UIControlState.Normal)
-		btn.setTitle(title, forState: UIControlState.Highlighted)
+		btn.setTitle(title, forState: .Normal)
+		btn.titleLabel?.font = UIFont(name: "AvenirNext-Bold", size: 16)
+		btn.setTitleColor(UIColor.whiteColor(), forState: UIControlState.Normal)
 
 		let si = Const.messageBaseSize
-//		let si = baseView.bounds.size
 		btn.frame = CGRect(x: 0, y: si.height + 8, width: si.width, height: 30)
-//		btn.frame = CGRect(x: 0, y: 0, width: si.width, height: 30)
-//		btn.backgroundColor = UIColor.redColor()
 		btn.addTarget(self, action: #selector(SK4OverlayIndicatorInnerView.onCancel), forControlEvents: .TouchUpInside)
 
 		baseView.addSubview(btn)
-//		baseView.clipsToBounds = false
-//		baseView.userInteractionEnabled = true
 		cancelButton = btn
 	}
 
 	func onCancel() {
-		print(#function)
-
+		SK4OverlayIndicatorView.canceled = true
+		SK4OverlayIndicatorView.cancelExec?()
 	}
 
 
