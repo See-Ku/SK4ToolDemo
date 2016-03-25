@@ -80,7 +80,7 @@ public class SK4OverlayIndicatorView: UIView {
 	}
 
 	/// 初期化＆開始
-	convenience public init(cancel: (()->Void)? = nil) {
+	convenience public init(cancel: (()->Void)?) {
 		self.init(frame: CGRect())
 
 		setup()
