@@ -11,6 +11,8 @@ import UIKit
 class MainMenuTableAdmin: SK4TableViewAdmin {
 
 	let itemArray = [
+		"PickerView",
+
 		"TableViewAdmin",
 		"AlertController",
 		"ActionSheet",
@@ -19,6 +21,7 @@ class MainMenuTableAdmin: SK4TableViewAdmin {
 		"OverlayIndicator",
 		"Notify",
 		"CollectionView",
+
 
 	]
 
