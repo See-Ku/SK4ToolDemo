@@ -8,8 +8,8 @@
 
 import UIKit
 
-/// UICollectionViewを簡単に使うための管理クラス
-public class SK4CollectionViewAdmin: NSObject, UICollectionViewDataSource, UICollectionViewDelegate {
+/// UICollectionViewを簡単に使うための管理クラス　※FlowLayoutを想定
+public class SK4CollectionViewAdmin: NSObject, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
 
 	// /////////////////////////////////////////////////////////////
 	// MARK: - プロパティ＆初期化
@@ -24,8 +24,8 @@ public class SK4CollectionViewAdmin: NSObject, UICollectionViewDataSource, UICol
 	public var cellId = "Cell"
 
 	/// レイアウトを取得
-	public var collectionLayout: UICollectionViewLayout! {
-		return collectionView?.collectionViewLayout
+	public var collectionLayout: UICollectionViewFlowLayout! {
+		return collectionView?.collectionViewLayout as? UICollectionViewFlowLayout
 	}
 
 	/// 初期化
@@ -72,6 +72,21 @@ public class SK4CollectionViewAdmin: NSObject, UICollectionViewDataSource, UICol
 	}
 
 	// /////////////////////////////////////////////////////////////
+
+	/// アイテムのサイズを返す
+	public func sizeForItem(indexPath: NSIndexPath) -> CGSize {
+		return collectionLayout.itemSize
+	}
+
+	public func minimumLineSpacing(section: Int) -> CGFloat {
+		return collectionLayout.minimumLineSpacing
+	}
+
+	public func minimumInteritemSpacing(section: Int) -> CGFloat {
+		return collectionLayout.minimumInteritemSpacing
+	}
+
+	// /////////////////////////////////////////////////////////////
 	// MARK: - UICollectionViewDataSource
 
 	public func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -91,6 +106,21 @@ public class SK4CollectionViewAdmin: NSObject, UICollectionViewDataSource, UICol
 		return didSelectItem(indexPath)
 	}
 	
+	// /////////////////////////////////////////////////////////////
+	// MARK: - UICollectionViewDelegateFlowLayout
+
+	public func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
+		return sizeForItem(indexPath)
+	}
+
+	public func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, section: Int) -> CGFloat {
+		return minimumLineSpacing(section)
+	}
+
+	public func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAtIndex section: Int) -> CGFloat {
+		return minimumInteritemSpacing(section)
+	}
+
 }
 
 // eof

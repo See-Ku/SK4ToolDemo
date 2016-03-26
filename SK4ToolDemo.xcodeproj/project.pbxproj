@@ -15,8 +15,9 @@
 		878402191CA39AC7001C3E0F /* SK4BorderButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 878402181CA39AC7001C3E0F /* SK4BorderButton.swift */; };
 		8784021B1CA39BDE001C3E0F /* BorderButtonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8784021A1CA39BDE001C3E0F /* BorderButtonViewController.swift */; };
 		8784021D1CA3A5DE001C3E0F /* ToolbarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8784021C1CA3A5DE001C3E0F /* ToolbarViewController.swift */; };
-		879E73F71CA6A7D400C64902 /* SK4CollectionViewAdminFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879E73F61CA6A7D400C64902 /* SK4CollectionViewAdminFlowLayout.swift */; };
 		879E73F91CA6A7F700C64902 /* SK4CollectionViewAdmin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879E73F81CA6A7F700C64902 /* SK4CollectionViewAdmin.swift */; };
+		879E73FB1CA6A9D600C64902 /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879E73FA1CA6A9D600C64902 /* CollectionViewController.swift */; };
+		879E73FD1CA6AA0F00C64902 /* CollectionViewAdmin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879E73FC1CA6AA0F00C64902 /* CollectionViewAdmin.swift */; };
 		87BB463F1CA2A86F00F0BC50 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87BB463E1CA2A86F00F0BC50 /* AppDelegate.swift */; };
 		87BB46441CA2A86F00F0BC50 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87BB46421CA2A86F00F0BC50 /* Main.storyboard */; };
 		87BB46461CA2A86F00F0BC50 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 87BB46451CA2A86F00F0BC50 /* Assets.xcassets */; };
@@ -64,8 +65,9 @@
 		878402181CA39AC7001C3E0F /* SK4BorderButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SK4BorderButton.swift; path = gui/SK4BorderButton.swift; sourceTree = "<group>"; };
 		8784021A1CA39BDE001C3E0F /* BorderButtonViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BorderButtonViewController.swift; sourceTree = "<group>"; };
 		8784021C1CA3A5DE001C3E0F /* ToolbarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToolbarViewController.swift; sourceTree = "<group>"; };
-		879E73F61CA6A7D400C64902 /* SK4CollectionViewAdminFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SK4CollectionViewAdminFlowLayout.swift; path = gui/SK4CollectionViewAdminFlowLayout.swift; sourceTree = "<group>"; };
 		879E73F81CA6A7F700C64902 /* SK4CollectionViewAdmin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SK4CollectionViewAdmin.swift; path = gui/SK4CollectionViewAdmin.swift; sourceTree = "<group>"; };
+		879E73FA1CA6A9D600C64902 /* CollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
+		879E73FC1CA6AA0F00C64902 /* CollectionViewAdmin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewAdmin.swift; sourceTree = "<group>"; };
 		87BB463B1CA2A86F00F0BC50 /* SK4ToolDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SK4ToolDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		87BB463E1CA2A86F00F0BC50 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		87BB46431CA2A86F00F0BC50 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -144,6 +146,8 @@
 				87BB467C1CA354E300F0BC50 /* sk4 */,
 				87BB463E1CA2A86F00F0BC50 /* AppDelegate.swift */,
 				87BB46701CA2AE9900F0BC50 /* MainMenuViewController.swift */,
+				879E73FA1CA6A9D600C64902 /* CollectionViewController.swift */,
+				879E73FC1CA6AA0F00C64902 /* CollectionViewAdmin.swift */,
 				87EE2A2B1CA6433800D0A222 /* Notify1ViewController.swift */,
 				87EE2A2D1CA6476000D0A222 /* Notify2ViewController.swift */,
 				87EE2A2F1CA6476D00D0A222 /* Notify3ViewController.swift */,
@@ -193,7 +197,6 @@
 				87BB46741CA2BEAE00F0BC50 /* SK4ToolKit.swift */,
 				87BB466C1CA2A8E300F0BC50 /* SK4TableViewAdmin.swift */,
 				879E73F81CA6A7F700C64902 /* SK4CollectionViewAdmin.swift */,
-				879E73F61CA6A7D400C64902 /* SK4CollectionViewAdminFlowLayout.swift */,
 				871F9E881CA3BA6D005295FC /* SK4Dispatch.swift */,
 			);
 			name = sk4;
@@ -332,7 +335,6 @@
 			files = (
 				871F9E891CA3BA6D005295FC /* SK4Dispatch.swift in Sources */,
 				879E73F91CA6A7F700C64902 /* SK4CollectionViewAdmin.swift in Sources */,
-				879E73F71CA6A7D400C64902 /* SK4CollectionViewAdminFlowLayout.swift in Sources */,
 				87EE2A301CA6476D00D0A222 /* Notify3ViewController.swift in Sources */,
 				8784021D1CA3A5DE001C3E0F /* ToolbarViewController.swift in Sources */,
 				878402191CA39AC7001C3E0F /* SK4BorderButton.swift in Sources */,
@@ -349,8 +351,10 @@
 				871F9E8B1CA3BCF7005295FC /* SK4StopWatch.swift in Sources */,
 				87EE2A2E1CA6476000D0A222 /* Notify2ViewController.swift in Sources */,
 				87BB46731CA2AFC600F0BC50 /* TableViewAdmin.swift in Sources */,
+				879E73FB1CA6A9D600C64902 /* CollectionViewController.swift in Sources */,
 				87BB467E1CA35E7300F0BC50 /* SK4ActionSheet.swift in Sources */,
 				87EE2A2A1CA63DBE00D0A222 /* SK4Notify.swift in Sources */,
+				879E73FD1CA6AA0F00C64902 /* CollectionViewAdmin.swift in Sources */,
 				871F9E871CA3B91D005295FC /* OverlayIndicatorViewController.swift in Sources */,
 				87BB466F1CA2AE7C00F0BC50 /* TableViewController.swift in Sources */,
 				878402171CA36269001C3E0F /* ActionSheetViewController.swift in Sources */,
