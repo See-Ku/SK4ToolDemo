@@ -64,6 +64,29 @@ public func sk4GetWindow() -> UIWindow? {
 	return nil
 }
 
+/*
+// /////////////////////////////////////////////////////////////
+// MARK: - Array
+
+/// 添字は範囲内か？
+public func sk4IsInside<T>(array: Array<T>, index: Int) -> Bool {
+	if 0 <= index && index < array.count {
+		return true
+	} else {
+		return false
+	}
+}
+
+/// 範囲内の場合だけ取得
+public func sk4SafeGet<T>(array: Array<T>, index: Int) -> T? {
+	if 0 <= index && index < array.count {
+		return array[index]
+	} else {
+		return nil
+	}
+}
+*/
+
 
 
 // eof
