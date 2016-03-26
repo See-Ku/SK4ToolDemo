@@ -16,7 +16,8 @@ class MainMenuTableAdmin: SK4TableViewAdmin {
 		"ActionSheet",
 		"BorderButton",
 		"Toolbar",
-		"OverlayIndicator"
+		"OverlayIndicator",
+		"Notify",
 	]
 
 	override func numberOfRows(section: Int) -> Int {
