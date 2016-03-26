@@ -15,10 +15,16 @@ import Foundation
 public protocol SK4Notify {
 
 	/// 通知を受信したときの処理を登録　※メインキューで受信
+	func recieveNotify(observer: AnyObject, block: (()->Void))
+
+	/// 通知を受信したときの処理を登録　※メインキューで受信
 	func recieveNotify<T>(observer: AnyObject, block: (T->Void))
 
 	/// 通知を受信したときの処理を登録　※グローバルキューで受信
 	func recieveNotifyGlobal<T>(observer: AnyObject, block: (T->Void))
+
+	/// 通知を送信
+	func postNotify()
 
 	/// 通知を送信
 	func postNotify<T>(param: T)
@@ -36,6 +42,12 @@ public protocol SK4Notify {
 
 /// 通知関係の実装
 extension SK4Notify where Self: Equatable {
+
+	func recieveNotify(observer: AnyObject, block: (()->Void)) {
+		let info = SK4NotifyHub.Info(notify: self, observer: observer, block: block, mainQueue: true)
+		SK4NotifyHub.addInfo(info)
+	}
+
 	func recieveNotify<T>(observer: AnyObject, block: (T->Void)) {
 		let info = SK4NotifyHub.Info(notify: self, observer: observer, block: block, mainQueue: true)
 		SK4NotifyHub.addInfo(info)
@@ -44,6 +56,10 @@ extension SK4Notify where Self: Equatable {
 	func recieveNotifyGlobal<T>(observer: AnyObject, block: (T->Void)) {
 		let info = SK4NotifyHub.Info(notify: self, observer: observer, block: block, mainQueue: false)
 		SK4NotifyHub.addInfo(info)
+	}
+
+	func postNotify() {
+		SK4NotifyHub.postNotify(self, param: ())
 	}
 
 	func postNotify<T>(param: T) {
