@@ -6,11 +6,10 @@
 //  Copyright (c) 2016 AxeRoad. All rights reserved.
 //
 
-//import UIKit
 import Foundation
 
 // /////////////////////////////////////////////////////////////
-// MARK: - 非同期処理
+// MARK: - 同期／非同期関係の処理
 
 /// グローバルキューで非同期処理
 public func sk4AsyncGlobal(exec: (()->Void)) {
@@ -32,14 +31,35 @@ public func sk4AsyncMain(after: NSTimeInterval, exec: (()->Void)) {
 	dispatch_after(time, main, exec)
 }
 
-/// 現在のスレッドはメインスレッドか？
-public func sk4IsMainQueue() -> Bool {
-	return NSThread.isMainThread()
+/// 同期処理を実行
+public func sk4Synchronized(obj: AnyObject, @noescape block: (()->Void)) {
+	objc_sync_enter(obj)
+	block()
+	objc_sync_exit(obj)
 }
 
 /// 指定された時間、待機する
 public func sk4Sleep(time: NSTimeInterval) {
 	NSThread.sleepForTimeInterval(time)
 }
+
+/// 現在のキューはメインキューか？
+public func sk4IsMainQueue() -> Bool {
+	return NSThread.isMainThread()
+}
+
+/*
+/// GCDだけで判定する方法
+func sk4IsMainQueue() -> Bool {
+	let main = dispatch_get_main_queue()
+	let main_label = dispatch_queue_get_label(main)
+	let current_label = dispatch_queue_get_label(DISPATCH_CURRENT_QUEUE_LABEL)
+	if main_label == current_label {
+		return true
+	} else {
+		return false
+	}
+}
+*/
 
 // eof
