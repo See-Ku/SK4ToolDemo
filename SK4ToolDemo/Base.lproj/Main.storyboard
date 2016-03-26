@@ -59,10 +59,10 @@
             </objects>
             <point key="canvasLocation" x="713" y="-336"/>
         </scene>
-        <!--Normal-->
+        <!--Size-->
         <scene sceneID="EWu-R0-wtK">
             <objects>
-                <viewController id="fYD-u7-i7n" sceneMemberID="viewController">
+                <viewController id="fYD-u7-i7n" customClass="PickerSizeViewController" customModule="SK4ToolDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="r8I-QE-55o"/>
                         <viewControllerLayoutGuide type="bottom" id="aII-p0-rvd"/>
@@ -70,13 +70,41 @@
                     <view key="view" contentMode="scaleToFill" id="AT2-Hh-WVo">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="width x height" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F7H-xl-sqc">
+                                <rect key="frame" x="20" y="72" width="560" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="Pfn-bH-AHa"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3ee-Yt-JOb">
+                                <rect key="frame" x="0.0" y="101" width="600" height="216"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="216" id="3BZ-6m-hWN"/>
+                                </constraints>
+                            </pickerView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="0.9745729179" blue="0.69497675270000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="3ee-Yt-JOb" firstAttribute="top" secondItem="F7H-xl-sqc" secondAttribute="bottom" constant="8" id="IJB-Pv-kzR"/>
+                            <constraint firstAttribute="trailing" secondItem="3ee-Yt-JOb" secondAttribute="trailing" id="Ynr-Fe-TqU"/>
+                            <constraint firstItem="F7H-xl-sqc" firstAttribute="trailing" secondItem="AT2-Hh-WVo" secondAttribute="trailingMargin" id="gEi-us-rED"/>
+                            <constraint firstItem="F7H-xl-sqc" firstAttribute="top" secondItem="r8I-QE-55o" secondAttribute="bottom" constant="8" id="jks-1R-IOM"/>
+                            <constraint firstItem="F7H-xl-sqc" firstAttribute="leading" secondItem="AT2-Hh-WVo" secondAttribute="leadingMargin" id="rxA-Za-ylS"/>
+                            <constraint firstItem="3ee-Yt-JOb" firstAttribute="leading" secondItem="AT2-Hh-WVo" secondAttribute="leading" id="v9C-gp-SHu"/>
+                        </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Normal" id="U7P-kJ-sDi"/>
+                    <tabBarItem key="tabBarItem" title="Size" id="U7P-kJ-sDi"/>
+                    <connections>
+                        <outlet property="pickerView" destination="3ee-Yt-JOb" id="DYd-NK-M9j"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MoO-SQ-vi7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2384" y="343"/>
+            <point key="canvasLocation" x="2328" y="119"/>
         </scene>
         <!--Infinite-->
         <scene sceneID="KQh-Zc-KwM">
@@ -95,7 +123,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dCd-Yh-u0S" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3025" y="568"/>
+            <point key="canvasLocation" x="3021" y="148"/>
         </scene>
         <!--Generator-->
         <scene sceneID="Jx3-12-bwU">
@@ -114,7 +142,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RU8-C9-DDq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3723" y="651"/>
+            <point key="canvasLocation" x="3683" y="199"/>
         </scene>
         <!--CollectionView-->
         <scene sceneID="vql-5L-y0w">
@@ -898,7 +926,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jbe-M0-fvH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1447" y="-199"/>
+            <point key="canvasLocation" x="1639" y="57"/>
         </scene>
     </scenes>
 </document>
