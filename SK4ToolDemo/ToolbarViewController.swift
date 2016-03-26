@@ -10,6 +10,8 @@ import UIKit
 
 class ToolbarViewController: UIViewController {
 
+	let check = SK4LeakCheck(name: "ToolbarViewController")
+
 	var starFlag = false
 
 	func updateToolbar() {

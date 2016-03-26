@@ -32,6 +32,8 @@
 		87BB467E1CA35E7300F0BC50 /* SK4ActionSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87BB467D1CA35E7300F0BC50 /* SK4ActionSheet.swift */; };
 		87EE2A2A1CA63DBE00D0A222 /* SK4Notify.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EE2A291CA63DBE00D0A222 /* SK4Notify.swift */; };
 		87EE2A2C1CA6433800D0A222 /* Notify1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EE2A2B1CA6433800D0A222 /* Notify1ViewController.swift */; };
+		87EE2A2E1CA6476000D0A222 /* Notify2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EE2A2D1CA6476000D0A222 /* Notify2ViewController.swift */; };
+		87EE2A301CA6476D00D0A222 /* Notify3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EE2A2F1CA6476D00D0A222 /* Notify3ViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +85,8 @@
 		87BB467D1CA35E7300F0BC50 /* SK4ActionSheet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SK4ActionSheet.swift; path = gui/SK4ActionSheet.swift; sourceTree = "<group>"; };
 		87EE2A291CA63DBE00D0A222 /* SK4Notify.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SK4Notify.swift; path = core/SK4Notify.swift; sourceTree = "<group>"; };
 		87EE2A2B1CA6433800D0A222 /* Notify1ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Notify1ViewController.swift; sourceTree = "<group>"; };
+		87EE2A2D1CA6476000D0A222 /* Notify2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Notify2ViewController.swift; sourceTree = "<group>"; };
+		87EE2A2F1CA6476D00D0A222 /* Notify3ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Notify3ViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +141,8 @@
 				87BB463E1CA2A86F00F0BC50 /* AppDelegate.swift */,
 				87BB46701CA2AE9900F0BC50 /* MainMenuViewController.swift */,
 				87EE2A2B1CA6433800D0A222 /* Notify1ViewController.swift */,
+				87EE2A2D1CA6476000D0A222 /* Notify2ViewController.swift */,
+				87EE2A2F1CA6476D00D0A222 /* Notify3ViewController.swift */,
 				8784021C1CA3A5DE001C3E0F /* ToolbarViewController.swift */,
 				8784021A1CA39BDE001C3E0F /* BorderButtonViewController.swift */,
 				87BB466E1CA2AE7C00F0BC50 /* TableViewController.swift */,
@@ -319,6 +325,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				871F9E891CA3BA6D005295FC /* SK4Dispatch.swift in Sources */,
+				87EE2A301CA6476D00D0A222 /* Notify3ViewController.swift in Sources */,
 				8784021D1CA3A5DE001C3E0F /* ToolbarViewController.swift in Sources */,
 				878402191CA39AC7001C3E0F /* SK4BorderButton.swift in Sources */,
 				87EE2A2C1CA6433800D0A222 /* Notify1ViewController.swift in Sources */,
@@ -332,6 +339,7 @@
 				87BB463F1CA2A86F00F0BC50 /* AppDelegate.swift in Sources */,
 				87BB46771CA2CCB900F0BC50 /* SK4AlertController.swift in Sources */,
 				871F9E8B1CA3BCF7005295FC /* SK4StopWatch.swift in Sources */,
+				87EE2A2E1CA6476000D0A222 /* Notify2ViewController.swift in Sources */,
 				87BB46731CA2AFC600F0BC50 /* TableViewAdmin.swift in Sources */,
 				87BB467E1CA35E7300F0BC50 /* SK4ActionSheet.swift in Sources */,
 				87EE2A2A1CA63DBE00D0A222 /* SK4Notify.swift in Sources */,

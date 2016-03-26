@@ -1,5 +1,5 @@
 //
-//  Notify1ViewController.swift
+//  Notify2ViewController.swift
 //  SK4ToolDemo
 //
 //  Created by See.Ku on 2016/03/26.
@@ -8,49 +8,22 @@
 
 import UIKit
 
-/// 通知を識別するenum
-enum Notify: SK4Notify {
-	case Blue
-	case Black
-	case Red
-	case Green
-}
+class Notify2ViewController: UIViewController {
 
-class Notify1ViewController: UIViewController {
-
-	let check = SK4LeakCheck(name: "Notify1ViewController")
+	let check = SK4LeakCheck(name: "Notify2ViewController")
 
 	@IBOutlet weak var statusLabel: UILabel!
-	@IBOutlet weak var textField: UITextField!
-
-	@IBAction func onBlue(sender: AnyObject) {
-		Notify.Blue.postNotify()
-	}
-
-	@IBAction func onBlack(sender: AnyObject) {
-		Notify.Black.postNotify()
-	}
-
-	@IBAction func onRed(sender: AnyObject) {
-		Notify.Red.postNotify()
-	}
-
-	@IBAction func onGreen(sender: AnyObject) {
-		if let text = textField.text {
-			Notify.Green.postNotify(text)
-		}
-	}
 
 	override func viewWillAppear(animated: Bool) {
 		super.viewWillAppear(animated)
 
-		tabBarController?.navigationItem.title = "Notify1"
+		tabBarController?.navigationItem.title = "Notify2"
 	}
 
 	override func viewWillDisappear(animated: Bool) {
 		super.viewWillDisappear(animated)
 	}
-
+	
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -69,9 +42,7 @@ class Notify1ViewController: UIViewController {
 		Notify.Green.recieveNotify(self) { [weak self] (str: String) in
 			self?.statusLabel.text = "Green: \(str)"
 		}
-
-		textField.text = "temp"
-	}
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
