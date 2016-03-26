@@ -115,17 +115,17 @@ public class SK4PickerViewAdmin: NSObject, UIPickerViewDelegate, UIPickerViewDat
 	}
 
 	/// Pickerで使用する各列の情報
-	public var units = [SK4PickerViewUnit]()
+	public var unitArray = [SK4PickerViewUnit]()
 
 	/// インデックスでまとめて設定／取得
 	public var selectIndex: [Int] {
 		get {
 			pickerToSelect()
-			return units.map() { unit in unit.selectIndex }
+			return unitArray.map() { unit in unit.selectIndex }
 		}
 
 		set {
-			for (i, unit) in units.enumerate() {
+			for (i, unit) in unitArray.enumerate() {
 				let index = (i < newValue.count) ? newValue[i] : -1
 				unit.selectIndex = index
 			}
@@ -137,11 +137,11 @@ public class SK4PickerViewAdmin: NSObject, UIPickerViewDelegate, UIPickerViewDat
 	public var selectString: [String] {
 		get {
 			pickerToSelect()
-			return units.map() { unit in unit.selectString ?? "" }
+			return unitArray.map() { unit in unit.selectString ?? "" }
 		}
 
 		set {
-			for (i, unit) in units.enumerate() {
+			for (i, unit) in unitArray.enumerate() {
 				let str: String? = (i < newValue.count) ? newValue[i] : nil
 				unit.selectString = str
 			}
@@ -174,14 +174,31 @@ public class SK4PickerViewAdmin: NSObject, UIPickerViewDelegate, UIPickerViewDat
 	// MARK: - その他
 
 	/// 列の情報を追加
-	public func addUnit(items: [String], width: CGFloat = 0, select: Int = 0, infinite: Bool = false) {
+	public func addUnit(items: [String], width: CGFloat = 0, select: Int = 0, infinite: Bool = false) -> SK4PickerViewUnit {
 		let unit = SK4PickerViewUnit(width: width, select: select, items: items, infinite: infinite)
-		units.append(unit)
+		unitArray.append(unit)
+		return unit
+	}
+
+	/// 列の情報を追加　※アイテムが１つだけの列
+	public func addUnit(item: String, width: CGFloat) -> SK4PickerViewUnit {
+		let unit = SK4PickerViewUnit(width: width, select: 0, items: [item], infinite: false)
+		unitArray.append(unit)
+		return unit
+	}
+
+	/// 列の情報を追加　※ジェネレーターに対応
+	public func addUnit(itemCount: Int, width: CGFloat = 0, select: Int = 0, infinite: Bool = false, gen: (Int->String)) -> SK4PickerViewUnit {
+		let unit = SK4PickerViewUnit(width: width, select: select, items: [], infinite: infinite)
+		unit.itemGenerator = gen
+		unit.generatorMax = itemCount
+		unitArray.append(unit)
+		return unit
 	}
 
 	/// 選択項目をPickerに反映
 	public func selectToPicker() {
-		for (i, unit) in units.enumerate() {
+		for (i, unit) in unitArray.enumerate() {
 			var sel = unit.selectIndex
 			if unit.infinite {
 				let max = unit.itemCount()
@@ -194,24 +211,38 @@ public class SK4PickerViewAdmin: NSObject, UIPickerViewDelegate, UIPickerViewDat
 
 	/// Pickerの選択項目を取得
 	public func pickerToSelect() {
-		for (i, unit) in units.enumerate() {
+		for (i, unit) in unitArray.enumerate() {
 			unit.selectIndex = pickerView.selectedRowInComponent(i) % unit.itemCount()
 		}
+	}
+
+	// /////////////////////////////////////////////////////////////
+	// MARK: - for override
+
+	/// ViewControllerが表示になる
+	public func viewWillAppear() {
+	}
+
+	/// ViewControllerが非表示になる
+	public func viewWillDisappear() {
+	}
+
+	/// アイテムが選択された
+	public func didSelectRow(row: Int) {
 	}
 
 	// /////////////////////////////////////////////////////////////
 	// MARK: - for UIPickerViewDataSource
 
 	public func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
-		return units.count
+		return unitArray.count
 	}
 
 	public func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-		let unit = units[component]
+		let unit = unitArray[component]
 		if unit.infinite {
 			return Const.infiniteOfRows
 		} else {
-//			return unit.itemArray.count
 			return unit.itemCount()
 		}
 	}
@@ -220,14 +251,14 @@ public class SK4PickerViewAdmin: NSObject, UIPickerViewDelegate, UIPickerViewDat
 	// MARK: - for UIPickerViewDelegate
 
 	public func pickerView(pickerView: UIPickerView, widthForComponent component: Int) -> CGFloat {
-		var wi = units[component].width
+		var wi = unitArray[component].width
 		if wi == 0.0 {
 
 			// 幅が指定されてない時は、残りのスペースを等分して使用
-			for unit in units {
+			for unit in unitArray {
 				wi += unit.width
 			}
-			return (pickerView.bounds.width - wi) / CGFloat(units.count)
+			return (pickerView.bounds.width - wi) / CGFloat(unitArray.count)
 
 		} else {
 
@@ -237,7 +268,7 @@ public class SK4PickerViewAdmin: NSObject, UIPickerViewDelegate, UIPickerViewDat
 	}
 
 	public func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-		let unit = units[component]
+		let unit = unitArray[component]
 		let max = unit.itemCount()
 		return unit.indexToItem(row % max)
 	}
@@ -245,6 +276,8 @@ public class SK4PickerViewAdmin: NSObject, UIPickerViewDelegate, UIPickerViewDat
 	public func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
 		pickerToSelect()
 		selectToPicker()
+
+		didSelectRow(row)
 	}
 	
 }

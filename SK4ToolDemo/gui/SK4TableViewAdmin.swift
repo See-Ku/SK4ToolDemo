@@ -47,7 +47,7 @@ public class SK4TableViewAdmin: NSObject, UITableViewDelegate, UITableViewDataSo
 	}
 
 	// /////////////////////////////////////////////////////////////
-	// MARK: - etc
+	// MARK: - その他
 
 	/// 不要なセパレーターを消す
 	public func clearSeparator() {

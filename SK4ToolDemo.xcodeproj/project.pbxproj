@@ -202,8 +202,8 @@
 				87BB467D1CA35E7300F0BC50 /* SK4ActionSheet.swift */,
 				87BB466C1CA2A8E300F0BC50 /* SK4TableViewAdmin.swift */,
 				879E73F81CA6A7F700C64902 /* SK4CollectionViewAdmin.swift */,
-				871F9E881CA3BA6D005295FC /* SK4Dispatch.swift */,
 				87E236DC1CA72B9200B98DF7 /* SK4PickerViewAdmin.swift */,
+				871F9E881CA3BA6D005295FC /* SK4Dispatch.swift */,
 			);
 			name = sk4;
 			sourceTree = "<group>";
