@@ -15,6 +15,16 @@ class CollectionViewAdmin: SK4CollectionViewAdmin {
 	}
 
 	override func cellForItem(cell: UICollectionViewCell, indexPath: NSIndexPath) {
+		if let cell = cell as? CollectionViewCell {
+			cell.setup(indexPath)
+		}
+	}
+
+	override func sizeForItem(indexPath: NSIndexPath) -> CGSize {
+		var si = collectionLayout.itemSize
+		si.width += CGFloat(indexPath.row) * 2
+		si.height += CGFloat(indexPath.row) * 2
+		return si
 	}
 
 }

@@ -10,6 +10,8 @@ import UIKit
 
 class CollectionViewController: UIViewController {
 
+	let check = SK4LeakCheck(name: "CollectionViewController")
+
 	@IBOutlet weak var collectionView: UICollectionView!
 
 	var collectionViewAdmin: CollectionViewAdmin!

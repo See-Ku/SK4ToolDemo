@@ -80,7 +80,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="S4F-W2-4Ls">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="S4F-W2-4Ls" customClass="CollectionViewCell" customModule="SK4ToolDemo" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="64" width="80" height="80"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -89,7 +89,7 @@
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s5J-v6-Prw">
                                                     <rect key="frame" x="8" y="8" width="64" height="64"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="60"/>
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="60"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -103,6 +103,9 @@
                                             <constraint firstItem="s5J-v6-Prw" firstAttribute="top" secondItem="S4F-W2-4Ls" secondAttribute="top" constant="8" id="c7p-yn-7Zl"/>
                                             <constraint firstAttribute="trailing" secondItem="s5J-v6-Prw" secondAttribute="trailing" constant="8" id="kGb-Ft-vJE"/>
                                         </constraints>
+                                        <connections>
+                                            <outlet property="charLabel" destination="s5J-v6-Prw" id="RSY-Rv-ljG"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
