@@ -11,7 +11,7 @@ import UIKit
 class MainMenuTableAdmin: SK4TableViewAdmin {
 
 	let itemArray = [
-		"LazyTimer",
+		"TextAttributes",
 
 
 		"TableViewAdmin",
@@ -24,6 +24,7 @@ class MainMenuTableAdmin: SK4TableViewAdmin {
 		"CollectionView",
 		"PickerView",
 		"ImageCache",
+		"LazyTimer",
 
 
 	]

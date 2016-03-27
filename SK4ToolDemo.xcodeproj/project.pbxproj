@@ -20,6 +20,8 @@
 		879E73FD1CA6AA0F00C64902 /* CollectionViewAdmin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879E73FC1CA6AA0F00C64902 /* CollectionViewAdmin.swift */; };
 		87B634EE1CA7B27A004501B2 /* SK4TextAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87B634ED1CA7B27A004501B2 /* SK4TextAttributes.swift */; };
 		87B634F01CA7F2B5004501B2 /* LazyTimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87B634EF1CA7F2B4004501B2 /* LazyTimerViewController.swift */; };
+		87B634F21CA7F579004501B2 /* TextAttributesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87B634F11CA7F579004501B2 /* TextAttributesViewController.swift */; };
+		87B634F41CA7F99E004501B2 /* SK4NSAttributedStringExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87B634F31CA7F99E004501B2 /* SK4NSAttributedStringExtention.swift */; };
 		87BB463F1CA2A86F00F0BC50 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87BB463E1CA2A86F00F0BC50 /* AppDelegate.swift */; };
 		87BB46441CA2A86F00F0BC50 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87BB46421CA2A86F00F0BC50 /* Main.storyboard */; };
 		87BB46461CA2A86F00F0BC50 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 87BB46451CA2A86F00F0BC50 /* Assets.xcassets */; };
@@ -82,6 +84,8 @@
 		879E73FC1CA6AA0F00C64902 /* CollectionViewAdmin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewAdmin.swift; sourceTree = "<group>"; };
 		87B634ED1CA7B27A004501B2 /* SK4TextAttributes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SK4TextAttributes.swift; path = gui/SK4TextAttributes.swift; sourceTree = "<group>"; };
 		87B634EF1CA7F2B4004501B2 /* LazyTimerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LazyTimerViewController.swift; sourceTree = "<group>"; };
+		87B634F11CA7F579004501B2 /* TextAttributesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextAttributesViewController.swift; sourceTree = "<group>"; };
+		87B634F31CA7F99E004501B2 /* SK4NSAttributedStringExtention.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SK4NSAttributedStringExtention.swift; path = extention/SK4NSAttributedStringExtention.swift; sourceTree = "<group>"; };
 		87BB463B1CA2A86F00F0BC50 /* SK4ToolDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SK4ToolDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		87BB463E1CA2A86F00F0BC50 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		87BB46431CA2A86F00F0BC50 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -170,7 +174,9 @@
 				87BB467C1CA354E300F0BC50 /* sk4 */,
 				87BB463E1CA2A86F00F0BC50 /* AppDelegate.swift */,
 				87BB46701CA2AE9900F0BC50 /* MainMenuViewController.swift */,
+				87B634F11CA7F579004501B2 /* TextAttributesViewController.swift */,
 				87E236E81CA78AAA00B98DF7 /* ImageCacheViewController.swift */,
+				87B634F31CA7F99E004501B2 /* SK4NSAttributedStringExtention.swift */,
 				87B634EF1CA7F2B4004501B2 /* LazyTimerViewController.swift */,
 				87E236DE1CA7553F00B98DF7 /* PickerSizeViewController.swift */,
 				87E236E01CA75AA600B98DF7 /* PickerTimeViewController.swift */,
@@ -374,6 +380,7 @@
 				871F9E891CA3BA6D005295FC /* SK4Dispatch.swift in Sources */,
 				879E73F91CA6A7F700C64902 /* SK4CollectionViewAdmin.swift in Sources */,
 				87EE2A301CA6476D00D0A222 /* Notify3ViewController.swift in Sources */,
+				87B634F41CA7F99E004501B2 /* SK4NSAttributedStringExtention.swift in Sources */,
 				8784021D1CA3A5DE001C3E0F /* ToolbarViewController.swift in Sources */,
 				878402191CA39AC7001C3E0F /* SK4BorderButton.swift in Sources */,
 				87EE2A2C1CA6433800D0A222 /* Notify1ViewController.swift in Sources */,
@@ -405,6 +412,7 @@
 				87E236EB1CA78D7100B98DF7 /* SK4LazyTimer.swift in Sources */,
 				87E236DF1CA7553F00B98DF7 /* PickerSizeViewController.swift in Sources */,
 				87BB466F1CA2AE7C00F0BC50 /* TableViewController.swift in Sources */,
+				87B634F21CA7F579004501B2 /* TextAttributesViewController.swift in Sources */,
 				878402171CA36269001C3E0F /* ActionSheetViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

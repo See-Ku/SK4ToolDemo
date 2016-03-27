@@ -55,11 +55,51 @@
                         <segue destination="GeL-zm-e9D" kind="show" identifier="PickerView" id="NX0-ni-2CO"/>
                         <segue destination="5Yc-7Q-S1F" kind="show" identifier="ImageCache" id="Mvq-aF-afZ"/>
                         <segue destination="uzA-4O-30N" kind="show" identifier="LazyTimer" id="iEX-FD-cmT"/>
+                        <segue destination="BIz-BJ-65R" kind="show" identifier="TextAttributes" id="kkl-6Z-8nF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="713" y="-336"/>
+        </scene>
+        <!--TextAttributes-->
+        <scene sceneID="bb8-Vt-ZpP">
+            <objects>
+                <viewController id="BIz-BJ-65R" customClass="TextAttributesViewController" customModule="SK4ToolDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="LZx-43-C49"/>
+                        <viewControllerLayoutGuide type="bottom" id="o4Z-De-tJL"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="AOg-G2-D7S">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WAd-nW-BUV">
+                                <rect key="frame" x="20" y="72" width="560" height="300"/>
+                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="25y-hG-ndJ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="WAd-nW-BUV" firstAttribute="trailing" secondItem="AOg-G2-D7S" secondAttribute="trailingMargin" id="Uwz-go-KM2"/>
+                            <constraint firstItem="WAd-nW-BUV" firstAttribute="top" secondItem="LZx-43-C49" secondAttribute="bottom" constant="8" id="atk-ev-xdk"/>
+                            <constraint firstItem="WAd-nW-BUV" firstAttribute="leading" secondItem="AOg-G2-D7S" secondAttribute="leadingMargin" id="bUi-Sj-fnW"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="TextAttributes" id="LKW-Nn-OR9"/>
+                    <connections>
+                        <outlet property="atrLabel" destination="WAd-nW-BUV" id="YE5-CO-Hbb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EiJ-Qm-uWZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1452" y="-58"/>
         </scene>
         <!--LazyTimer-->
         <scene sceneID="Rva-hl-t3r">
@@ -110,7 +150,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9dv-az-8vC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1481" y="60"/>
+            <point key="canvasLocation" x="3041" y="96"/>
         </scene>
         <!--ImageCache-->
         <scene sceneID="L2Y-W7-eYi">
