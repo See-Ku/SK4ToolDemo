@@ -47,7 +47,7 @@ public func sk4AlertView(title title: String?, message: String?, vc: UIViewContr
 }
 
 
-////////////////////////////////////////////////////////////////
+// /////////////////////////////////////////////////////////////
 // MARK: - GUI関係
 
 /// UIWindowを取得　※UIWindowにaddSubview()した場合、removeFromSuperview()が必要になる
@@ -63,6 +63,78 @@ public func sk4GetWindow() -> UIWindow? {
 
 	return nil
 }
+
+
+// /////////////////////////////////////////////////////////////
+// MARK: - システムディレクトリ取得
+
+/// ドキュメントディレクトリへのパスを取得
+public func sk4GetDocumentDirectory() -> String {
+	return sk4GetSearchPathDirectory(.DocumentDirectory)
+}
+
+/// ライブラリディレクトリへのパスを取得
+public func sk4GetLibraryDirectory() -> String {
+	return sk4GetSearchPathDirectory(.LibraryDirectory)
+}
+
+/// キャッシュディレクトリへのパスを取得
+public func sk4GetCachesDirectory() -> String {
+	return sk4GetSearchPathDirectory(.CachesDirectory)
+}
+
+/// テンポラリディレクトリへのパスを取得
+public func sk4GetTemporaryDirectory() -> String {
+	return NSTemporaryDirectory()
+}
+
+/// システムで用意されたディレクトリへのパスを取得
+public func sk4GetSearchPathDirectory(dir: NSSearchPathDirectory) -> String {
+	let paths = NSSearchPathForDirectoriesInDomains(dir, .UserDomainMask, true)
+	return paths[0] + "/"
+}
+
+
+// /////////////////////////////////////////////////////////////
+// MARK: - ファイル操作
+
+/// ファイルを削除
+public func sk4DeleteFile(path: String) -> Bool {
+	do {
+		let man = NSFileManager.defaultManager()
+		try man.removeItemAtPath(path)
+		return true
+	} catch let error {
+		sk4DebugLog("removeItemAtPath error \(path): \(error)")
+		return false
+	}
+}
+
+
+/// ファイルの一覧を作成
+public func sk4FileListAtPath(path: String, ext: String? = nil) -> [String] {
+	do {
+		let man = NSFileManager.defaultManager()
+		let ar = try man.contentsOfDirectoryAtPath(path)
+
+		// 拡張子が指定されている場合、マッチするものだけを選択
+		if let ext = ext {
+			let ext_ok = ext.sk4Trim(".")
+			return ar.filter() { fn in
+				return fn.nsString.pathExtension == ext_ok
+			}
+		} else {
+			return ar
+		}
+	} catch let error {
+		sk4DebugLog("contentsOfDirectoryAtPath error \(path): \(error)")
+		return []
+	}
+}
+
+
+
+
 
 /*
 // /////////////////////////////////////////////////////////////
@@ -86,6 +158,20 @@ public func sk4SafeGet<T>(array: Array<T>, index: Int) -> T? {
 	}
 }
 */
+
+
+// /////////////////////////////////////////////////////////////
+// MARK: - その他
+
+/// DEBUGが設定されている時のみ、メッセージを出力。
+/// ※Xcodeの設定が必要： Other Swift Flags -> [-D DEBUG]
+public func sk4DebugLog(@autoclosure message:  () -> String, function: String = #function) {
+	#if DEBUG
+		print("\(message()) - \(function)")
+	#endif
+}
+
+
 
 
 
