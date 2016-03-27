@@ -54,11 +54,63 @@
                         <segue destination="aHe-v9-C5E" kind="show" identifier="CollectionView" id="vtH-W0-A6R"/>
                         <segue destination="GeL-zm-e9D" kind="show" identifier="PickerView" id="NX0-ni-2CO"/>
                         <segue destination="5Yc-7Q-S1F" kind="show" identifier="ImageCache" id="Mvq-aF-afZ"/>
+                        <segue destination="uzA-4O-30N" kind="show" identifier="LazyTimer" id="iEX-FD-cmT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="713" y="-336"/>
+        </scene>
+        <!--LazyTimer-->
+        <scene sceneID="Rva-hl-t3r">
+            <objects>
+                <viewController id="uzA-4O-30N" customClass="LazyTimerViewController" customModule="SK4ToolDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="DHn-pG-Hlv"/>
+                        <viewControllerLayoutGuide type="bottom" id="Z3T-Tp-0h1"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="2Pc-fp-xP1">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="---" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QDd-kK-ZQM">
+                                <rect key="frame" x="20" y="100" width="560" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="NNz-wx-rJ7"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TBW-GP-fbX">
+                                <rect key="frame" x="277" y="141" width="46" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="wJo-f9-hBp"/>
+                                    <constraint firstAttribute="width" constant="46" id="zlA-7Q-szH"/>
+                                </constraints>
+                                <state key="normal" title="Fire"/>
+                                <connections>
+                                    <action selector="onFire:" destination="uzA-4O-30N" eventType="touchUpInside" id="EMq-M7-ugO"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="QDd-kK-ZQM" firstAttribute="top" secondItem="DHn-pG-Hlv" secondAttribute="bottom" constant="36" id="192-u6-AVi"/>
+                            <constraint firstItem="QDd-kK-ZQM" firstAttribute="trailing" secondItem="2Pc-fp-xP1" secondAttribute="trailingMargin" id="69u-4x-cXB"/>
+                            <constraint firstItem="QDd-kK-ZQM" firstAttribute="leading" secondItem="2Pc-fp-xP1" secondAttribute="leadingMargin" id="bnr-QU-JbE"/>
+                            <constraint firstItem="TBW-GP-fbX" firstAttribute="top" secondItem="QDd-kK-ZQM" secondAttribute="bottom" constant="20" id="c2k-ky-2a9"/>
+                            <constraint firstItem="TBW-GP-fbX" firstAttribute="centerX" secondItem="2Pc-fp-xP1" secondAttribute="centerX" id="zJc-lO-c8L"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="LazyTimer" id="io1-W7-3hn"/>
+                    <connections>
+                        <outlet property="stateLabel" destination="QDd-kK-ZQM" id="QlD-K6-dD4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9dv-az-8vC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1481" y="60"/>
         </scene>
         <!--ImageCache-->
         <scene sceneID="L2Y-W7-eYi">
@@ -135,7 +187,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mo5-K2-zc4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1482" y="-171"/>
+            <point key="canvasLocation" x="2358" y="25"/>
         </scene>
         <!--Size-->
         <scene sceneID="EWu-R0-wtK">
