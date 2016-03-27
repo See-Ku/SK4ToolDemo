@@ -41,6 +41,7 @@
 		87E236E51CA76F7100B98DF7 /* SK4ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E236E41CA76F7100B98DF7 /* SK4ImageCache.swift */; };
 		87E236E71CA7733000B98DF7 /* SK4StringExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E236E61CA7733000B98DF7 /* SK4StringExtention.swift */; };
 		87E236E91CA78AAA00B98DF7 /* ImageCacheViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E236E81CA78AAA00B98DF7 /* ImageCacheViewController.swift */; };
+		87E236EB1CA78D7100B98DF7 /* SK4LazyTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E236EA1CA78D7100B98DF7 /* SK4LazyTimer.swift */; };
 		87EE2A2A1CA63DBE00D0A222 /* SK4Notify.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EE2A291CA63DBE00D0A222 /* SK4Notify.swift */; };
 		87EE2A2C1CA6433800D0A222 /* Notify1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EE2A2B1CA6433800D0A222 /* Notify1ViewController.swift */; };
 		87EE2A2E1CA6476000D0A222 /* Notify2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EE2A2D1CA6476000D0A222 /* Notify2ViewController.swift */; };
@@ -105,6 +106,7 @@
 		87E236E41CA76F7100B98DF7 /* SK4ImageCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SK4ImageCache.swift; sourceTree = "<group>"; };
 		87E236E61CA7733000B98DF7 /* SK4StringExtention.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SK4StringExtention.swift; path = extention/SK4StringExtention.swift; sourceTree = "<group>"; };
 		87E236E81CA78AAA00B98DF7 /* ImageCacheViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCacheViewController.swift; sourceTree = "<group>"; };
+		87E236EA1CA78D7100B98DF7 /* SK4LazyTimer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SK4LazyTimer.swift; path = core/SK4LazyTimer.swift; sourceTree = "<group>"; };
 		87EE2A291CA63DBE00D0A222 /* SK4Notify.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SK4Notify.swift; path = core/SK4Notify.swift; sourceTree = "<group>"; };
 		87EE2A2B1CA6433800D0A222 /* Notify1ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Notify1ViewController.swift; sourceTree = "<group>"; };
 		87EE2A2D1CA6476000D0A222 /* Notify2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Notify2ViewController.swift; sourceTree = "<group>"; };
@@ -209,6 +211,7 @@
 			isa = PBXGroup;
 			children = (
 				87BB46741CA2BEAE00F0BC50 /* SK4ToolKit.swift */,
+				87E236EA1CA78D7100B98DF7 /* SK4LazyTimer.swift */,
 				87EE2A291CA63DBE00D0A222 /* SK4Notify.swift */,
 				876C0AC61CA4CB14001F15A8 /* SK4OverlayIndicator.swift */,
 				871F9E8A1CA3BCF7005295FC /* SK4StopWatch.swift */,
@@ -387,6 +390,7 @@
 				87E236E71CA7733000B98DF7 /* SK4StringExtention.swift in Sources */,
 				879E73FD1CA6AA0F00C64902 /* CollectionViewAdmin.swift in Sources */,
 				871F9E871CA3B91D005295FC /* OverlayIndicatorViewController.swift in Sources */,
+				87E236EB1CA78D7100B98DF7 /* SK4LazyTimer.swift in Sources */,
 				87E236DF1CA7553F00B98DF7 /* PickerSizeViewController.swift in Sources */,
 				87BB466F1CA2AE7C00F0BC50 /* TableViewController.swift in Sources */,
 				878402171CA36269001C3E0F /* ActionSheetViewController.swift in Sources */,
