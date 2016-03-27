@@ -37,6 +37,7 @@
 		87E236DD1CA72B9200B98DF7 /* SK4PickerViewAdmin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E236DC1CA72B9200B98DF7 /* SK4PickerViewAdmin.swift */; };
 		87E236DF1CA7553F00B98DF7 /* PickerSizeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E236DE1CA7553F00B98DF7 /* PickerSizeViewController.swift */; };
 		87E236E11CA75AA600B98DF7 /* PickerTimeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E236E01CA75AA600B98DF7 /* PickerTimeViewController.swift */; };
+		87E236E31CA7645F00B98DF7 /* PickerEverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E236E21CA7645F00B98DF7 /* PickerEverViewController.swift */; };
 		87EE2A2A1CA63DBE00D0A222 /* SK4Notify.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EE2A291CA63DBE00D0A222 /* SK4Notify.swift */; };
 		87EE2A2C1CA6433800D0A222 /* Notify1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EE2A2B1CA6433800D0A222 /* Notify1ViewController.swift */; };
 		87EE2A2E1CA6476000D0A222 /* Notify2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EE2A2D1CA6476000D0A222 /* Notify2ViewController.swift */; };
@@ -97,6 +98,7 @@
 		87E236DC1CA72B9200B98DF7 /* SK4PickerViewAdmin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SK4PickerViewAdmin.swift; path = gui/SK4PickerViewAdmin.swift; sourceTree = "<group>"; };
 		87E236DE1CA7553F00B98DF7 /* PickerSizeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickerSizeViewController.swift; sourceTree = "<group>"; };
 		87E236E01CA75AA600B98DF7 /* PickerTimeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickerTimeViewController.swift; sourceTree = "<group>"; };
+		87E236E21CA7645F00B98DF7 /* PickerEverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickerEverViewController.swift; sourceTree = "<group>"; };
 		87EE2A291CA63DBE00D0A222 /* SK4Notify.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SK4Notify.swift; path = core/SK4Notify.swift; sourceTree = "<group>"; };
 		87EE2A2B1CA6433800D0A222 /* Notify1ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Notify1ViewController.swift; sourceTree = "<group>"; };
 		87EE2A2D1CA6476000D0A222 /* Notify2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Notify2ViewController.swift; sourceTree = "<group>"; };
@@ -156,6 +158,7 @@
 				87BB46701CA2AE9900F0BC50 /* MainMenuViewController.swift */,
 				87E236DE1CA7553F00B98DF7 /* PickerSizeViewController.swift */,
 				87E236E01CA75AA600B98DF7 /* PickerTimeViewController.swift */,
+				87E236E21CA7645F00B98DF7 /* PickerEverViewController.swift */,
 				879E73FA1CA6A9D600C64902 /* CollectionViewController.swift */,
 				879E73FC1CA6AA0F00C64902 /* CollectionViewAdmin.swift */,
 				87E236DA1CA7214A00B98DF7 /* CollectionViewCell.swift */,
@@ -369,6 +372,7 @@
 				879E73FB1CA6A9D600C64902 /* CollectionViewController.swift in Sources */,
 				87BB467E1CA35E7300F0BC50 /* SK4ActionSheet.swift in Sources */,
 				87EE2A2A1CA63DBE00D0A222 /* SK4Notify.swift in Sources */,
+				87E236E31CA7645F00B98DF7 /* PickerEverViewController.swift in Sources */,
 				879E73FD1CA6AA0F00C64902 /* CollectionViewAdmin.swift in Sources */,
 				871F9E871CA3B91D005295FC /* OverlayIndicatorViewController.swift in Sources */,
 				87E236DF1CA7553F00B98DF7 /* PickerSizeViewController.swift in Sources */,
