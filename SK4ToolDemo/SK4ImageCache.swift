@@ -11,46 +11,41 @@ import UIKit
 /// シンプルなイメージキャッシュクラス
 public class SK4ImageCache {
 
-	let cache = NSCache()
-
-	/// イメージをキャッシュする最大数
-	public var cacheLimit: Int {
-		get {
-			return cache.countLimit
-		}
-
-		set {
-			cache.countLimit = newValue
-		}
-	}
+	/// キャッシュファイルを保存するディレクトリ
+	public let cacheDir: String
 
 	/// キャッシュファイルの接頭辞
-	public var cachePrefix = "###"
+	public let cachePrefix: String
 
 	/// キャッシュファイルの接尾辞
-	public var cacheSuffix = ".png"
+	public let cacheSuffix: String
 
-	/// キャッシュファイルを保存するディレクトリ
-	public var cacheDir = sk4GetCachesDirectory()
+	let cache = NSCache()
 
 	/// 初期化
-	public init() {
+	public init(dir: String, prefix: String, suffix: String, cacheLimit: Int) {
+		self.cacheDir = dir
+		self.cachePrefix = prefix
+		self.cacheSuffix = suffix
+
 		cache.evictsObjectsWithDiscardedContent = true
-		cacheLimit = 100
+		cache.countLimit = cacheLimit
 	}
 
-	/// 最大数を指定して初期化
-	public convenience init(cacheLimit: Int) {
-		self.init()
-		self.cacheLimit = cacheLimit
+	/// キャッシュの最大数を指定して初期化
+	public convenience init(cacheLimit: Int = 100) {
+		let dir = sk4GetCachesDirectory()
+		let prefix = "###"
+		let suffix = ".png"
+		self.init(dir: dir, prefix: prefix, suffix: suffix, cacheLimit: cacheLimit)
 	}
 
 	// /////////////////////////////////////////////////////////////
-	// MARK: - イメージを生成＆キャッシュ使用
+	// MARK: - イメージを生成＆キャッシュファイル使用
 
 	var makingList = Set<String>()
 
-	/// キャッシュファイルから読み込み。存在しない場合はイメージを作成
+	/// キャッシュファイルから読み込み。存在しない場合はイメージを作成　※イメージを生成する処理はグローバルキューで実行
 	public func manageCacheFile(name: String, imageMaker: (()->UIImage?)) -> UIImage? {
 
 		// キャッシュファイルに保存されているか？
@@ -69,9 +64,9 @@ public class SK4ImageCache {
 		sk4AsyncGlobal() {
 			let image = imageMaker()
 
-			sk4AsyncMain() { [weak self] in
-				self?.saveCacheFile(name, image: image)
-				self?.makingList.remove(name)
+			sk4AsyncMain() {
+				self.saveCacheFile(name, image: image)
+				self.makingList.remove(name)
 			}
 		}
 
@@ -106,7 +101,7 @@ public class SK4ImageCache {
 	}
 
 	// /////////////////////////////////////////////////////////////
-	// MARK: - イメージをファイルから読み込み＆キャッシュ
+	// MARK: - イメージをファイルから読み込み＆メモリにキャッシュ
 
 	/// パスを指定してイメージを読み込み
 	public func loadImage(path: String, mode: UIImageRenderingMode = .Automatic) -> UIImage? {
@@ -157,25 +152,23 @@ public class SK4ImageCache {
 	// MARK: - その他
 
 	/// キャッシュされたイメージをすべて削除
-	public func removeAll() {
+	public func removeCacheAll() {
 		cache.removeAllObjects()
 	}
 
 	/// イメージのキャッシュファイルをすべて削除
 	public func deleteCacheFileAll() {
-		let dir = sk4GetCachesDirectory()
-		let ar = sk4FileListAtPath(dir)
-
+		let ar = sk4FileListAtPath(cacheDir)
 		for fn in ar {
 			if fn.hasPrefix(cachePrefix) && fn.hasSuffix(cacheSuffix) {
-				sk4DeleteFile(dir + fn)
+				sk4DeleteFile(cacheDir + fn)
 			}
 		}
 	}
 
 	/// キャッシュファイルのパスを生成
 	public func makeCachePath(name: String) -> String {
-		return sk4GetCachesDirectory() + cachePrefix + name + cacheSuffix
+		return cacheDir + cachePrefix + name + cacheSuffix
 	}
 	
 }
