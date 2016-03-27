@@ -71,21 +71,8 @@ public class SK4ImageContext {
 		return UIGraphicsGetImageFromCurrentImageContext()
 	}
 
-
-
-
-
-/*
-	/// 他で用意したCGContextを利用
-	public convenience init(context: CGContext, rect: CGRect = CGRect()) {
-		self.init(context: context, rect: rect, release: false)
-	}
-
-
-
-
 	// /////////////////////////////////////////////////////////////
-	// MARK: - 描画関係
+	// MARK: - 描画設定
 
 	public func setFillColor(color: UIColor) {
 		CGContextSetFillColorWithColor(context, color.CGColor)
@@ -95,14 +82,76 @@ public class SK4ImageContext {
 		CGContextSetStrokeColorWithColor(context, color.CGColor)
 	}
 
+	public func setLineWidth(width: CGFloat) {
+		CGContextSetLineWidth(context, width)
+	}
+
+
+	// /////////////////////////////////////////////////////////////
+	// MARK: - path & clip
+
+	public func beginPath() {
+		CGContextBeginPath(context)
+	}
+
+	public func closePath() {
+		CGContextClosePath(context)
+	}
+
+	public func clip() {
+		CGContextClip(context)
+	}
+
+	public func evenOddClip() {
+		CGContextEOClip(context)
+	}
+
+	// /////////////////////////////////////////////////////////////
+
+	public func drawPath(mode: CGPathDrawingMode = .FillStroke) {
+		CGContextDrawPath(context, mode)
+	}
+
+	public func drawStroke() {
+		CGContextDrawPath(context, .Stroke)
+	}
+
+	public func drawFill() {
+		CGContextDrawPath(context, .Fill)
+	}
+	
+
+
+	// /////////////////////////////////////////////////////////////
+	// MARK: - 門を丸めた四角
+
+	public func addRoundRect(rect: CGRect, radius: CGFloat) {
+		CGContextMoveToPoint(context, rect.minX, rect.midY)
+		CGContextAddArcToPoint(context, rect.minX, rect.minY, rect.midX, rect.minY, radius)
+		CGContextAddArcToPoint(context, rect.maxX, rect.minY, rect.maxX, rect.midY, radius)
+		CGContextAddArcToPoint(context, rect.maxX, rect.maxY, rect.midX, rect.maxY, radius)
+		CGContextAddArcToPoint(context, rect.minX, rect.maxY, rect.minX, rect.midY, radius)
+		closePath()
+	}
+
+	public func drawRoundRect(rect: CGRect, radius: CGFloat, mode: CGPathDrawingMode = .FillStroke) {
+		addRoundRect(rect, radius: radius)
+		drawPath(mode)
+	}
+
+
+
+/*
+
+	// /////////////////////////////////////////////////////////////
+	// MARK: - 描画関係
+
+
 	public func setColor(color: UIColor) {
 		CGContextSetFillColorWithColor(context, color.CGColor)
 		CGContextSetStrokeColorWithColor(context, color.CGColor)
 	}
 
-	public func setLineWidth(width: CGFloat) {
-		CGContextSetLineWidth(context, width)
-	}
 
 	// /////////////////////////////////////////////////////////////
 
@@ -156,53 +205,7 @@ public class SK4ImageContext {
 
 	// /////////////////////////////////////////////////////////////
 
-	public func drawPath(mode: CGPathDrawingMode) {
-		CGContextDrawPath(context, mode)
-	}
 
-	public func drawStroke() {
-		CGContextDrawPath(context, .Stroke)
-	}
-
-	public func drawFill() {
-		CGContextDrawPath(context, .Fill)
-	}
-
-	// /////////////////////////////////////////////////////////////
-	// MARK: - 門を丸めた四角
-
-	public func addRoundRect(rect: CGRect, radius: CGFloat) {
-		CGContextMoveToPoint(context, rect.minX, rect.midY)
-		CGContextAddArcToPoint(context, rect.minX, rect.minY, rect.midX, rect.minY, radius)
-		CGContextAddArcToPoint(context, rect.maxX, rect.minY, rect.maxX, rect.midY, radius)
-		CGContextAddArcToPoint(context, rect.maxX, rect.maxY, rect.midX, rect.maxY, radius)
-		CGContextAddArcToPoint(context, rect.minX, rect.maxY, rect.minX, rect.midY, radius)
-		closePath()
-	}
-
-	public func drawRoundRect(rect: CGRect, radius: CGFloat, mode: CGPathDrawingMode = .FillStroke) {
-		addRoundRect(rect, radius: radius)
-		drawPath(mode)
-	}
-
-	// /////////////////////////////////////////////////////////////
-	// MARK: - path & clip
-
-	public func beginPath() {
-		CGContextBeginPath(context)
-	}
-
-	public func closePath() {
-		CGContextClosePath(context)
-	}
-
-	public func clip() {
-		CGContextClip(context)
-	}
-
-	public func evenOddClip() {
-		CGContextEOClip(context)
-	}
 
 	// /////////////////////////////////////////////////////////////
 	// MARK: - 状態の保存／復元
@@ -317,6 +320,14 @@ public class SK4ImageContext {
 		CGContextDrawLinearGradient(context, gradient, start, end, options)
 	}
 */
+
+/*
+	/// 他で用意したCGContextを利用
+	public convenience init(context: CGContext, rect: CGRect = CGRect()) {
+		self.init(context: context, rect: rect, release: false)
+	}
+*/
+
 
 }
 

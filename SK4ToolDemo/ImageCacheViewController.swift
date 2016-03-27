@@ -55,7 +55,7 @@ class ImageCacheViewController: UIViewController {
 		}
 
 		listUpdate.fire()
-    }
+	}
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -70,12 +70,9 @@ class ImageCacheViewController: UIViewController {
 	}
 
 	func makeImage(no: Int) -> UIImage {
-
-		return UIImage()
-
-/*
 		let ic = SK4ImageContext(width: Const.size, height: Const.size, opaque: false)
 
+/*
 		switch no {
 		case 0:
 			makeImage0(ic)
@@ -89,12 +86,12 @@ class ImageCacheViewController: UIViewController {
 		default:
 			makeImage0(ic)
 		}
+*/
+		makeImage0(ic)
 
 		return ic.makeImage()
-*/
 	}
 
-/*
 	func makeImage0(ic: SK4ImageContext) {
 		let si = Const.size
 		let color = UIColor.redColor()
@@ -106,9 +103,11 @@ class ImageCacheViewController: UIViewController {
 		let re = CGRect(x: 8, y: 8, width: si-16, height: si-16)
 		ic.drawRoundRect(re, radius: 10)
 
-		drawString("A", color: color, size: si)
+//		drawString("A", color: color, size: si)
 	}
 
+
+/*
 	func makeImage1(ic: SK4ImageContext) {
 		let si = Const.size
 		let color = UIColor.greenColor()
@@ -162,6 +161,10 @@ class ImageCacheViewController: UIViewController {
 		drawString("C", color: color, size: si)
 	}
 
+
+*/
+
+/*
 	func drawString(str: String, color: UIColor, size: CGFloat) {
 		let atr = SK4TextAttributes()
 		atr.textColor = color
@@ -171,9 +174,7 @@ class ImageCacheViewController: UIViewController {
 		let re = CGRect(x: 0, y: 0, width: size, height: size)
 		str.sk4DrawInRect(re, withAttributes: atr.attributes, vertical: .Center)
 	}
-
 */
-
 
 	// /////////////////////////////////////////////////////////////
 	// MARK: - その他
@@ -189,8 +190,6 @@ class ImageCacheViewController: UIViewController {
 		}
 		cacheFileList.text = str
 	}
-
-
 
 }
 
