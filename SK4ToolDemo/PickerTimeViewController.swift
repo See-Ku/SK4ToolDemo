@@ -1,5 +1,5 @@
 //
-//  PickerSizeViewController.swift
+//  PickerTimeViewController.swift
 //  SK4ToolDemo
 //
 //  Created by See.Ku on 2016/03/27.
@@ -8,22 +8,22 @@
 
 import UIKit
 
-class PickerSizeViewController: UIViewController {
+class PickerTimeViewController: UIViewController {
 
-	let check = SK4LeakCheck(name: "PickerSizeViewController")
+	let check = SK4LeakCheck(name: "PickerTimeViewController")
 
 	@IBOutlet weak var pickerView: UIPickerView!
 	@IBOutlet weak var selectLabel: UILabel!
 
 	@IBAction func onPick(sender: AnyObject) {
-		let ar = pickerViewAdmin.selectIndex.map() { no in String(no) }
-		selectLabel.text = ar.joinWithSeparator(", ")
+
+		selectLabel.text = pickerViewAdmin.selectString.joinWithSeparator("")
 	}
 
 	override func viewWillAppear(animated: Bool) {
 		super.viewWillAppear(animated)
 
-		tabBarController?.navigationItem.title = "Picker Size"
+		tabBarController?.navigationItem.title = "Picker Time"
 	}
 
 	override func viewWillDisappear(animated: Bool) {
@@ -38,14 +38,15 @@ class PickerSizeViewController: UIViewController {
 		selectLabel.text = ""
 		pickerViewAdmin = SK4PickerViewAdmin(pickerView: pickerView, parent: self)
 
-		let ar = (5...20).map() { no in String(no) }
+		let hour = (0...23).map() { no in String(no) }
+		let min = (0...59).map() { no in String(no) }
 
-		pickerViewAdmin.addUnit(ar)
-		pickerViewAdmin.addUnit("x", width: 32)
-		pickerViewAdmin.addUnit(ar)
+		pickerViewAdmin.addUnit(hour, infinite: true)
+		pickerViewAdmin.addUnit(":", width: 32)
+		pickerViewAdmin.addUnit(min, infinite: true)
 
-		pickerViewAdmin.selectIndex = [5, 0, 5]
-	}
+		pickerViewAdmin.selectIndex = [12, 0, 0]
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

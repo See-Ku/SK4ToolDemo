@@ -71,6 +71,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3ee-Yt-JOb">
+                                <rect key="frame" x="0.0" y="101" width="600" height="216"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="216" id="3BZ-6m-hWN"/>
+                                </constraints>
+                            </pickerView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="width x height" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F7H-xl-sqc">
                                 <rect key="frame" x="20" y="72" width="560" height="21"/>
                                 <constraints>
@@ -80,19 +86,38 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3ee-Yt-JOb">
-                                <rect key="frame" x="0.0" y="101" width="600" height="216"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KPe-Xf-wra">
+                                <rect key="frame" x="250" y="325" width="100" height="30"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="216" id="3BZ-6m-hWN"/>
+                                    <constraint firstAttribute="height" constant="30" id="5IW-qg-h2g"/>
+                                    <constraint firstAttribute="width" constant="100" id="YQm-d7-ctA"/>
                                 </constraints>
-                            </pickerView>
+                                <state key="normal" title="Pick(index)"/>
+                                <connections>
+                                    <action selector="onPick:" destination="fYD-u7-i7n" eventType="touchUpInside" id="7Vz-nV-Scr"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F95-Mx-uXf">
+                                <rect key="frame" x="20" y="363" width="560" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="lZD-ca-ied"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.9745729179" blue="0.69497675270000003" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="KPe-Xf-wra" firstAttribute="centerX" secondItem="AT2-Hh-WVo" secondAttribute="centerX" id="FkZ-JM-HYN"/>
                             <constraint firstItem="3ee-Yt-JOb" firstAttribute="top" secondItem="F7H-xl-sqc" secondAttribute="bottom" constant="8" id="IJB-Pv-kzR"/>
+                            <constraint firstItem="F95-Mx-uXf" firstAttribute="top" secondItem="KPe-Xf-wra" secondAttribute="bottom" constant="8" id="RiH-JK-JSU"/>
                             <constraint firstAttribute="trailing" secondItem="3ee-Yt-JOb" secondAttribute="trailing" id="Ynr-Fe-TqU"/>
+                            <constraint firstItem="F95-Mx-uXf" firstAttribute="leading" secondItem="AT2-Hh-WVo" secondAttribute="leadingMargin" id="bwA-PR-hI4"/>
                             <constraint firstItem="F7H-xl-sqc" firstAttribute="trailing" secondItem="AT2-Hh-WVo" secondAttribute="trailingMargin" id="gEi-us-rED"/>
+                            <constraint firstItem="F95-Mx-uXf" firstAttribute="trailing" secondItem="AT2-Hh-WVo" secondAttribute="trailingMargin" id="j4B-S1-D8O"/>
                             <constraint firstItem="F7H-xl-sqc" firstAttribute="top" secondItem="r8I-QE-55o" secondAttribute="bottom" constant="8" id="jks-1R-IOM"/>
+                            <constraint firstItem="KPe-Xf-wra" firstAttribute="top" secondItem="3ee-Yt-JOb" secondAttribute="bottom" constant="8" id="oY1-Lf-pzC"/>
                             <constraint firstItem="F7H-xl-sqc" firstAttribute="leading" secondItem="AT2-Hh-WVo" secondAttribute="leadingMargin" id="rxA-Za-ylS"/>
                             <constraint firstItem="3ee-Yt-JOb" firstAttribute="leading" secondItem="AT2-Hh-WVo" secondAttribute="leading" id="v9C-gp-SHu"/>
                         </constraints>
@@ -100,16 +125,17 @@
                     <tabBarItem key="tabBarItem" title="Size" id="U7P-kJ-sDi"/>
                     <connections>
                         <outlet property="pickerView" destination="3ee-Yt-JOb" id="DYd-NK-M9j"/>
+                        <outlet property="selectLabel" destination="F95-Mx-uXf" id="tE6-hz-aqR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MoO-SQ-vi7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2328" y="119"/>
         </scene>
-        <!--Infinite-->
+        <!--Time-->
         <scene sceneID="KQh-Zc-KwM">
             <objects>
-                <viewController id="o1g-lY-cG7" sceneMemberID="viewController">
+                <viewController id="o1g-lY-cG7" customClass="PickerTimeViewController" customModule="SK4ToolDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="N9f-am-CXR"/>
                         <viewControllerLayoutGuide type="bottom" id="yk5-qe-SSg"/>
@@ -117,9 +143,63 @@
                     <view key="view" contentMode="scaleToFill" id="CbV-47-eXk">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select time" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DoX-CB-1XN">
+                                <rect key="frame" x="20" y="72" width="560" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="yWz-uK-hOV"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a8N-ei-4Fd">
+                                <rect key="frame" x="0.0" y="101" width="600" height="216"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="216" id="EIR-MM-aru"/>
+                                </constraints>
+                            </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hQU-0i-fn9">
+                                <rect key="frame" x="277" y="325" width="46" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="H7v-Jb-InQ"/>
+                                    <constraint firstAttribute="width" constant="46" id="nOM-a4-YYc"/>
+                                </constraints>
+                                <state key="normal" title="Pick"/>
+                                <connections>
+                                    <action selector="onPick:" destination="o1g-lY-cG7" eventType="touchUpInside" id="fBt-pX-E2b"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yuI-Ac-58q">
+                                <rect key="frame" x="20" y="363" width="560" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="5s8-yU-aUE"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="a8N-ei-4Fd" firstAttribute="top" secondItem="DoX-CB-1XN" secondAttribute="bottom" constant="8" id="9oY-by-Iem"/>
+                            <constraint firstItem="hQU-0i-fn9" firstAttribute="centerX" secondItem="CbV-47-eXk" secondAttribute="centerX" id="KYA-kJ-oOt"/>
+                            <constraint firstItem="DoX-CB-1XN" firstAttribute="top" secondItem="N9f-am-CXR" secondAttribute="bottom" constant="8" id="SK1-fG-BSi"/>
+                            <constraint firstItem="DoX-CB-1XN" firstAttribute="leading" secondItem="CbV-47-eXk" secondAttribute="leadingMargin" id="Udi-tt-Cm2"/>
+                            <constraint firstAttribute="trailing" secondItem="a8N-ei-4Fd" secondAttribute="trailing" id="aso-Sa-nHB"/>
+                            <constraint firstItem="yuI-Ac-58q" firstAttribute="leading" secondItem="CbV-47-eXk" secondAttribute="leadingMargin" id="eY0-Lo-ppv"/>
+                            <constraint firstItem="yuI-Ac-58q" firstAttribute="trailing" secondItem="CbV-47-eXk" secondAttribute="trailingMargin" id="igW-hp-HVN"/>
+                            <constraint firstItem="yuI-Ac-58q" firstAttribute="top" secondItem="hQU-0i-fn9" secondAttribute="bottom" constant="8" id="qRP-iL-HA3"/>
+                            <constraint firstItem="DoX-CB-1XN" firstAttribute="trailing" secondItem="CbV-47-eXk" secondAttribute="trailingMargin" id="rTM-PD-pDN"/>
+                            <constraint firstItem="hQU-0i-fn9" firstAttribute="top" secondItem="a8N-ei-4Fd" secondAttribute="bottom" constant="8" id="rya-bI-mvd"/>
+                            <constraint firstItem="a8N-ei-4Fd" firstAttribute="leading" secondItem="CbV-47-eXk" secondAttribute="leading" id="w3P-6t-da2"/>
+                        </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Infinite" id="HmP-MK-Hcm"/>
+                    <tabBarItem key="tabBarItem" title="Time" id="HmP-MK-Hcm"/>
+                    <connections>
+                        <outlet property="pickerView" destination="a8N-ei-4Fd" id="Bzx-WQ-eoa"/>
+                        <outlet property="selectLabel" destination="yuI-Ac-58q" id="wn7-A8-bsj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dCd-Yh-u0S" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
