@@ -90,41 +90,72 @@ class ImageCacheViewController: UIViewController {
 	}
 
 	func makeImage0(ic: SK4ImageContext) {
+		let si = Const.size
+		var re = CGRect(x: 8, y: 8, width: si-16, height: si-16)
+
+		// 花の画像をアスペクト比を保ったまま転送
+		if let img = UIImage(named: "flower") {
+			ic.drawImageAspectFit(img, toRect: re)
+		}
+
+		// 角丸の四角
 		let color = UIColor.redColor()
 		ic.setLineWidthColor(4, stroke: color, fill: .whiteColor())
-
-		let si = Const.size
-		let re = CGRect(x: 8, y: 8, width: si-16, height: si-16)
 		ic.drawRoundRect(re, radius: 10)
 
-		drawString("A", color: color, size: si)
+		// 上に大きく『A』
+		let dif: CGFloat = 40
+		re.size.height -= dif
+		drawString("A", color: color, rect: re)
+
+		// 下に小さくランダムな数字
+		re.origin.y += re.size.height
+		re.size.height = dif
+
+		let no = sk4Random(100)
+		let str = String(no)
+		drawString(str, color: color, rect: re)
 	}
 
 	func makeImage1(ic: SK4ImageContext) {
+
+		// 角丸の四角
+		let si = Const.size
+		var re = CGRect(x: 8, y: 8, width: si-16, height: si-16)
 		let color = UIColor.greenColor()
 		ic.setLineWidthColor(4, stroke: color, fill: .whiteColor())
-
-		let si = Const.size
-		let re = CGRect(x: 8, y: 8, width: si-16, height: si-16)
 		ic.drawRoundRect(re, radius: 10)
 
+		let dif: CGFloat = 40
+		re.size.height -= dif
+
+		// 左半分に『B』
 		ic.saveState()
-		let re2 = CGRect(x: 0, y: 0, width: si/2, height: si)
-		ic.addRect(re2)
+		ic.addRect(CGRect(x: 0, y: 0, width: si/2, height: si))
 		ic.clip()
-		drawString("B", color: UIColor.blueColor(), size: si)
+		drawString("B", color: .blueColor(), rect: re)
 		ic.restoreState()
 
+		// 右左半分に『B』
 		ic.saveState()
-		let re3 = CGRect(x: si/2, y: 0, width: si/2, height: si)
-		ic.addRect(re3)
+		ic.addRect(CGRect(x: si/2, y: 0, width: si/2, height: si))
 		ic.clip()
-		drawString("C", color: UIColor.cyanColor(), size: si)
+		drawString("C", color: .cyanColor(), rect: re)
 		ic.restoreState()
+
+		// 下に小さくランダムな数字
+		re.origin.y += re.size.height
+		re.size.height = dif
+
+		let no = sk4Random(100)
+		let str = String(no)
+		drawString(str, color: color, rect: re)
 	}
 
 	func makeImage2(ic: SK4ImageContext) {
-		let loc: [CGFloat] = [0,0.5,1]
+
+		// グラデーションで塗りつぶし
+		let loc: [CGFloat] = [0.0, 0.5, 1.0]
 		let com: [CGFloat] = [
 			1.0, 0.5, 0.5, 1.0,	//	red
 			0.5, 1.0, 0.5, 1.0,	//	green
@@ -136,24 +167,31 @@ class ImageCacheViewController: UIViewController {
 		let p1 = CGPoint(x: Const.size+20, y: Const.size)
 		ic.drawLinearGradient(gra, start: p0, end: p1)
 
+		// 左上に角丸で『D』
 		let color = UIColor.blueColor()
 		ic.setLineWidthColor(4, stroke: color, fill: .whiteColor())
 
 		let si = Const.size / 2
 		let re = CGRect(x: 8, y: 8, width: si-16, height: si-16)
 		ic.drawRoundRect(re, radius: 10)
+		drawString("D", color: color, rect: re)
 
-		drawString("D", color: color, size: si)
+		// 下に小さくランダムな数字
+		let dif: CGFloat = 40
+		let py = Const.size - 8 - dif
+		let re2 = CGRect(x: 0, y: py, width: Const.size, height: dif)
+
+		let no = sk4Random(100)
+		let str = String(no)
+		drawString(str, color: color, rect: re2)
 	}
 
-	func drawString(str: String, color: UIColor, size: CGFloat) {
+	func drawString(str: String, color: UIColor, rect: CGRect) {
 		let atr = SK4TextAttributes()
 		atr.textColor = color
-		atr.font = UIFont(name: "ArialRoundedMTBold", size: size - 10)
+		atr.font = UIFont(name: "ArialRoundedMTBold", size: rect.height)
 		atr.alignment = .Center
-
-		let re = CGRect(x: 0, y: 0, width: size, height: size)
-		str.sk4DrawInRect(re, withAttributes: atr.attributes, vertical: .Center)
+		str.sk4DrawInRect(rect, withAttributes: atr.attributes, vertical: .Center)
 	}
 
 	// /////////////////////////////////////////////////////////////

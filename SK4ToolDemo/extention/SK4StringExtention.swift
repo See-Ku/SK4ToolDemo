@@ -7,7 +7,6 @@
 //
 
 import UIKit
-//import Foundation
 
 /// 垂直方向のAlignment
 public enum SK4VerticalAlignment: Int {

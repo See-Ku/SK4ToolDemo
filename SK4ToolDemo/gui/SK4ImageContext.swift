@@ -14,9 +14,6 @@ public class SK4ImageContext {
 	// /////////////////////////////////////////////////////////////
 	// MARK: - プロパティ＆初期化（内部用）
 
-	/// 描画範囲
-	public let rect: CGRect
-
 	/// 描画で使用するCGContext
 	public let context: CGContext
 
@@ -24,8 +21,7 @@ public class SK4ImageContext {
 	let release: Bool
 
 	/// 初期化
-	init(context: CGContext, rect: CGRect, release: Bool) {
-		self.rect = rect
+	init(context: CGContext, release: Bool) {
 		self.context = context
 		self.release = release
 	}
@@ -41,23 +37,26 @@ public class SK4ImageContext {
 	// MARK: - 初期化
 
 	/// サイズを指定してCGContextを生成
-	public convenience init(width: CGFloat, height: CGFloat, opaque: Bool = true, scale: CGFloat = 0) {
-		let rect = CGRect(x: 0.0, y: 0.0, width: width, height: height)
+	public convenience init!(size: CGSize, opaque: Bool = true, scale: CGFloat = 0) {
+		UIGraphicsBeginImageContextWithOptions(size, opaque, scale)
 
-		UIGraphicsBeginImageContextWithOptions(rect.size, opaque, scale)
-		let context = UIGraphicsGetCurrentContext()
-		self.init(context: context!, rect: rect, release: true)
+		if let context = UIGraphicsGetCurrentContext() {
+			self.init(context: context, release: true)
+		} else {
+			return nil
+		}
 	}
 
 	/// サイズを指定してCGContextを生成
-	public convenience init(size: CGSize, opaque: Bool = true) {
-		self.init(width: size.width, height: size.height, opaque: opaque)
+	public convenience init!(width: CGFloat, height: CGFloat, opaque: Bool = true) {
+		let si = CGSize(width: width, height: height)
+		self.init(size: si, opaque: opaque)
 	}
 
 	/// 現在のCGContextからSK4ImageContextを生成
-	public class func currentContext() -> SK4ImageContext? {
+	public class func currentContext() -> SK4ImageContext! {
 		if let context = UIGraphicsGetCurrentContext() {
-			return SK4ImageContext(context: context, rect: CGRect(), release: false)
+			return SK4ImageContext(context: context, release: false)
 		} else {
 			return nil
 		}
@@ -69,17 +68,6 @@ public class SK4ImageContext {
 	/// CGContextからUIImageを取得
 	public func makeImage() -> UIImage {
 		return UIGraphicsGetImageFromCurrentImageContext()
-	}
-
-	// /////////////////////////////////////////////////////////////
-	// MARK: - 状態の保存／復元
-
-	public func saveState() {
-		CGContextSaveGState(context)
-	}
-
-	public func restoreState() {
-		CGContextRestoreGState(context)
 	}
 
 	// /////////////////////////////////////////////////////////////
@@ -103,17 +91,66 @@ public class SK4ImageContext {
 		CGContextSetFillColorWithColor(context, fill.CGColor)
 	}
 
+	// /////////////////////////////////////////////////////////////
+	// MARK: - 矩形描画
+
+	public func fillRect(rect: CGRect) {
+		CGContextFillRect(context, rect)
+	}
+
+	public func fillRect(rect: CGRect, color: UIColor) {
+		CGContextSetFillColorWithColor(context, color.CGColor)
+		CGContextFillRect(context, rect)
+	}
+
+	public func strokeRect(rect: CGRect) {
+		CGContextStrokeRect(context, rect)
+	}
+
+	public func strokeRect(rect: CGRect, color: UIColor) {
+		CGContextSetStrokeColorWithColor(context, color.CGColor)
+		CGContextStrokeRect(context, rect)
+	}
 
 	// /////////////////////////////////////////////////////////////
-	// MARK: - path & clip
+	// MARK: - 楕円描画
 
-	public func beginPath() {
-		CGContextBeginPath(context)
+	public func fillEllipse(rect: CGRect) {
+		CGContextFillEllipseInRect(context, rect)
 	}
 
-	public func closePath() {
-		CGContextClosePath(context)
+	public func strokeEllipse(rect: CGRect) {
+		CGContextStrokeEllipseInRect(context, rect)
 	}
+
+	// /////////////////////////////////////////////////////////////
+	// MARK: - パスの描画
+
+	public func drawPath(mode: CGPathDrawingMode = .FillStroke) {
+		CGContextDrawPath(context, mode)
+	}
+
+	public func drawPathStroke() {
+		CGContextDrawPath(context, .Stroke)
+	}
+
+	public func drawPathFill() {
+		CGContextDrawPath(context, .Fill)
+	}
+
+	// /////////////////////////////////////////////////////////////
+	// MARK: - 状態の保存／復元
+
+	public func saveState() {
+		CGContextSaveGState(context)
+	}
+
+	public func restoreState() {
+		CGContextRestoreGState(context)
+	}
+
+	// /////////////////////////////////////////////////////////////
+	// MARK: - クリッピング
 
 	public func clip() {
 		CGContextClip(context)
@@ -124,36 +161,32 @@ public class SK4ImageContext {
 	}
 
 	// /////////////////////////////////////////////////////////////
+	// MARK: - パス
+
+	public func beginPath() {
+		CGContextBeginPath(context)
+	}
+
+	public func closePath() {
+		CGContextClosePath(context)
+	}
+
+	// /////////////////////////////////////////////////////////////
 
 	public func addRect(rect: CGRect) {
 		CGContextAddRect(context, rect)
 	}
 
-	public func moveToPoint(x: CGFloat, _ y: CGFloat) {
+	public func moveToPoint(x x: CGFloat, y: CGFloat) {
 		CGContextMoveToPoint(context, x, y)
 	}
 
-	public func addLineToPoint(x: CGFloat, _ y: CGFloat) {
+	public func addLineToPoint(x x: CGFloat, y: CGFloat) {
 		CGContextAddLineToPoint(context, x, y)
 	}
 
 	// /////////////////////////////////////////////////////////////
-	// MARK: - 描画
-
-	public func drawPath(mode: CGPathDrawingMode = .FillStroke) {
-		CGContextDrawPath(context, mode)
-	}
-
-	public func drawStroke() {
-		CGContextDrawPath(context, .Stroke)
-	}
-
-	public func drawFill() {
-		CGContextDrawPath(context, .Fill)
-	}
-
-	// /////////////////////////////////////////////////////////////
-	// MARK: - 角を丸めた四角
+	// MARK: - 角を丸めた矩形
 
 	public func addRoundRect(rect: CGRect, radius: CGFloat) {
 		CGContextMoveToPoint(context, rect.minX, rect.midY)
@@ -167,6 +200,80 @@ public class SK4ImageContext {
 	public func drawRoundRect(rect: CGRect, radius: CGFloat, mode: CGPathDrawingMode = .FillStroke) {
 		addRoundRect(rect, radius: radius)
 		drawPath(mode)
+	}
+
+	// /////////////////////////////////////////////////////////////
+	// MARK: - UIImage転送
+
+	/// イメージ全体を指定された位置に描画
+	public func drawImage(image: UIImage, toPos: CGPoint) {
+		let rect = CGRect(origin: toPos, size: image.size)
+		if let img = image.CGImage {
+			drawFlipImage(img, rect)
+		}
+	}
+
+	/// イメージの指定された範囲を指定された位置に描画
+	public func drawImage(image: UIImage, toPos: CGPoint, fromRect: CGRect) {
+		let toRect = CGRect(origin: toPos, size: image.size)
+		drawImage(image, toRect: toRect, fromRect: fromRect)
+	}
+
+	/// イメージの指定された範囲を指定された範囲に描画
+	public func drawImage(image: UIImage, toRect: CGRect, fromRect: CGRect) {
+
+		// 転送元のサイズが指定されてない　→　イメージ全体を転送
+		var fromRect = fromRect
+		if fromRect.isEmpty {
+			fromRect.size = image.size
+		}
+
+		// 転送先のサイズが指定されてない　→　そのまま転送
+		var toRect = toRect
+		if toRect.isEmpty {
+			toRect.size = fromRect.size
+		}
+
+		// scaleの指定に対応
+		if image.scale != 1.0 {
+			fromRect.origin.x *= image.scale
+			fromRect.origin.y *= image.scale
+			fromRect.size.width *= image.scale
+			fromRect.size.height *= image.scale
+		}
+
+		// 実際の描画処理
+		if let src_ref = CGImageCreateWithImageInRect(image.CGImage, fromRect) {
+			drawFlipImage(src_ref, toRect)
+		}
+	}
+
+	/// アスペクト比を維持したままで画像を描画
+	public func drawImageAspectFit(image: UIImage, toRect: CGRect, fromRect: CGRect = CGRect.zero) {
+
+		// 転送元のサイズが指定されてない　→　イメージ全体を転送
+		var fromRect = fromRect
+		if fromRect.isEmpty {
+			fromRect.size = image.size
+		}
+
+		let re = sk4AspectFit(toRect: toRect, fromRect: fromRect)
+		drawImage(image, toRect: re, fromRect: fromRect)
+	}
+
+	/// 普通に転送すると上下反転してしまうのを修正して転送
+	func drawFlipImage(image: CGImage, _ toRect: CGRect) {
+
+		// TODO: Save/Restoreを省略出来ないか？
+
+		var affine = CGAffineTransformIdentity
+		affine.d = -1
+		affine.ty = toRect.origin.y * 2 + toRect.size.height
+
+		CGContextSaveGState(context)
+		CGContextConcatCTM(context, affine)
+		CGContextDrawImage(context, toRect, image)
+		CGContextRestoreGState(context)
 	}
 
 	// /////////////////////////////////////////////////////////////
@@ -190,152 +297,6 @@ public class SK4ImageContext {
 	public func drawLinearGradient(gradient: CGGradient, start: CGPoint, end: CGPoint, options: CGGradientDrawingOptions = []) {
 		CGContextDrawLinearGradient(context, gradient, start, end, options)
 	}
-
-
-/*
-
-	// /////////////////////////////////////////////////////////////
-	// MARK: - 描画関係
-
-
-
-
-	// /////////////////////////////////////////////////////////////
-
-	public func fillRect() {
-		CGContextFillRect(context, rect)
-	}
-
-	public func fillRect(rect: CGRect) {
-		CGContextFillRect(context, rect)
-	}
-
-	public func fillRect(rect: CGRect, color: UIColor) {
-		CGContextSetFillColorWithColor(context, color.CGColor)
-		CGContextFillRect(context, rect)
-	}
-
-	public func fillEllipseInRect(rect: CGRect) {
-		CGContextFillEllipseInRect(context, rect)
-	}
-
-	public func strokeRect() {
-		CGContextStrokeRect(context, rect)
-	}
-
-	public func strokeRect(rect: CGRect) {
-		CGContextStrokeRect(context, rect)
-	}
-
-	public func strokeRect(rect: CGRect, color: UIColor) {
-		CGContextSetStrokeColorWithColor(context, color.CGColor)
-		CGContextStrokeRect(context, rect)
-	}
-
-	public func strokeEllipseInRect(rect: CGRect) {
-		CGContextStrokeEllipseInRect(context, rect)
-	}
-
-
-	// /////////////////////////////////////////////////////////////
-
-
-
-	// /////////////////////////////////////////////////////////////
-	// MARK: - UIImage転送
-
-	/// イメージ全体を指定された位置に描画
-	public func drawImage(image: UIImage, _ toPos: CGPoint) {
-		let rect = CGRect(origin: toPos, size: image.size)
-		if let img = image.CGImage {
-			drawFlipImage(img, rect)
-		}
-	}
-
-	/// イメージの指定された範囲を指定された位置に描画
-	public func drawImage(image: UIImage, _ toPos: CGPoint, _ fromRect: CGRect) {
-		let toRect = CGRect(origin: toPos, size: image.size)
-		drawImage(image, toRect, fromRect)
-	}
-
-	/// イメージの指定された範囲を指定された範囲に描画
-	public func drawImage(image: UIImage, var _ toRect: CGRect, var _ fromRect: CGRect) {
-
-		// 転送先のサイズが指定されてない　→　全体に転送
-		if toRect.isEmpty {
-			toRect.size = rect.size
-		}
-
-		// 転送元のサイズが指定されてない　→　全体を転送
-		if fromRect.isEmpty {
-			fromRect.size = image.size
-		}
-
-		// scaleの指定に対応
-		if image.scale != 1.0 {
-			fromRect.origin.x *= image.scale
-			fromRect.origin.y *= image.scale
-			fromRect.size.width *= image.scale
-			fromRect.size.height *= image.scale
-		}
-
-		// 実際の描画処理
-		if let src_ref = CGImageCreateWithImageInRect(image.CGImage, fromRect) {
-			drawFlipImage(src_ref, toRect)
-		}
-	}
-
-	/// アスペクト比を維持したままで画像を描画
-	public func drawImageAspectFit(image: UIImage, var _ toRect: CGRect, _ fromRect: CGRect) {
-		if fromRect.width == 0 || fromRect.height == 0 {
-			return
-		}
-
-		let ax = toRect.width / fromRect.width
-		let ay = toRect.height / fromRect.height
-		let rate = min(ax, ay)
-
-		let wx = fromRect.width * rate
-		let wy = fromRect.height * rate
-
-		toRect.origin.x += (toRect.width - wx) / 2
-		toRect.origin.y += (toRect.height - wy) / 2
-		toRect.size.width = wx
-		toRect.size.height = wy
-
-		drawImage(image, toRect, fromRect)
-	}
-
-	/// 普通に転送すると上下反転してしまうのを修正して転送
-	func drawFlipImage(image: CGImage, _ toRect: CGRect) {
-
-		// TODO: Save/Restoreを省略出来ないか？
-
-		var affine = CGAffineTransformIdentity
-		affine.d = -1
-		affine.ty = toRect.origin.y * 2 + toRect.size.height
-
-		CGContextSaveGState(context)
-		CGContextConcatCTM(context, affine)
-		CGContextDrawImage(context, toRect, image)
-		CGContextRestoreGState(context)
-	}
-
-*/
-
-/*
-	/// 他で用意したCGContextを利用
-	public convenience init(context: CGContext, rect: CGRect = CGRect()) {
-		self.init(context: context, rect: rect, release: false)
-	}
-
-	public func setColor(color: UIColor) {
-		CGContextSetFillColorWithColor(context, color.CGColor)
-		CGContextSetStrokeColorWithColor(context, color.CGColor)
-	}
-	*/
-
-
 
 }
 

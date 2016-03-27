@@ -133,6 +133,48 @@ public func sk4FileListAtPath(path: String, ext: String? = nil) -> [String] {
 
 
 
+// /////////////////////////////////////////////////////////////
+// MARK: - 乱数
+
+/// 乱数を取得
+public func sk4Random(max: Int) -> Int {
+	let tmp = UInt32(max)
+	return Int(arc4random_uniform(tmp))
+}
+
+/// 乱数を取得
+public func sk4Random(max: CGFloat) -> CGFloat {
+	let tmp = UInt32(max)
+	return CGFloat(arc4random_uniform(tmp))
+}
+
+/// 範囲を指定して乱数を取得
+public func sk4Random(range: Range<Int>) -> Int {
+	let tmp = UInt32(range.endIndex - range.startIndex)
+	return Int(arc4random_uniform(tmp)) + range.startIndex
+}
+
+
+// /////////////////////////////////////////////////////////////
+// MARK: - 数学
+
+/// アスペクト比を保ったまま転送する転送先の矩形を求める
+func sk4AspectFit(toRect toRect: CGRect, fromRect: CGRect) -> CGRect {
+	if fromRect.width == 0 || fromRect.height == 0 {
+		return CGRect.zero
+	}
+
+	let ax = toRect.width / fromRect.width
+	let ay = toRect.height / fromRect.height
+	let rate = min(ax, ay)
+
+	let wx = fromRect.width * rate
+	let wy = fromRect.height * rate
+	let px = toRect.origin.x + (toRect.width - wx) / 2
+	let py = toRect.origin.y + (toRect.height - wy) / 2
+	return CGRect(x: px, y: py, width: wx, height: wy)
+}
+
 
 
 /*
