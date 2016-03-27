@@ -38,10 +38,11 @@
 		87E236DF1CA7553F00B98DF7 /* PickerSizeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E236DE1CA7553F00B98DF7 /* PickerSizeViewController.swift */; };
 		87E236E11CA75AA600B98DF7 /* PickerTimeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E236E01CA75AA600B98DF7 /* PickerTimeViewController.swift */; };
 		87E236E31CA7645F00B98DF7 /* PickerEverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E236E21CA7645F00B98DF7 /* PickerEverViewController.swift */; };
-		87E236E51CA76F7100B98DF7 /* SK4ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E236E41CA76F7100B98DF7 /* SK4ImageCache.swift */; };
 		87E236E71CA7733000B98DF7 /* SK4StringExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E236E61CA7733000B98DF7 /* SK4StringExtention.swift */; };
 		87E236E91CA78AAA00B98DF7 /* ImageCacheViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E236E81CA78AAA00B98DF7 /* ImageCacheViewController.swift */; };
 		87E236EB1CA78D7100B98DF7 /* SK4LazyTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E236EA1CA78D7100B98DF7 /* SK4LazyTimer.swift */; };
+		87E236ED1CA798A600B98DF7 /* SK4ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E236EC1CA798A600B98DF7 /* SK4ImageCache.swift */; };
+		87E236EF1CA799ED00B98DF7 /* SK4ImageContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E236EE1CA799ED00B98DF7 /* SK4ImageContext.swift */; };
 		87EE2A2A1CA63DBE00D0A222 /* SK4Notify.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EE2A291CA63DBE00D0A222 /* SK4Notify.swift */; };
 		87EE2A2C1CA6433800D0A222 /* Notify1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EE2A2B1CA6433800D0A222 /* Notify1ViewController.swift */; };
 		87EE2A2E1CA6476000D0A222 /* Notify2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EE2A2D1CA6476000D0A222 /* Notify2ViewController.swift */; };
@@ -103,10 +104,11 @@
 		87E236DE1CA7553F00B98DF7 /* PickerSizeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickerSizeViewController.swift; sourceTree = "<group>"; };
 		87E236E01CA75AA600B98DF7 /* PickerTimeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickerTimeViewController.swift; sourceTree = "<group>"; };
 		87E236E21CA7645F00B98DF7 /* PickerEverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickerEverViewController.swift; sourceTree = "<group>"; };
-		87E236E41CA76F7100B98DF7 /* SK4ImageCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SK4ImageCache.swift; sourceTree = "<group>"; };
 		87E236E61CA7733000B98DF7 /* SK4StringExtention.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SK4StringExtention.swift; path = extention/SK4StringExtention.swift; sourceTree = "<group>"; };
 		87E236E81CA78AAA00B98DF7 /* ImageCacheViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCacheViewController.swift; sourceTree = "<group>"; };
 		87E236EA1CA78D7100B98DF7 /* SK4LazyTimer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SK4LazyTimer.swift; path = core/SK4LazyTimer.swift; sourceTree = "<group>"; };
+		87E236EC1CA798A600B98DF7 /* SK4ImageCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SK4ImageCache.swift; path = core/SK4ImageCache.swift; sourceTree = "<group>"; };
+		87E236EE1CA799ED00B98DF7 /* SK4ImageContext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SK4ImageContext.swift; path = gui/SK4ImageContext.swift; sourceTree = "<group>"; };
 		87EE2A291CA63DBE00D0A222 /* SK4Notify.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SK4Notify.swift; path = core/SK4Notify.swift; sourceTree = "<group>"; };
 		87EE2A2B1CA6433800D0A222 /* Notify1ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Notify1ViewController.swift; sourceTree = "<group>"; };
 		87EE2A2D1CA6476000D0A222 /* Notify2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Notify2ViewController.swift; sourceTree = "<group>"; };
@@ -210,6 +212,7 @@
 		87BB467C1CA354E300F0BC50 /* sk4 */ = {
 			isa = PBXGroup;
 			children = (
+				87E236EC1CA798A600B98DF7 /* SK4ImageCache.swift */,
 				87BB46741CA2BEAE00F0BC50 /* SK4ToolKit.swift */,
 				87E236EA1CA78D7100B98DF7 /* SK4LazyTimer.swift */,
 				87EE2A291CA63DBE00D0A222 /* SK4Notify.swift */,
@@ -224,7 +227,7 @@
 				879E73F81CA6A7F700C64902 /* SK4CollectionViewAdmin.swift */,
 				87E236DC1CA72B9200B98DF7 /* SK4PickerViewAdmin.swift */,
 				871F9E881CA3BA6D005295FC /* SK4Dispatch.swift */,
-				87E236E41CA76F7100B98DF7 /* SK4ImageCache.swift */,
+				87E236EE1CA799ED00B98DF7 /* SK4ImageContext.swift */,
 			);
 			name = sk4;
 			sourceTree = "<group>";
@@ -371,6 +374,7 @@
 				876C0AC71CA4CB14001F15A8 /* SK4OverlayIndicator.swift in Sources */,
 				87E236DB1CA7214A00B98DF7 /* CollectionViewCell.swift in Sources */,
 				87E236DD1CA72B9200B98DF7 /* SK4PickerViewAdmin.swift in Sources */,
+				87E236EF1CA799ED00B98DF7 /* SK4ImageContext.swift in Sources */,
 				87BB46751CA2BEAE00F0BC50 /* SK4ToolKit.swift in Sources */,
 				87E236E11CA75AA600B98DF7 /* PickerTimeViewController.swift in Sources */,
 				87BB46791CA2CF5100F0BC50 /* SK4LeakCheck.swift in Sources */,
@@ -379,8 +383,8 @@
 				8784021B1CA39BDE001C3E0F /* BorderButtonViewController.swift in Sources */,
 				87BB463F1CA2A86F00F0BC50 /* AppDelegate.swift in Sources */,
 				87BB46771CA2CCB900F0BC50 /* SK4AlertController.swift in Sources */,
+				87E236ED1CA798A600B98DF7 /* SK4ImageCache.swift in Sources */,
 				871F9E8B1CA3BCF7005295FC /* SK4StopWatch.swift in Sources */,
-				87E236E51CA76F7100B98DF7 /* SK4ImageCache.swift in Sources */,
 				87EE2A2E1CA6476000D0A222 /* Notify2ViewController.swift in Sources */,
 				87BB46731CA2AFC600F0BC50 /* TableViewAdmin.swift in Sources */,
 				879E73FB1CA6A9D600C64902 /* CollectionViewController.swift in Sources */,
