@@ -53,11 +53,87 @@
                         <segue destination="do5-ev-WTV" kind="show" identifier="Notify" id="hWZ-Qw-6mz"/>
                         <segue destination="aHe-v9-C5E" kind="show" identifier="CollectionView" id="vtH-W0-A6R"/>
                         <segue destination="GeL-zm-e9D" kind="show" identifier="PickerView" id="NX0-ni-2CO"/>
+                        <segue destination="5Yc-7Q-S1F" kind="show" identifier="ImageCache" id="Mvq-aF-afZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="713" y="-336"/>
+        </scene>
+        <!--ImageCache-->
+        <scene sceneID="L2Y-W7-eYi">
+            <objects>
+                <viewController id="5Yc-7Q-S1F" customClass="ImageCacheViewController" customModule="SK4ToolDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="t5t-CO-Vgp"/>
+                        <viewControllerLayoutGuide type="bottom" id="nH5-1z-b6Y"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="tvA-Wz-hCh">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tW7-VG-zgv">
+                                <rect key="frame" x="20" y="72" width="560" height="240"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="240" id="ZWJ-tD-5A3"/>
+                                </constraints>
+                            </imageView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="2IU-fL-2Ri">
+                                <rect key="frame" x="20" y="320" width="180" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="28" id="USV-fZ-V9P"/>
+                                    <constraint firstAttribute="width" constant="180" id="aKO-JD-fiR"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="First"/>
+                                    <segment title="Second"/>
+                                    <segment title="3"/>
+                                </segments>
+                            </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2v4-72-lzj">
+                                <rect key="frame" x="20" y="358" width="560" height="222"/>
+                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cdf-pg-pFf">
+                                <rect key="frame" x="480" y="320" width="100" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="7IZ-c2-d22"/>
+                                    <constraint firstAttribute="height" constant="30" id="k5d-yQ-mCA"/>
+                                </constraints>
+                                <state key="normal" title="Delete Cache"/>
+                                <connections>
+                                    <action selector="onDeleteCache:" destination="5Yc-7Q-S1F" eventType="touchUpInside" id="cZq-YJ-Txp"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="tW7-VG-zgv" firstAttribute="top" secondItem="t5t-CO-Vgp" secondAttribute="bottom" constant="8" id="1sk-E0-hQS"/>
+                            <constraint firstItem="tW7-VG-zgv" firstAttribute="trailing" secondItem="tvA-Wz-hCh" secondAttribute="trailingMargin" id="1vE-Fa-edU"/>
+                            <constraint firstItem="tW7-VG-zgv" firstAttribute="leading" secondItem="tvA-Wz-hCh" secondAttribute="leadingMargin" id="Af6-sQ-3uz"/>
+                            <constraint firstItem="2IU-fL-2Ri" firstAttribute="top" secondItem="tW7-VG-zgv" secondAttribute="bottom" constant="8" id="C4f-zV-tYe"/>
+                            <constraint firstItem="nH5-1z-b6Y" firstAttribute="top" secondItem="2v4-72-lzj" secondAttribute="bottom" constant="20" id="TQ8-A9-ucE"/>
+                            <constraint firstItem="2v4-72-lzj" firstAttribute="top" secondItem="cdf-pg-pFf" secondAttribute="bottom" constant="8" id="UIL-bs-2d9"/>
+                            <constraint firstItem="cdf-pg-pFf" firstAttribute="trailing" secondItem="tvA-Wz-hCh" secondAttribute="trailingMargin" id="af2-BU-5s4"/>
+                            <constraint firstItem="2IU-fL-2Ri" firstAttribute="leading" secondItem="tvA-Wz-hCh" secondAttribute="leadingMargin" id="deq-il-8L6"/>
+                            <constraint firstItem="2v4-72-lzj" firstAttribute="trailing" secondItem="tvA-Wz-hCh" secondAttribute="trailingMargin" id="frf-mZ-L7j"/>
+                            <constraint firstItem="2v4-72-lzj" firstAttribute="leading" secondItem="tvA-Wz-hCh" secondAttribute="leadingMargin" id="kys-vF-3mF"/>
+                            <constraint firstItem="cdf-pg-pFf" firstAttribute="top" secondItem="tW7-VG-zgv" secondAttribute="bottom" constant="8" id="z70-jR-cfc"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="ImageCache" id="m1r-of-asK"/>
+                    <connections>
+                        <outlet property="cacheList" destination="2v4-72-lzj" id="yxS-4m-foQ"/>
+                        <outlet property="imageView" destination="tW7-VG-zgv" id="t2n-uh-UzH"/>
+                        <outlet property="selectSegment" destination="2IU-fL-2Ri" id="n6e-vj-sDY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Mo5-K2-zc4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1482" y="-171"/>
         </scene>
         <!--Size-->
         <scene sceneID="EWu-R0-wtK">
@@ -130,7 +206,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MoO-SQ-vi7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2328" y="119"/>
+            <point key="canvasLocation" x="3604" y="-609"/>
         </scene>
         <!--Time-->
         <scene sceneID="KQh-Zc-KwM">
@@ -203,7 +279,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dCd-Yh-u0S" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3021" y="148"/>
+            <point key="canvasLocation" x="4297" y="-580"/>
         </scene>
         <!--Ever-->
         <scene sceneID="Jx3-12-bwU">
@@ -251,7 +327,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RU8-C9-DDq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3683" y="199"/>
+            <point key="canvasLocation" x="4959" y="-529"/>
         </scene>
         <!--CollectionView-->
         <scene sceneID="vql-5L-y0w">
@@ -492,7 +568,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j15-VJ-o2r" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3897" y="-1463"/>
+            <point key="canvasLocation" x="3805" y="-1419"/>
         </scene>
         <!--Notify3 View Controller-->
         <scene sceneID="z35-BA-nbk">
@@ -530,7 +606,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BvY-xa-lcp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5218" y="-1216"/>
+            <point key="canvasLocation" x="5126" y="-1172"/>
         </scene>
         <!--Notify2 View Controller-->
         <scene sceneID="XOv-v3-OPC">
@@ -565,7 +641,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ps0-e0-H83" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4559" y="-1322"/>
+            <point key="canvasLocation" x="4467" y="-1278"/>
         </scene>
         <!--AlertController-->
         <scene sceneID="CX5-fG-qAu">
@@ -1035,7 +1111,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jbe-M0-fvH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1639" y="57"/>
+            <point key="canvasLocation" x="2915" y="-671"/>
         </scene>
     </scenes>
 </document>
