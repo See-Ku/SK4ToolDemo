@@ -39,7 +39,7 @@ class PickerTimeViewController: UIViewController {
 		pickerViewAdmin = SK4PickerViewAdmin(pickerView: pickerView, parent: self)
 
 		let hour = (0...23).map() { no in String(no) }
-		let min = (0...59).map() { no in String(no) }
+		let min = (0...59).map() { no in String(format: "%02d", no) }
 
 		pickerViewAdmin.addUnit(hour, infinite: true)
 		pickerViewAdmin.addUnit(":", width: 32)
