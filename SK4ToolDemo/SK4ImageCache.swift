@@ -25,10 +25,13 @@ public class SK4ImageCache {
 	}
 
 	/// キャッシュファイルの接頭辞
-	public var prefix = "###"
+	public var cachePrefix = "###"
 
 	/// キャッシュファイルの接尾辞
-	public var suffix = ".png"
+	public var cacheSuffix = ".png"
+
+	/// キャッシュファイルを保存するディレクトリ
+	public var cacheDir = sk4GetCachesDirectory()
 
 	/// 初期化
 	public init() {
@@ -164,7 +167,7 @@ public class SK4ImageCache {
 		let ar = sk4FileListAtPath(dir)
 
 		for fn in ar {
-			if fn.hasPrefix(prefix) && fn.hasSuffix(suffix) {
+			if fn.hasPrefix(cachePrefix) && fn.hasSuffix(cacheSuffix) {
 				sk4DeleteFile(dir + fn)
 			}
 		}
@@ -172,7 +175,7 @@ public class SK4ImageCache {
 
 	/// キャッシュファイルのパスを生成
 	public func makeCachePath(name: String) -> String {
-		return sk4GetCachesDirectory() + prefix + name + suffix
+		return sk4GetCachesDirectory() + cachePrefix + name + cacheSuffix
 	}
 	
 }

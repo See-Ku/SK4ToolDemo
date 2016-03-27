@@ -110,7 +110,6 @@ public func sk4DeleteFile(path: String) -> Bool {
 	}
 }
 
-
 /// ファイルの一覧を作成
 public func sk4FileListAtPath(path: String, ext: String? = nil) -> [String] {
 	do {
