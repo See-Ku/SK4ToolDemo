@@ -72,7 +72,6 @@ class ImageCacheViewController: UIViewController {
 	func makeImage(no: Int) -> UIImage {
 		let ic = SK4ImageContext(width: Const.size, height: Const.size, opaque: false)
 
-/*
 		switch no {
 		case 0:
 			makeImage0(ic)
@@ -86,36 +85,26 @@ class ImageCacheViewController: UIViewController {
 		default:
 			makeImage0(ic)
 		}
-*/
-		makeImage0(ic)
 
 		return ic.makeImage()
 	}
 
 	func makeImage0(ic: SK4ImageContext) {
-		let si = Const.size
 		let color = UIColor.redColor()
+		ic.setLineWidthColor(4, stroke: color, fill: .whiteColor())
 
-		ic.setFillColor(UIColor.whiteColor())
-		ic.setStrokeColor(color)
-		ic.setLineWidth(4)
-
+		let si = Const.size
 		let re = CGRect(x: 8, y: 8, width: si-16, height: si-16)
 		ic.drawRoundRect(re, radius: 10)
 
-//		drawString("A", color: color, size: si)
+		drawString("A", color: color, size: si)
 	}
 
-
-/*
 	func makeImage1(ic: SK4ImageContext) {
-		let si = Const.size
 		let color = UIColor.greenColor()
+		ic.setLineWidthColor(4, stroke: color, fill: .whiteColor())
 
-		ic.setFillColor(UIColor.whiteColor())
-		ic.setStrokeColor(color)
-		ic.setLineWidth(4)
-
+		let si = Const.size
 		let re = CGRect(x: 8, y: 8, width: si-16, height: si-16)
 		ic.drawRoundRect(re, radius: 10)
 
@@ -130,41 +119,33 @@ class ImageCacheViewController: UIViewController {
 		let re3 = CGRect(x: si/2, y: 0, width: si/2, height: si)
 		ic.addRect(re3)
 		ic.clip()
-		drawString("D", color: UIColor.cyanColor(), size: si)
+		drawString("C", color: UIColor.cyanColor(), size: si)
 		ic.restoreState()
 	}
 
 	func makeImage2(ic: SK4ImageContext) {
-		let si = Const.size / 2
-		let color = UIColor.blueColor()
-
 		let loc: [CGFloat] = [0,0.5,1]
 		let com: [CGFloat] = [
-			1,0,0,1,	//	red
-			0,1,0,1,	//	green
-			0,0,1,1,	//	blue
+			1.0, 0.5, 0.5, 1.0,	//	red
+			0.5, 1.0, 0.5, 1.0,	//	green
+			0.5 ,0.5 ,1.0, 1.0,	//	blue
 		]
 
-		let gra = ic.gradientCreateWithColorComponents(com, locations: loc)
-
+		let gra = ic.createGradient(com, locations: loc)
 		let p0 = CGPoint(x: -20, y: 0)
 		let p1 = CGPoint(x: Const.size+20, y: Const.size)
 		ic.drawLinearGradient(gra, start: p0, end: p1)
 
-		ic.setFillColor(UIColor.whiteColor())
-		ic.setStrokeColor(color)
-		ic.setLineWidth(4)
+		let color = UIColor.blueColor()
+		ic.setLineWidthColor(4, stroke: color, fill: .whiteColor())
 
+		let si = Const.size / 2
 		let re = CGRect(x: 8, y: 8, width: si-16, height: si-16)
 		ic.drawRoundRect(re, radius: 10)
 
-		drawString("C", color: color, size: si)
+		drawString("D", color: color, size: si)
 	}
 
-
-*/
-
-/*
 	func drawString(str: String, color: UIColor, size: CGFloat) {
 		let atr = SK4TextAttributes()
 		atr.textColor = color
@@ -174,7 +155,6 @@ class ImageCacheViewController: UIViewController {
 		let re = CGRect(x: 0, y: 0, width: size, height: size)
 		str.sk4DrawInRect(re, withAttributes: atr.attributes, vertical: .Center)
 	}
-*/
 
 	// /////////////////////////////////////////////////////////////
 	// MARK: - その他

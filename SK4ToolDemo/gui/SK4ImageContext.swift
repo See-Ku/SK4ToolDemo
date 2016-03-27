@@ -72,6 +72,17 @@ public class SK4ImageContext {
 	}
 
 	// /////////////////////////////////////////////////////////////
+	// MARK: - 状態の保存／復元
+
+	public func saveState() {
+		CGContextSaveGState(context)
+	}
+
+	public func restoreState() {
+		CGContextRestoreGState(context)
+	}
+
+	// /////////////////////////////////////////////////////////////
 	// MARK: - 描画設定
 
 	public func setFillColor(color: UIColor) {
@@ -84,6 +95,12 @@ public class SK4ImageContext {
 
 	public func setLineWidth(width: CGFloat) {
 		CGContextSetLineWidth(context, width)
+	}
+
+	public func setLineWidthColor(width: CGFloat, stroke: UIColor, fill: UIColor) {
+		CGContextSetLineWidth(context, width)
+		CGContextSetStrokeColorWithColor(context, stroke.CGColor)
+		CGContextSetFillColorWithColor(context, fill.CGColor)
 	}
 
 
@@ -108,6 +125,21 @@ public class SK4ImageContext {
 
 	// /////////////////////////////////////////////////////////////
 
+	public func addRect(rect: CGRect) {
+		CGContextAddRect(context, rect)
+	}
+
+	public func moveToPoint(x: CGFloat, _ y: CGFloat) {
+		CGContextMoveToPoint(context, x, y)
+	}
+
+	public func addLineToPoint(x: CGFloat, _ y: CGFloat) {
+		CGContextAddLineToPoint(context, x, y)
+	}
+
+	// /////////////////////////////////////////////////////////////
+	// MARK: - 描画
+
 	public func drawPath(mode: CGPathDrawingMode = .FillStroke) {
 		CGContextDrawPath(context, mode)
 	}
@@ -119,11 +151,9 @@ public class SK4ImageContext {
 	public func drawFill() {
 		CGContextDrawPath(context, .Fill)
 	}
-	
-
 
 	// /////////////////////////////////////////////////////////////
-	// MARK: - 門を丸めた四角
+	// MARK: - 角を丸めた四角
 
 	public func addRoundRect(rect: CGRect, radius: CGFloat) {
 		CGContextMoveToPoint(context, rect.minX, rect.midY)
@@ -131,7 +161,7 @@ public class SK4ImageContext {
 		CGContextAddArcToPoint(context, rect.maxX, rect.minY, rect.maxX, rect.midY, radius)
 		CGContextAddArcToPoint(context, rect.maxX, rect.maxY, rect.midX, rect.maxY, radius)
 		CGContextAddArcToPoint(context, rect.minX, rect.maxY, rect.minX, rect.midY, radius)
-		closePath()
+		CGContextClosePath(context)
 	}
 
 	public func drawRoundRect(rect: CGRect, radius: CGFloat, mode: CGPathDrawingMode = .FillStroke) {
@@ -139,6 +169,27 @@ public class SK4ImageContext {
 		drawPath(mode)
 	}
 
+	// /////////////////////////////////////////////////////////////
+	// MARK: - グラデーション
+
+	/// CGGradientを生成
+	public func createGradient(components: [CGFloat], locations: [CGFloat]) -> CGGradient! {
+
+		assert(components.count % 4 == 0, "components count error.")
+
+		var count = locations.count
+		if components.count < count * 4 {
+			count = components.count / 4
+		}
+
+		let space = CGColorSpaceCreateDeviceRGB()
+		return CGGradientCreateWithColorComponents(space, components, locations, count)
+	}
+
+	/// グラデーションを描画
+	public func drawLinearGradient(gradient: CGGradient, start: CGPoint, end: CGPoint, options: CGGradientDrawingOptions = []) {
+		CGContextDrawLinearGradient(context, gradient, start, end, options)
+	}
 
 
 /*
@@ -147,10 +198,6 @@ public class SK4ImageContext {
 	// MARK: - 描画関係
 
 
-	public func setColor(color: UIColor) {
-		CGContextSetFillColorWithColor(context, color.CGColor)
-		CGContextSetStrokeColorWithColor(context, color.CGColor)
-	}
 
 
 	// /////////////////////////////////////////////////////////////
@@ -189,34 +236,10 @@ public class SK4ImageContext {
 		CGContextStrokeEllipseInRect(context, rect)
 	}
 
-	// /////////////////////////////////////////////////////////////
-
-	public func addRect(rect: CGRect) {
-		CGContextAddRect(context, rect)
-	}
-
-	public func moveToPoint(x: CGFloat, _ y: CGFloat) {
-		CGContextMoveToPoint(context, x, y)
-	}
-
-	public func addLineToPoint(x: CGFloat, _ y: CGFloat) {
-		CGContextAddLineToPoint(context, x, y)
-	}
 
 	// /////////////////////////////////////////////////////////////
 
 
-
-	// /////////////////////////////////////////////////////////////
-	// MARK: - 状態の保存／復元
-
-	public func saveState() {
-		CGContextSaveGState(context)
-	}
-
-	public func restoreState() {
-		CGContextRestoreGState(context)
-	}
 
 	// /////////////////////////////////////////////////////////////
 	// MARK: - UIImage転送
@@ -298,27 +321,6 @@ public class SK4ImageContext {
 		CGContextRestoreGState(context)
 	}
 
-	// /////////////////////////////////////////////////////////////
-	// MARK: - グラデーション
-
-	/// CGGradientを生成
-	public func gradientCreateWithColorComponents(components: [CGFloat], locations: [CGFloat]) -> CGGradient! {
-
-		assert(components.count % 4 == 0, "components count error.")
-
-		var count = locations.count
-		if components.count < count*4 {
-			count = components.count/4
-		}
-
-		let space = CGColorSpaceCreateDeviceRGB()
-		return CGGradientCreateWithColorComponents(space, components, locations, count)
-	}
-
-	/// グラデーションを描画
-	public func drawLinearGradient(gradient: CGGradient, start: CGPoint, end: CGPoint, options: CGGradientDrawingOptions = []) {
-		CGContextDrawLinearGradient(context, gradient, start, end, options)
-	}
 */
 
 /*
@@ -326,7 +328,13 @@ public class SK4ImageContext {
 	public convenience init(context: CGContext, rect: CGRect = CGRect()) {
 		self.init(context: context, rect: rect, release: false)
 	}
-*/
+
+	public func setColor(color: UIColor) {
+		CGContextSetFillColorWithColor(context, color.CGColor)
+		CGContextSetStrokeColorWithColor(context, color.CGColor)
+	}
+	*/
+
 
 
 }

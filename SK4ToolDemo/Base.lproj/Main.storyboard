@@ -72,7 +72,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tW7-VG-zgv">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tW7-VG-zgv">
                                 <rect key="frame" x="20" y="72" width="560" height="240"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="240" id="ZWJ-tD-5A3"/>
@@ -85,9 +85,9 @@
                                     <constraint firstAttribute="width" constant="180" id="aKO-JD-fiR"/>
                                 </constraints>
                                 <segments>
-                                    <segment title="First"/>
-                                    <segment title="Second"/>
-                                    <segment title="3"/>
+                                    <segment title="A"/>
+                                    <segment title="BC"/>
+                                    <segment title="D"/>
                                 </segments>
                                 <connections>
                                     <action selector="onSelect:" destination="5Yc-7Q-S1F" eventType="valueChanged" id="qIK-5X-XMq"/>

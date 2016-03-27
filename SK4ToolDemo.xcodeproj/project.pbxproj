@@ -18,6 +18,7 @@
 		879E73F91CA6A7F700C64902 /* SK4CollectionViewAdmin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879E73F81CA6A7F700C64902 /* SK4CollectionViewAdmin.swift */; };
 		879E73FB1CA6A9D600C64902 /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879E73FA1CA6A9D600C64902 /* CollectionViewController.swift */; };
 		879E73FD1CA6AA0F00C64902 /* CollectionViewAdmin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879E73FC1CA6AA0F00C64902 /* CollectionViewAdmin.swift */; };
+		87B634EE1CA7B27A004501B2 /* SK4TextAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87B634ED1CA7B27A004501B2 /* SK4TextAttributes.swift */; };
 		87BB463F1CA2A86F00F0BC50 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87BB463E1CA2A86F00F0BC50 /* AppDelegate.swift */; };
 		87BB46441CA2A86F00F0BC50 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87BB46421CA2A86F00F0BC50 /* Main.storyboard */; };
 		87BB46461CA2A86F00F0BC50 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 87BB46451CA2A86F00F0BC50 /* Assets.xcassets */; };
@@ -78,6 +79,7 @@
 		879E73F81CA6A7F700C64902 /* SK4CollectionViewAdmin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SK4CollectionViewAdmin.swift; path = gui/SK4CollectionViewAdmin.swift; sourceTree = "<group>"; };
 		879E73FA1CA6A9D600C64902 /* CollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
 		879E73FC1CA6AA0F00C64902 /* CollectionViewAdmin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewAdmin.swift; sourceTree = "<group>"; };
+		87B634ED1CA7B27A004501B2 /* SK4TextAttributes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SK4TextAttributes.swift; path = gui/SK4TextAttributes.swift; sourceTree = "<group>"; };
 		87BB463B1CA2A86F00F0BC50 /* SK4ToolDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SK4ToolDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		87BB463E1CA2A86F00F0BC50 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		87BB46431CA2A86F00F0BC50 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -228,6 +230,7 @@
 				87E236DC1CA72B9200B98DF7 /* SK4PickerViewAdmin.swift */,
 				871F9E881CA3BA6D005295FC /* SK4Dispatch.swift */,
 				87E236EE1CA799ED00B98DF7 /* SK4ImageContext.swift */,
+				87B634ED1CA7B27A004501B2 /* SK4TextAttributes.swift */,
 			);
 			name = sk4;
 			sourceTree = "<group>";
@@ -363,6 +366,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				87B634EE1CA7B27A004501B2 /* SK4TextAttributes.swift in Sources */,
 				87E236E91CA78AAA00B98DF7 /* ImageCacheViewController.swift in Sources */,
 				871F9E891CA3BA6D005295FC /* SK4Dispatch.swift in Sources */,
 				879E73F91CA6A7F700C64902 /* SK4CollectionViewAdmin.swift in Sources */,
