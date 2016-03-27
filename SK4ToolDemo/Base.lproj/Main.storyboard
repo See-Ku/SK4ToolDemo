@@ -93,13 +93,6 @@
                                     <action selector="onSelect:" destination="5Yc-7Q-S1F" eventType="valueChanged" id="qIK-5X-XMq"/>
                                 </connections>
                             </segmentedControl>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2v4-72-lzj">
-                                <rect key="frame" x="20" y="358" width="560" height="222"/>
-                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cdf-pg-pFf">
                                 <rect key="frame" x="480" y="320" width="100" height="30"/>
                                 <constraints>
@@ -111,25 +104,31 @@
                                     <action selector="onDeleteCache:" destination="5Yc-7Q-S1F" eventType="touchUpInside" id="cZq-YJ-Txp"/>
                                 </connections>
                             </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Nst-8e-JFv">
+                                <rect key="frame" x="20" y="356" width="560" height="224"/>
+                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="tW7-VG-zgv" firstAttribute="top" secondItem="t5t-CO-Vgp" secondAttribute="bottom" constant="8" id="1sk-E0-hQS"/>
                             <constraint firstItem="tW7-VG-zgv" firstAttribute="trailing" secondItem="tvA-Wz-hCh" secondAttribute="trailingMargin" id="1vE-Fa-edU"/>
+                            <constraint firstItem="Nst-8e-JFv" firstAttribute="trailing" secondItem="tvA-Wz-hCh" secondAttribute="trailingMargin" id="4i3-NA-ZxD"/>
                             <constraint firstItem="tW7-VG-zgv" firstAttribute="leading" secondItem="tvA-Wz-hCh" secondAttribute="leadingMargin" id="Af6-sQ-3uz"/>
                             <constraint firstItem="2IU-fL-2Ri" firstAttribute="top" secondItem="tW7-VG-zgv" secondAttribute="bottom" constant="8" id="C4f-zV-tYe"/>
-                            <constraint firstItem="nH5-1z-b6Y" firstAttribute="top" secondItem="2v4-72-lzj" secondAttribute="bottom" constant="20" id="TQ8-A9-ucE"/>
-                            <constraint firstItem="2v4-72-lzj" firstAttribute="top" secondItem="cdf-pg-pFf" secondAttribute="bottom" constant="8" id="UIL-bs-2d9"/>
+                            <constraint firstItem="nH5-1z-b6Y" firstAttribute="top" secondItem="Nst-8e-JFv" secondAttribute="bottom" constant="20" id="LVv-WS-SQP"/>
+                            <constraint firstItem="Nst-8e-JFv" firstAttribute="leading" secondItem="tvA-Wz-hCh" secondAttribute="leadingMargin" id="Oek-Zc-jAB"/>
                             <constraint firstItem="cdf-pg-pFf" firstAttribute="trailing" secondItem="tvA-Wz-hCh" secondAttribute="trailingMargin" id="af2-BU-5s4"/>
                             <constraint firstItem="2IU-fL-2Ri" firstAttribute="leading" secondItem="tvA-Wz-hCh" secondAttribute="leadingMargin" id="deq-il-8L6"/>
-                            <constraint firstItem="2v4-72-lzj" firstAttribute="trailing" secondItem="tvA-Wz-hCh" secondAttribute="trailingMargin" id="frf-mZ-L7j"/>
-                            <constraint firstItem="2v4-72-lzj" firstAttribute="leading" secondItem="tvA-Wz-hCh" secondAttribute="leadingMargin" id="kys-vF-3mF"/>
+                            <constraint firstItem="Nst-8e-JFv" firstAttribute="top" secondItem="cdf-pg-pFf" secondAttribute="bottom" constant="6" id="lF1-h3-8SH"/>
                             <constraint firstItem="cdf-pg-pFf" firstAttribute="top" secondItem="tW7-VG-zgv" secondAttribute="bottom" constant="8" id="z70-jR-cfc"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="ImageCache" id="m1r-of-asK"/>
                     <connections>
-                        <outlet property="cacheList" destination="2v4-72-lzj" id="yxS-4m-foQ"/>
+                        <outlet property="cacheFileList" destination="Nst-8e-JFv" id="k3L-ml-A1D"/>
                         <outlet property="imageView" destination="tW7-VG-zgv" id="t2n-uh-UzH"/>
                         <outlet property="selectSegment" destination="2IU-fL-2Ri" id="n6e-vj-sDY"/>
                     </connections>

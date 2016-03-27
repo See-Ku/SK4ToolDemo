@@ -12,21 +12,21 @@ import UIKit
 public class SK4ImageCache {
 
 	/// キャッシュファイルを保存するディレクトリ
-	public let cacheDir: String
+	public let dir: String
 
 	/// キャッシュファイルの接頭辞
-	public let cachePrefix: String
+	public let prefix: String
 
 	/// キャッシュファイルの接尾辞
-	public let cacheSuffix: String
+	public let suffix: String
 
 	let cache = NSCache()
 
 	/// 初期化
 	public init(dir: String, prefix: String, suffix: String, cacheLimit: Int) {
-		self.cacheDir = dir
-		self.cachePrefix = prefix
-		self.cacheSuffix = suffix
+		self.dir = dir
+		self.prefix = prefix
+		self.suffix = suffix
 
 		cache.evictsObjectsWithDiscardedContent = true
 		cache.countLimit = cacheLimit
@@ -158,17 +158,17 @@ public class SK4ImageCache {
 
 	/// イメージのキャッシュファイルをすべて削除
 	public func deleteCacheFileAll() {
-		let ar = sk4FileListAtPath(cacheDir)
+		let ar = sk4FileListAtPath(dir)
 		for fn in ar {
-			if fn.hasPrefix(cachePrefix) && fn.hasSuffix(cacheSuffix) {
-				sk4DeleteFile(cacheDir + fn)
+			if fn.hasPrefix(prefix) && fn.hasSuffix(suffix) {
+				sk4DeleteFile(dir + fn)
 			}
 		}
 	}
 
 	/// キャッシュファイルのパスを生成
 	public func makeCachePath(name: String) -> String {
-		return cacheDir + cachePrefix + name + cacheSuffix
+		return dir + prefix + name + suffix
 	}
 	
 }
