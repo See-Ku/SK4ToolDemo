@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SK4Toolkit
 
 /// 通知を識別するenum
 enum Notify: SK4Notify {

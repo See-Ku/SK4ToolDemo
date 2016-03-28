@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SK4Toolkit
 
 class MainMenuTableAdmin: SK4TableViewAdmin {
 
@@ -15,10 +16,12 @@ class MainMenuTableAdmin: SK4TableViewAdmin {
 		"AlertController",
 		"ActionSheet",
 		"BorderButton",
+
 		"Toolbar",
 		"OverlayIndicator",
 		"Notify",
 		"CollectionView",
+
 		"PickerView",
 		"ImageCache",
 		"LazyTimer",

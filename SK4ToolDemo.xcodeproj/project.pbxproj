@@ -8,52 +8,57 @@
 
 /* Begin PBXBuildFile section */
 		871F9E871CA3B91D005295FC /* OverlayIndicatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 871F9E861CA3B91D005295FC /* OverlayIndicatorViewController.swift */; };
-		871F9E891CA3BA6D005295FC /* SK4Dispatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 871F9E881CA3BA6D005295FC /* SK4Dispatch.swift */; };
-		871F9E8B1CA3BCF7005295FC /* SK4StopWatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 871F9E8A1CA3BCF7005295FC /* SK4StopWatch.swift */; };
-		876C0AC71CA4CB14001F15A8 /* SK4OverlayIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 876C0AC61CA4CB14001F15A8 /* SK4OverlayIndicator.swift */; };
 		878402171CA36269001C3E0F /* ActionSheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 878402161CA36269001C3E0F /* ActionSheetViewController.swift */; };
-		878402191CA39AC7001C3E0F /* SK4BorderButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 878402181CA39AC7001C3E0F /* SK4BorderButton.swift */; };
 		8784021B1CA39BDE001C3E0F /* BorderButtonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8784021A1CA39BDE001C3E0F /* BorderButtonViewController.swift */; };
 		8784021D1CA3A5DE001C3E0F /* ToolbarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8784021C1CA3A5DE001C3E0F /* ToolbarViewController.swift */; };
-		879E73F91CA6A7F700C64902 /* SK4CollectionViewAdmin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879E73F81CA6A7F700C64902 /* SK4CollectionViewAdmin.swift */; };
 		879E73FB1CA6A9D600C64902 /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879E73FA1CA6A9D600C64902 /* CollectionViewController.swift */; };
 		879E73FD1CA6AA0F00C64902 /* CollectionViewAdmin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879E73FC1CA6AA0F00C64902 /* CollectionViewAdmin.swift */; };
-		87B634EE1CA7B27A004501B2 /* SK4TextAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87B634ED1CA7B27A004501B2 /* SK4TextAttributes.swift */; };
+		87A583B31CA8F82500D0E357 /* SK4Toolkit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87A583B01CA8F80D00D0E357 /* SK4Toolkit.framework */; };
+		87A583B41CA8F82500D0E357 /* SK4Toolkit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 87A583B01CA8F80D00D0E357 /* SK4Toolkit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		87B634F01CA7F2B5004501B2 /* LazyTimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87B634EF1CA7F2B4004501B2 /* LazyTimerViewController.swift */; };
 		87B634F21CA7F579004501B2 /* TextAttributesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87B634F11CA7F579004501B2 /* TextAttributesViewController.swift */; };
-		87B634F41CA7F99E004501B2 /* SK4NSAttributedStringExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87B634F31CA7F99E004501B2 /* SK4NSAttributedStringExtention.swift */; };
 		87BB463F1CA2A86F00F0BC50 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87BB463E1CA2A86F00F0BC50 /* AppDelegate.swift */; };
 		87BB46441CA2A86F00F0BC50 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87BB46421CA2A86F00F0BC50 /* Main.storyboard */; };
 		87BB46461CA2A86F00F0BC50 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 87BB46451CA2A86F00F0BC50 /* Assets.xcassets */; };
 		87BB46491CA2A86F00F0BC50 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87BB46471CA2A86F00F0BC50 /* LaunchScreen.storyboard */; };
 		87BB46541CA2A86F00F0BC50 /* SK4ToolDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87BB46531CA2A86F00F0BC50 /* SK4ToolDemoTests.swift */; };
 		87BB465F1CA2A86F00F0BC50 /* SK4ToolDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87BB465E1CA2A86F00F0BC50 /* SK4ToolDemoUITests.swift */; };
-		87BB466D1CA2A8E300F0BC50 /* SK4TableViewAdmin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87BB466C1CA2A8E300F0BC50 /* SK4TableViewAdmin.swift */; };
 		87BB466F1CA2AE7C00F0BC50 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87BB466E1CA2AE7C00F0BC50 /* TableViewController.swift */; };
 		87BB46711CA2AE9900F0BC50 /* MainMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87BB46701CA2AE9900F0BC50 /* MainMenuViewController.swift */; };
 		87BB46731CA2AFC600F0BC50 /* TableViewAdmin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87BB46721CA2AFC600F0BC50 /* TableViewAdmin.swift */; };
-		87BB46751CA2BEAE00F0BC50 /* SK4ToolKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87BB46741CA2BEAE00F0BC50 /* SK4ToolKit.swift */; };
-		87BB46771CA2CCB900F0BC50 /* SK4AlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87BB46761CA2CCB900F0BC50 /* SK4AlertController.swift */; };
-		87BB46791CA2CF5100F0BC50 /* SK4LeakCheck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87BB46781CA2CF5100F0BC50 /* SK4LeakCheck.swift */; };
 		87BB467B1CA353A000F0BC50 /* AlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87BB467A1CA353A000F0BC50 /* AlertViewController.swift */; };
-		87BB467E1CA35E7300F0BC50 /* SK4ActionSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87BB467D1CA35E7300F0BC50 /* SK4ActionSheet.swift */; };
 		87E236DB1CA7214A00B98DF7 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E236DA1CA7214A00B98DF7 /* CollectionViewCell.swift */; };
-		87E236DD1CA72B9200B98DF7 /* SK4PickerViewAdmin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E236DC1CA72B9200B98DF7 /* SK4PickerViewAdmin.swift */; };
 		87E236DF1CA7553F00B98DF7 /* PickerSizeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E236DE1CA7553F00B98DF7 /* PickerSizeViewController.swift */; };
 		87E236E11CA75AA600B98DF7 /* PickerTimeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E236E01CA75AA600B98DF7 /* PickerTimeViewController.swift */; };
 		87E236E31CA7645F00B98DF7 /* PickerEverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E236E21CA7645F00B98DF7 /* PickerEverViewController.swift */; };
-		87E236E71CA7733000B98DF7 /* SK4StringExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E236E61CA7733000B98DF7 /* SK4StringExtention.swift */; };
 		87E236E91CA78AAA00B98DF7 /* ImageCacheViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E236E81CA78AAA00B98DF7 /* ImageCacheViewController.swift */; };
-		87E236EB1CA78D7100B98DF7 /* SK4LazyTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E236EA1CA78D7100B98DF7 /* SK4LazyTimer.swift */; };
-		87E236ED1CA798A600B98DF7 /* SK4ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E236EC1CA798A600B98DF7 /* SK4ImageCache.swift */; };
-		87E236EF1CA799ED00B98DF7 /* SK4ImageContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E236EE1CA799ED00B98DF7 /* SK4ImageContext.swift */; };
-		87EE2A2A1CA63DBE00D0A222 /* SK4Notify.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EE2A291CA63DBE00D0A222 /* SK4Notify.swift */; };
 		87EE2A2C1CA6433800D0A222 /* Notify1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EE2A2B1CA6433800D0A222 /* Notify1ViewController.swift */; };
 		87EE2A2E1CA6476000D0A222 /* Notify2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EE2A2D1CA6476000D0A222 /* Notify2ViewController.swift */; };
 		87EE2A301CA6476D00D0A222 /* Notify3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EE2A2F1CA6476D00D0A222 /* Notify3ViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		87A583AF1CA8F80D00D0E357 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 87A583AA1CA8F80C00D0E357 /* SK4Toolkit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 87BB45DC1CA2A1F100F0BC50;
+			remoteInfo = SK4Toolkit;
+		};
+		87A583B11CA8F80D00D0E357 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 87A583AA1CA8F80C00D0E357 /* SK4Toolkit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 87BB45E61CA2A1F100F0BC50;
+			remoteInfo = SK4ToolkitTests;
+		};
+		87A583B51CA8F82500D0E357 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 87A583AA1CA8F80C00D0E357 /* SK4Toolkit.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 87BB45DB1CA2A1F100F0BC50;
+			remoteInfo = SK4Toolkit;
+		};
 		87BB46501CA2A86F00F0BC50 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 87BB46331CA2A86F00F0BC50 /* Project object */;
@@ -70,22 +75,30 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		87A583B71CA8F82500D0E357 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				87A583B41CA8F82500D0E357 /* SK4Toolkit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		871F9E861CA3B91D005295FC /* OverlayIndicatorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OverlayIndicatorViewController.swift; sourceTree = "<group>"; };
-		871F9E881CA3BA6D005295FC /* SK4Dispatch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SK4Dispatch.swift; path = core/SK4Dispatch.swift; sourceTree = "<group>"; };
-		871F9E8A1CA3BCF7005295FC /* SK4StopWatch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SK4StopWatch.swift; path = core/SK4StopWatch.swift; sourceTree = "<group>"; };
-		876C0AC61CA4CB14001F15A8 /* SK4OverlayIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SK4OverlayIndicator.swift; path = gui/SK4OverlayIndicator.swift; sourceTree = "<group>"; };
 		878402161CA36269001C3E0F /* ActionSheetViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActionSheetViewController.swift; sourceTree = "<group>"; };
-		878402181CA39AC7001C3E0F /* SK4BorderButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SK4BorderButton.swift; path = gui/SK4BorderButton.swift; sourceTree = "<group>"; };
 		8784021A1CA39BDE001C3E0F /* BorderButtonViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BorderButtonViewController.swift; sourceTree = "<group>"; };
 		8784021C1CA3A5DE001C3E0F /* ToolbarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToolbarViewController.swift; sourceTree = "<group>"; };
-		879E73F81CA6A7F700C64902 /* SK4CollectionViewAdmin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SK4CollectionViewAdmin.swift; path = gui/SK4CollectionViewAdmin.swift; sourceTree = "<group>"; };
 		879E73FA1CA6A9D600C64902 /* CollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
 		879E73FC1CA6AA0F00C64902 /* CollectionViewAdmin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewAdmin.swift; sourceTree = "<group>"; };
-		87B634ED1CA7B27A004501B2 /* SK4TextAttributes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SK4TextAttributes.swift; path = gui/SK4TextAttributes.swift; sourceTree = "<group>"; };
+		87A583AA1CA8F80C00D0E357 /* SK4Toolkit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SK4Toolkit.xcodeproj; path = ../SK4Toolkit/SK4Toolkit.xcodeproj; sourceTree = "<group>"; };
 		87B634EF1CA7F2B4004501B2 /* LazyTimerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LazyTimerViewController.swift; sourceTree = "<group>"; };
 		87B634F11CA7F579004501B2 /* TextAttributesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextAttributesViewController.swift; sourceTree = "<group>"; };
-		87B634F31CA7F99E004501B2 /* SK4NSAttributedStringExtention.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SK4NSAttributedStringExtention.swift; path = extention/SK4NSAttributedStringExtention.swift; sourceTree = "<group>"; };
 		87BB463B1CA2A86F00F0BC50 /* SK4ToolDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SK4ToolDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		87BB463E1CA2A86F00F0BC50 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		87BB46431CA2A86F00F0BC50 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -98,26 +111,15 @@
 		87BB465A1CA2A86F00F0BC50 /* SK4ToolDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SK4ToolDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		87BB465E1CA2A86F00F0BC50 /* SK4ToolDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SK4ToolDemoUITests.swift; sourceTree = "<group>"; };
 		87BB46601CA2A86F00F0BC50 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		87BB466C1CA2A8E300F0BC50 /* SK4TableViewAdmin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SK4TableViewAdmin.swift; path = gui/SK4TableViewAdmin.swift; sourceTree = "<group>"; };
 		87BB466E1CA2AE7C00F0BC50 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		87BB46701CA2AE9900F0BC50 /* MainMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainMenuViewController.swift; sourceTree = "<group>"; };
 		87BB46721CA2AFC600F0BC50 /* TableViewAdmin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewAdmin.swift; sourceTree = "<group>"; };
-		87BB46741CA2BEAE00F0BC50 /* SK4ToolKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SK4ToolKit.swift; sourceTree = "<group>"; };
-		87BB46761CA2CCB900F0BC50 /* SK4AlertController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SK4AlertController.swift; path = gui/SK4AlertController.swift; sourceTree = "<group>"; };
-		87BB46781CA2CF5100F0BC50 /* SK4LeakCheck.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SK4LeakCheck.swift; path = core/SK4LeakCheck.swift; sourceTree = "<group>"; };
 		87BB467A1CA353A000F0BC50 /* AlertViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertViewController.swift; sourceTree = "<group>"; };
-		87BB467D1CA35E7300F0BC50 /* SK4ActionSheet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SK4ActionSheet.swift; path = gui/SK4ActionSheet.swift; sourceTree = "<group>"; };
 		87E236DA1CA7214A00B98DF7 /* CollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
-		87E236DC1CA72B9200B98DF7 /* SK4PickerViewAdmin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SK4PickerViewAdmin.swift; path = gui/SK4PickerViewAdmin.swift; sourceTree = "<group>"; };
 		87E236DE1CA7553F00B98DF7 /* PickerSizeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickerSizeViewController.swift; sourceTree = "<group>"; };
 		87E236E01CA75AA600B98DF7 /* PickerTimeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickerTimeViewController.swift; sourceTree = "<group>"; };
 		87E236E21CA7645F00B98DF7 /* PickerEverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickerEverViewController.swift; sourceTree = "<group>"; };
-		87E236E61CA7733000B98DF7 /* SK4StringExtention.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SK4StringExtention.swift; path = extention/SK4StringExtention.swift; sourceTree = "<group>"; };
 		87E236E81CA78AAA00B98DF7 /* ImageCacheViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCacheViewController.swift; sourceTree = "<group>"; };
-		87E236EA1CA78D7100B98DF7 /* SK4LazyTimer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SK4LazyTimer.swift; path = core/SK4LazyTimer.swift; sourceTree = "<group>"; };
-		87E236EC1CA798A600B98DF7 /* SK4ImageCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SK4ImageCache.swift; path = core/SK4ImageCache.swift; sourceTree = "<group>"; };
-		87E236EE1CA799ED00B98DF7 /* SK4ImageContext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SK4ImageContext.swift; path = gui/SK4ImageContext.swift; sourceTree = "<group>"; };
-		87EE2A291CA63DBE00D0A222 /* SK4Notify.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SK4Notify.swift; path = core/SK4Notify.swift; sourceTree = "<group>"; };
 		87EE2A2B1CA6433800D0A222 /* Notify1ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Notify1ViewController.swift; sourceTree = "<group>"; };
 		87EE2A2D1CA6476000D0A222 /* Notify2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Notify2ViewController.swift; sourceTree = "<group>"; };
 		87EE2A2F1CA6476D00D0A222 /* Notify3ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Notify3ViewController.swift; sourceTree = "<group>"; };
@@ -128,6 +130,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				87A583B31CA8F82500D0E357 /* SK4Toolkit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -148,6 +151,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		87A583AB1CA8F80C00D0E357 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				87A583B01CA8F80D00D0E357 /* SK4Toolkit.framework */,
+				87A583B21CA8F80D00D0E357 /* SK4ToolkitTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		87BB46321CA2A86F00F0BC50 = {
 			isa = PBXGroup;
 			children = (
@@ -155,6 +167,7 @@
 				87BB46521CA2A86F00F0BC50 /* SK4ToolDemoTests */,
 				87BB465D1CA2A86F00F0BC50 /* SK4ToolDemoUITests */,
 				87BB463C1CA2A86F00F0BC50 /* Products */,
+				87A583AA1CA8F80C00D0E357 /* SK4Toolkit.xcodeproj */,
 			);
 			sourceTree = "<group>";
 		};
@@ -174,25 +187,25 @@
 				87BB467C1CA354E300F0BC50 /* sk4 */,
 				87BB463E1CA2A86F00F0BC50 /* AppDelegate.swift */,
 				87BB46701CA2AE9900F0BC50 /* MainMenuViewController.swift */,
-				87B634F11CA7F579004501B2 /* TextAttributesViewController.swift */,
-				87E236E81CA78AAA00B98DF7 /* ImageCacheViewController.swift */,
-				87B634EF1CA7F2B4004501B2 /* LazyTimerViewController.swift */,
-				87E236DE1CA7553F00B98DF7 /* PickerSizeViewController.swift */,
-				87E236E01CA75AA600B98DF7 /* PickerTimeViewController.swift */,
-				87E236E21CA7645F00B98DF7 /* PickerEverViewController.swift */,
-				879E73FA1CA6A9D600C64902 /* CollectionViewController.swift */,
-				879E73FC1CA6AA0F00C64902 /* CollectionViewAdmin.swift */,
-				87E236DA1CA7214A00B98DF7 /* CollectionViewCell.swift */,
-				87EE2A2B1CA6433800D0A222 /* Notify1ViewController.swift */,
-				87EE2A2D1CA6476000D0A222 /* Notify2ViewController.swift */,
-				87EE2A2F1CA6476D00D0A222 /* Notify3ViewController.swift */,
-				8784021C1CA3A5DE001C3E0F /* ToolbarViewController.swift */,
-				8784021A1CA39BDE001C3E0F /* BorderButtonViewController.swift */,
 				87BB466E1CA2AE7C00F0BC50 /* TableViewController.swift */,
 				87BB46721CA2AFC600F0BC50 /* TableViewAdmin.swift */,
 				87BB467A1CA353A000F0BC50 /* AlertViewController.swift */,
 				878402161CA36269001C3E0F /* ActionSheetViewController.swift */,
+				8784021A1CA39BDE001C3E0F /* BorderButtonViewController.swift */,
+				8784021C1CA3A5DE001C3E0F /* ToolbarViewController.swift */,
 				871F9E861CA3B91D005295FC /* OverlayIndicatorViewController.swift */,
+				87EE2A2B1CA6433800D0A222 /* Notify1ViewController.swift */,
+				87EE2A2D1CA6476000D0A222 /* Notify2ViewController.swift */,
+				87EE2A2F1CA6476D00D0A222 /* Notify3ViewController.swift */,
+				879E73FA1CA6A9D600C64902 /* CollectionViewController.swift */,
+				879E73FC1CA6AA0F00C64902 /* CollectionViewAdmin.swift */,
+				87E236DA1CA7214A00B98DF7 /* CollectionViewCell.swift */,
+				87E236DE1CA7553F00B98DF7 /* PickerSizeViewController.swift */,
+				87E236E01CA75AA600B98DF7 /* PickerTimeViewController.swift */,
+				87E236E21CA7645F00B98DF7 /* PickerEverViewController.swift */,
+				87E236E81CA78AAA00B98DF7 /* ImageCacheViewController.swift */,
+				87B634EF1CA7F2B4004501B2 /* LazyTimerViewController.swift */,
+				87B634F11CA7F579004501B2 /* TextAttributesViewController.swift */,
 				87BB46421CA2A86F00F0BC50 /* Main.storyboard */,
 				87BB46451CA2A86F00F0BC50 /* Assets.xcassets */,
 				87BB46471CA2A86F00F0BC50 /* LaunchScreen.storyboard */,
@@ -222,24 +235,6 @@
 		87BB467C1CA354E300F0BC50 /* sk4 */ = {
 			isa = PBXGroup;
 			children = (
-				87E236EC1CA798A600B98DF7 /* SK4ImageCache.swift */,
-				87BB46741CA2BEAE00F0BC50 /* SK4ToolKit.swift */,
-				87E236EA1CA78D7100B98DF7 /* SK4LazyTimer.swift */,
-				87EE2A291CA63DBE00D0A222 /* SK4Notify.swift */,
-				876C0AC61CA4CB14001F15A8 /* SK4OverlayIndicator.swift */,
-				871F9E8A1CA3BCF7005295FC /* SK4StopWatch.swift */,
-				878402181CA39AC7001C3E0F /* SK4BorderButton.swift */,
-				87BB46781CA2CF5100F0BC50 /* SK4LeakCheck.swift */,
-				87BB46761CA2CCB900F0BC50 /* SK4AlertController.swift */,
-				87BB467D1CA35E7300F0BC50 /* SK4ActionSheet.swift */,
-				87BB466C1CA2A8E300F0BC50 /* SK4TableViewAdmin.swift */,
-				87E236E61CA7733000B98DF7 /* SK4StringExtention.swift */,
-				879E73F81CA6A7F700C64902 /* SK4CollectionViewAdmin.swift */,
-				87E236DC1CA72B9200B98DF7 /* SK4PickerViewAdmin.swift */,
-				871F9E881CA3BA6D005295FC /* SK4Dispatch.swift */,
-				87E236EE1CA799ED00B98DF7 /* SK4ImageContext.swift */,
-				87B634F31CA7F99E004501B2 /* SK4NSAttributedStringExtention.swift */,
-				87B634ED1CA7B27A004501B2 /* SK4TextAttributes.swift */,
 			);
 			name = sk4;
 			sourceTree = "<group>";
@@ -254,10 +249,12 @@
 				87BB46371CA2A86F00F0BC50 /* Sources */,
 				87BB46381CA2A86F00F0BC50 /* Frameworks */,
 				87BB46391CA2A86F00F0BC50 /* Resources */,
+				87A583B71CA8F82500D0E357 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				87A583B61CA8F82500D0E357 /* PBXTargetDependency */,
 			);
 			name = SK4ToolDemo;
 			productName = SK4ToolDemo;
@@ -334,6 +331,12 @@
 			mainGroup = 87BB46321CA2A86F00F0BC50;
 			productRefGroup = 87BB463C1CA2A86F00F0BC50 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 87A583AB1CA8F80C00D0E357 /* Products */;
+					ProjectRef = 87A583AA1CA8F80C00D0E357 /* SK4Toolkit.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				87BB463A1CA2A86F00F0BC50 /* SK4ToolDemo */,
@@ -342,6 +345,23 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		87A583B01CA8F80D00D0E357 /* SK4Toolkit.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SK4Toolkit.framework;
+			remoteRef = 87A583AF1CA8F80D00D0E357 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		87A583B21CA8F80D00D0E357 /* SK4ToolkitTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = SK4ToolkitTests.xctest;
+			remoteRef = 87A583B11CA8F80D00D0E357 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		87BB46391CA2A86F00F0BC50 /* Resources */ = {
@@ -375,41 +395,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				87B634EE1CA7B27A004501B2 /* SK4TextAttributes.swift in Sources */,
 				87E236E91CA78AAA00B98DF7 /* ImageCacheViewController.swift in Sources */,
-				871F9E891CA3BA6D005295FC /* SK4Dispatch.swift in Sources */,
-				879E73F91CA6A7F700C64902 /* SK4CollectionViewAdmin.swift in Sources */,
 				87EE2A301CA6476D00D0A222 /* Notify3ViewController.swift in Sources */,
-				87B634F41CA7F99E004501B2 /* SK4NSAttributedStringExtention.swift in Sources */,
 				8784021D1CA3A5DE001C3E0F /* ToolbarViewController.swift in Sources */,
-				878402191CA39AC7001C3E0F /* SK4BorderButton.swift in Sources */,
 				87EE2A2C1CA6433800D0A222 /* Notify1ViewController.swift in Sources */,
-				87BB466D1CA2A8E300F0BC50 /* SK4TableViewAdmin.swift in Sources */,
-				876C0AC71CA4CB14001F15A8 /* SK4OverlayIndicator.swift in Sources */,
 				87E236DB1CA7214A00B98DF7 /* CollectionViewCell.swift in Sources */,
-				87E236DD1CA72B9200B98DF7 /* SK4PickerViewAdmin.swift in Sources */,
-				87E236EF1CA799ED00B98DF7 /* SK4ImageContext.swift in Sources */,
-				87BB46751CA2BEAE00F0BC50 /* SK4ToolKit.swift in Sources */,
 				87E236E11CA75AA600B98DF7 /* PickerTimeViewController.swift in Sources */,
-				87BB46791CA2CF5100F0BC50 /* SK4LeakCheck.swift in Sources */,
 				87BB46711CA2AE9900F0BC50 /* MainMenuViewController.swift in Sources */,
 				87BB467B1CA353A000F0BC50 /* AlertViewController.swift in Sources */,
 				8784021B1CA39BDE001C3E0F /* BorderButtonViewController.swift in Sources */,
 				87BB463F1CA2A86F00F0BC50 /* AppDelegate.swift in Sources */,
-				87BB46771CA2CCB900F0BC50 /* SK4AlertController.swift in Sources */,
-				87E236ED1CA798A600B98DF7 /* SK4ImageCache.swift in Sources */,
-				871F9E8B1CA3BCF7005295FC /* SK4StopWatch.swift in Sources */,
 				87EE2A2E1CA6476000D0A222 /* Notify2ViewController.swift in Sources */,
 				87BB46731CA2AFC600F0BC50 /* TableViewAdmin.swift in Sources */,
 				879E73FB1CA6A9D600C64902 /* CollectionViewController.swift in Sources */,
-				87BB467E1CA35E7300F0BC50 /* SK4ActionSheet.swift in Sources */,
-				87EE2A2A1CA63DBE00D0A222 /* SK4Notify.swift in Sources */,
 				87B634F01CA7F2B5004501B2 /* LazyTimerViewController.swift in Sources */,
 				87E236E31CA7645F00B98DF7 /* PickerEverViewController.swift in Sources */,
-				87E236E71CA7733000B98DF7 /* SK4StringExtention.swift in Sources */,
 				879E73FD1CA6AA0F00C64902 /* CollectionViewAdmin.swift in Sources */,
 				871F9E871CA3B91D005295FC /* OverlayIndicatorViewController.swift in Sources */,
-				87E236EB1CA78D7100B98DF7 /* SK4LazyTimer.swift in Sources */,
 				87E236DF1CA7553F00B98DF7 /* PickerSizeViewController.swift in Sources */,
 				87BB466F1CA2AE7C00F0BC50 /* TableViewController.swift in Sources */,
 				87B634F21CA7F579004501B2 /* TextAttributesViewController.swift in Sources */,
@@ -436,6 +438,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		87A583B61CA8F82500D0E357 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SK4Toolkit;
+			targetProxy = 87A583B51CA8F82500D0E357 /* PBXContainerItemProxy */;
+		};
 		87BB46511CA2A86F00F0BC50 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 87BB463A1CA2A86F00F0BC50 /* SK4ToolDemo */;
@@ -557,6 +564,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = SK4ToolDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.see-ku.SK4ToolDemo";
@@ -568,6 +576,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = SK4ToolDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.see-ku.SK4ToolDemo";

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SK4Toolkit
 
 class Notify3ViewController: UIViewController {
 

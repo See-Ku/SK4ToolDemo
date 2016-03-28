@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SK4Toolkit
 
 class CollectionViewAdmin: SK4CollectionViewAdmin {
 
