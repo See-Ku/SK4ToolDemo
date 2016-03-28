@@ -11,9 +11,6 @@ import UIKit
 class MainMenuTableAdmin: SK4TableViewAdmin {
 
 	let itemArray = [
-		"TextAttributes",
-
-
 		"TableViewAdmin",
 		"AlertController",
 		"ActionSheet",
@@ -25,8 +22,7 @@ class MainMenuTableAdmin: SK4TableViewAdmin {
 		"PickerView",
 		"ImageCache",
 		"LazyTimer",
-
-
+		"TextAttributes",
 	]
 
 	override func numberOfRows(section: Int) -> Int {

@@ -176,7 +176,6 @@
 				87BB46701CA2AE9900F0BC50 /* MainMenuViewController.swift */,
 				87B634F11CA7F579004501B2 /* TextAttributesViewController.swift */,
 				87E236E81CA78AAA00B98DF7 /* ImageCacheViewController.swift */,
-				87B634F31CA7F99E004501B2 /* SK4NSAttributedStringExtention.swift */,
 				87B634EF1CA7F2B4004501B2 /* LazyTimerViewController.swift */,
 				87E236DE1CA7553F00B98DF7 /* PickerSizeViewController.swift */,
 				87E236E01CA75AA600B98DF7 /* PickerTimeViewController.swift */,
@@ -239,6 +238,7 @@
 				87E236DC1CA72B9200B98DF7 /* SK4PickerViewAdmin.swift */,
 				871F9E881CA3BA6D005295FC /* SK4Dispatch.swift */,
 				87E236EE1CA799ED00B98DF7 /* SK4ImageContext.swift */,
+				87B634F31CA7F99E004501B2 /* SK4NSAttributedStringExtention.swift */,
 				87B634ED1CA7B27A004501B2 /* SK4TextAttributes.swift */,
 			);
 			name = sk4;
