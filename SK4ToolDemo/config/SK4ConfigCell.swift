@@ -35,7 +35,7 @@ public class SK4ConfigCell {
 	//	public var cellHeight: CGFloat = 0.0
 
 	/// UITableViewCellで使用するaccessory
-	//	public var accessoryType = UITableViewCellAccessoryType.None
+	public var accessoryType = UITableViewCellAccessoryType.None
 
 	/// 初期化
 	public init() {
@@ -60,6 +60,14 @@ public class SK4ConfigCell {
 
 	/// Cellの内容を設定
 	public func configToCell(cell: UITableViewCell) {
+		cell.textLabel?.text = configValue.title
+		cell.detailTextLabel?.text = configValue.string
+
+		if accessoryType == .DisclosureIndicator && readOnly {
+			cell.accessoryType = .None
+		} else {
+			cell.accessoryType = accessoryType
+		}
 	}
 
 	// /////////////////////////////////////////////////////////////

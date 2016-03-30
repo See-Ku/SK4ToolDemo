@@ -15,17 +15,6 @@ public class SK4ConfigCellLabel: SK4ConfigCell {
 
 		readOnly = true
 	}
-
-	override public func configToCell(cell: UITableViewCell) {
-		cell.textLabel?.text = configValue.title
-		cell.detailTextLabel?.text = configValue.string
-
-		//		if accessoryType == .DisclosureIndicator && readOnly {
-		//			cell.accessoryType = .None
-		//		} else {
-		//			cell.accessoryType = accessoryType
-		//		}
-	}
 }
 
 // eof

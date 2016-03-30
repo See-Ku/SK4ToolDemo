@@ -258,13 +258,13 @@
 			isa = PBXGroup;
 			children = (
 				87632DD31CAC135F004D31E0 /* SK4TableViewController.swift */,
-				87632DD51CAC13BF004D31E0 /* SK4ConfigViewController.swift */,
 				87632DC61CAC0FDC004D31E0 /* SK4ConfigValue.swift */,
 				87632DCB1CAC1106004D31E0 /* SK4ConfigCell.swift */,
-				87632DCF1CAC1227004D31E0 /* SK4ConfigCellDirectory.swift */,
-				87632DCD1CAC1196004D31E0 /* SK4ConfigTableViewAdmin.swift */,
-				87632DC91CAC1081004D31E0 /* SK4ConfigAdmin.swift */,
 				87632DD11CAC12C9004D31E0 /* SK4ConfigCellLabel.swift */,
+				87632DCF1CAC1227004D31E0 /* SK4ConfigCellDirectory.swift */,
+				87632DC91CAC1081004D31E0 /* SK4ConfigAdmin.swift */,
+				87632DCD1CAC1196004D31E0 /* SK4ConfigTableViewAdmin.swift */,
+				87632DD51CAC13BF004D31E0 /* SK4ConfigViewController.swift */,
 			);
 			name = sk4;
 			sourceTree = "<group>";
