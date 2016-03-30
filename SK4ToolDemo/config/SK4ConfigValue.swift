@@ -6,8 +6,7 @@
 //  Copyright (c) 2016 AxeRoad. All rights reserved.
 //
 
-import UIKit
-import SK4Toolkit
+import Foundation
 
 /// 設定を管理するための基底クラス
 public class SK4ConfigValue : CustomStringConvertible {

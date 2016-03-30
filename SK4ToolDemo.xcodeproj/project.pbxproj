@@ -18,6 +18,8 @@
 		87632DD21CAC12C9004D31E0 /* SK4ConfigCellLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87632DD11CAC12C9004D31E0 /* SK4ConfigCellLabel.swift */; };
 		87632DD41CAC135F004D31E0 /* SK4TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87632DD31CAC135F004D31E0 /* SK4TableViewController.swift */; };
 		87632DD61CAC13BF004D31E0 /* SK4ConfigViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87632DD51CAC13BF004D31E0 /* SK4ConfigViewController.swift */; };
+		87632DD81CAC8289004D31E0 /* SK4ConfigGenerics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87632DD71CAC8289004D31E0 /* SK4ConfigGenerics.swift */; };
+		87632DDA1CAC82CE004D31E0 /* SK4ConfigInt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87632DD91CAC82CE004D31E0 /* SK4ConfigInt.swift */; };
 		878402171CA36269001C3E0F /* ActionSheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 878402161CA36269001C3E0F /* ActionSheetViewController.swift */; };
 		8784021B1CA39BDE001C3E0F /* BorderButtonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8784021A1CA39BDE001C3E0F /* BorderButtonViewController.swift */; };
 		8784021D1CA3A5DE001C3E0F /* ToolbarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8784021C1CA3A5DE001C3E0F /* ToolbarViewController.swift */; };
@@ -111,6 +113,8 @@
 		87632DD11CAC12C9004D31E0 /* SK4ConfigCellLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SK4ConfigCellLabel.swift; path = config/cell/SK4ConfigCellLabel.swift; sourceTree = "<group>"; };
 		87632DD31CAC135F004D31E0 /* SK4TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SK4TableViewController.swift; sourceTree = "<group>"; };
 		87632DD51CAC13BF004D31E0 /* SK4ConfigViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SK4ConfigViewController.swift; path = config/SK4ConfigViewController.swift; sourceTree = "<group>"; };
+		87632DD71CAC8289004D31E0 /* SK4ConfigGenerics.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SK4ConfigGenerics.swift; path = config/value/SK4ConfigGenerics.swift; sourceTree = "<group>"; };
+		87632DD91CAC82CE004D31E0 /* SK4ConfigInt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SK4ConfigInt.swift; path = config/value/SK4ConfigInt.swift; sourceTree = "<group>"; };
 		878402161CA36269001C3E0F /* ActionSheetViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActionSheetViewController.swift; sourceTree = "<group>"; };
 		8784021A1CA39BDE001C3E0F /* BorderButtonViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BorderButtonViewController.swift; sourceTree = "<group>"; };
 		8784021C1CA3A5DE001C3E0F /* ToolbarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToolbarViewController.swift; sourceTree = "<group>"; };
@@ -259,6 +263,8 @@
 			children = (
 				87632DD31CAC135F004D31E0 /* SK4TableViewController.swift */,
 				87632DC61CAC0FDC004D31E0 /* SK4ConfigValue.swift */,
+				87632DD71CAC8289004D31E0 /* SK4ConfigGenerics.swift */,
+				87632DD91CAC82CE004D31E0 /* SK4ConfigInt.swift */,
 				87632DCB1CAC1106004D31E0 /* SK4ConfigCell.swift */,
 				87632DD11CAC12C9004D31E0 /* SK4ConfigCellLabel.swift */,
 				87632DCF1CAC1227004D31E0 /* SK4ConfigCellDirectory.swift */,
@@ -425,6 +431,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				87632DDA1CAC82CE004D31E0 /* SK4ConfigInt.swift in Sources */,
 				87632DD01CAC1227004D31E0 /* SK4ConfigCellDirectory.swift in Sources */,
 				87E236E91CA78AAA00B98DF7 /* ImageCacheViewController.swift in Sources */,
 				87EE2A301CA6476D00D0A222 /* Notify3ViewController.swift in Sources */,
@@ -435,6 +442,7 @@
 				87EE2A2C1CA6433800D0A222 /* Notify1ViewController.swift in Sources */,
 				87632DD41CAC135F004D31E0 /* SK4TableViewController.swift in Sources */,
 				870216AE1CABF123006137E9 /* ColorPickerViewController.swift in Sources */,
+				87632DD81CAC8289004D31E0 /* SK4ConfigGenerics.swift in Sources */,
 				87E236DB1CA7214A00B98DF7 /* CollectionViewCell.swift in Sources */,
 				87E236E11CA75AA600B98DF7 /* PickerTimeViewController.swift in Sources */,
 				87632DD21CAC12C9004D31E0 /* SK4ConfigCellLabel.swift in Sources */,
