@@ -11,46 +11,63 @@ import SK4ToolDemo
 
 class ConfigValueTests: XCTestCase {
 
+
+	func testCGFloat() {
+
+		let cv1 = SK4ConfigCGFloat(title: "CGFloat1", value: 123.4)
+		XCTAssert(cv1.value == 123.4)
+		XCTAssert(cv1.defaultValue == "123.40")
+
+		cv1.value -= 200
+		XCTAssert(cv1.value == -76.6)
+		XCTAssert(cv1.string == "-76.60")
+
+		// 文字列表現と内部の値で誤差が出るのは仕様
+		cv1.string = "345.67"
+		XCTAssertEqualWithAccuracy(cv1.value, 345.67, accuracy: 0.01)
+		XCTAssert(cv1.string == "345.67")
+	}
+
 	/// SK4ConfigValueの基本的な要素をテスト
 	func testValue() {
 
 		// SK4ConfigIntを使用
-		let int1 = SK4ConfigInt(title: "Int1", value: 100)
+		let cv1 = SK4ConfigInt(title: "Int1", value: 100)
 
 		// 初期化で使用したtitleが両方に使われる
-		XCTAssert(int1.title == "Int1")
-		XCTAssert(int1.identifier == "Int1")
+		XCTAssert(cv1.title == "Int1")
+		XCTAssert(cv1.identifier == "Int1")
 
 		// そのままだとReadOnly
-		XCTAssert(int1.readOnly == true)
+		XCTAssert(cv1.readOnly == true)
 
 		// 値 == 初期値
-		XCTAssert(int1.value == 100)
-		XCTAssert(int1.defaultValue == "100")
+		XCTAssert(cv1.value == 100)
+		XCTAssert(cv1.defaultValue == "100")
 
 		// 値を直接変更
-		int1.value += 100
-		XCTAssert(int1.value == 200)
-		XCTAssert(int1.string == "200")
+		cv1.value += 100
+		XCTAssert(cv1.value == 200)
+		XCTAssert(cv1.string == "200")
 
 		// もちろん初期値は変わらない
-		XCTAssert(int1.defaultValue == "100")
+		XCTAssert(cv1.defaultValue == "100")
 
 		// 値をstring経由で変更
-		int1.string = "300"
-		XCTAssert(int1.value == 300)
-		XCTAssert(int1.string == "300")
+		cv1.string = "300"
+		XCTAssert(cv1.value == 300)
+		XCTAssert(cv1.string == "300")
 
 		// push/pop/reset
-		int1.push()
-		int1.string = "400"
-		XCTAssert(int1.value == 400)
+		cv1.push()
+		cv1.string = "400"
+		XCTAssert(cv1.value == 400)
 
-		int1.pop()
-		XCTAssert(int1.value == 300)
+		cv1.pop()
+		XCTAssert(cv1.value == 300)
 
-		int1.reset()
-		XCTAssert(int1.value == 100)
+		cv1.reset()
+		XCTAssert(cv1.value == 100)
 	}
 }
 
