@@ -20,6 +20,7 @@
 		87632DD61CAC13BF004D31E0 /* SK4ConfigViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87632DD51CAC13BF004D31E0 /* SK4ConfigViewController.swift */; };
 		87632DD81CAC8289004D31E0 /* SK4ConfigGenerics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87632DD71CAC8289004D31E0 /* SK4ConfigGenerics.swift */; };
 		87632DDA1CAC82CE004D31E0 /* SK4ConfigInt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87632DD91CAC82CE004D31E0 /* SK4ConfigInt.swift */; };
+		87632DDC1CAC8411004D31E0 /* ConfigValueTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87632DDB1CAC8411004D31E0 /* ConfigValueTests.swift */; };
 		878402171CA36269001C3E0F /* ActionSheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 878402161CA36269001C3E0F /* ActionSheetViewController.swift */; };
 		8784021B1CA39BDE001C3E0F /* BorderButtonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8784021A1CA39BDE001C3E0F /* BorderButtonViewController.swift */; };
 		8784021D1CA3A5DE001C3E0F /* ToolbarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8784021C1CA3A5DE001C3E0F /* ToolbarViewController.swift */; };
@@ -115,6 +116,7 @@
 		87632DD51CAC13BF004D31E0 /* SK4ConfigViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SK4ConfigViewController.swift; path = config/SK4ConfigViewController.swift; sourceTree = "<group>"; };
 		87632DD71CAC8289004D31E0 /* SK4ConfigGenerics.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SK4ConfigGenerics.swift; path = config/value/SK4ConfigGenerics.swift; sourceTree = "<group>"; };
 		87632DD91CAC82CE004D31E0 /* SK4ConfigInt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SK4ConfigInt.swift; path = config/value/SK4ConfigInt.swift; sourceTree = "<group>"; };
+		87632DDB1CAC8411004D31E0 /* ConfigValueTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfigValueTests.swift; sourceTree = "<group>"; };
 		878402161CA36269001C3E0F /* ActionSheetViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActionSheetViewController.swift; sourceTree = "<group>"; };
 		8784021A1CA39BDE001C3E0F /* BorderButtonViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BorderButtonViewController.swift; sourceTree = "<group>"; };
 		8784021C1CA3A5DE001C3E0F /* ToolbarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToolbarViewController.swift; sourceTree = "<group>"; };
@@ -244,6 +246,7 @@
 			isa = PBXGroup;
 			children = (
 				87BB46531CA2A86F00F0BC50 /* SK4ToolDemoTests.swift */,
+				87632DDB1CAC8411004D31E0 /* ConfigValueTests.swift */,
 				87BB46551CA2A86F00F0BC50 /* Info.plist */,
 			);
 			path = SK4ToolDemoTests;
@@ -472,6 +475,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				87BB46541CA2A86F00F0BC50 /* SK4ToolDemoTests.swift in Sources */,
+				87632DDC1CAC8411004D31E0 /* ConfigValueTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
