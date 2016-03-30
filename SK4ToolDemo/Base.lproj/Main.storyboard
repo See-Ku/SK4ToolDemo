@@ -57,11 +57,80 @@
                         <segue destination="uzA-4O-30N" kind="show" identifier="LazyTimer" id="iEX-FD-cmT"/>
                         <segue destination="BIz-BJ-65R" kind="show" identifier="TextAttributes" id="kkl-6Z-8nF"/>
                         <segue destination="IZO-dX-dxC" kind="show" identifier="ColorPicker" id="H3u-Rf-HKb"/>
+                        <segue destination="bE8-f0-xYw" kind="show" identifier="KeyboardObserver" id="9BA-3u-GP7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="713" y="-336"/>
+        </scene>
+        <!--KeyboardObserver-->
+        <scene sceneID="tXa-Hy-H4f">
+            <objects>
+                <viewController id="bE8-f0-xYw" customClass="KeyboardObserverViewController" customModule="SK4ToolDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="QDQ-og-KZk"/>
+                        <viewControllerLayoutGuide type="bottom" id="UcW-Ir-LPN"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="vY2-cI-zAj">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Input" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EKZ-Xv-OJY">
+                                <rect key="frame" x="20" y="72" width="560" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="mPT-9g-FHB"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CEx-em-10q">
+                                <rect key="frame" x="20" y="101" width="560" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="SPm-Lc-STa"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="State" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="3AU-E9-Jdx">
+                                <rect key="frame" x="20" y="139" width="560" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="2oQ-GI-KTK"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="CEx-em-10q" firstAttribute="top" secondItem="EKZ-Xv-OJY" secondAttribute="bottom" constant="8" id="71Z-bK-gvg"/>
+                            <constraint firstItem="CEx-em-10q" firstAttribute="trailing" secondItem="vY2-cI-zAj" secondAttribute="trailingMargin" id="8X6-O5-uwL"/>
+                            <constraint firstItem="EKZ-Xv-OJY" firstAttribute="trailing" secondItem="vY2-cI-zAj" secondAttribute="trailingMargin" id="BMt-dH-Htt"/>
+                            <constraint firstItem="EKZ-Xv-OJY" firstAttribute="top" secondItem="QDQ-og-KZk" secondAttribute="bottom" constant="8" id="Dgs-pn-G0G"/>
+                            <constraint firstItem="CEx-em-10q" firstAttribute="leading" secondItem="vY2-cI-zAj" secondAttribute="leadingMargin" id="IiX-lV-Kfm"/>
+                            <constraint firstItem="EKZ-Xv-OJY" firstAttribute="leading" secondItem="vY2-cI-zAj" secondAttribute="leadingMargin" id="UK2-tU-Stn"/>
+                            <constraint firstItem="3AU-E9-Jdx" firstAttribute="trailing" secondItem="vY2-cI-zAj" secondAttribute="trailingMargin" id="bya-SW-7Lo"/>
+                            <constraint firstItem="3AU-E9-Jdx" firstAttribute="leading" secondItem="vY2-cI-zAj" secondAttribute="leadingMargin" id="ffj-k2-FPb"/>
+                            <constraint firstItem="3AU-E9-Jdx" firstAttribute="top" secondItem="CEx-em-10q" secondAttribute="bottom" constant="8" id="pka-dV-qo4"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="KeyboardObserver" id="kLL-kS-3YG">
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="IVq-08-SPF">
+                            <connections>
+                                <action selector="onDone:" destination="bE8-f0-xYw" id="Byx-V7-Xnk"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="statusLabel" destination="3AU-E9-Jdx" id="zqS-UN-ame"/>
+                        <outlet property="textField" destination="CEx-em-10q" id="QFf-pp-mo2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dWo-Ws-xUX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1360" y="38"/>
         </scene>
         <!--ColorPicker-->
         <scene sceneID="Iw1-SW-6dm">
@@ -113,7 +182,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LrD-p7-BYw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1471" y="138"/>
+            <point key="canvasLocation" x="4343" y="206"/>
         </scene>
         <!--TextAttributes-->
         <scene sceneID="bb8-Vt-ZpP">

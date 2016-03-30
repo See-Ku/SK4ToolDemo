@@ -28,6 +28,7 @@ class MainMenuTableAdmin: SK4TableViewAdmin {
 		"TextAttributes",
 
 		"ColorPicker",
+		"KeyboardObserver",
 	]
 
 	override func numberOfRows(section: Int) -> Int {
