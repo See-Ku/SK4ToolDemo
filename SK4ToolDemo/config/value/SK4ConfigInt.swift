@@ -9,7 +9,9 @@
 import Foundation
 
 /// Int型の設定を管理するためのクラス
-public class SK4ConfigInt : SK4ConfigGenerics<Int> {
+public class SK4ConfigInt: SK4ConfigGenerics<Int> {
+
+	/// 値と文字列を相互に変換
 	override public var string: String {
 		get {
 			return String(value)
@@ -20,6 +22,7 @@ public class SK4ConfigInt : SK4ConfigGenerics<Int> {
 		}
 	}
 
+	/// 初期化
 	override public init(title: String, value: Int) {
 		super.init(title: title, value: value)
 	}

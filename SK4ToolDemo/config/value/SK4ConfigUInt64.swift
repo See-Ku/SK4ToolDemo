@@ -9,7 +9,9 @@
 import Foundation
 
 /// UInt64型の設定を管理するためのクラス　※内部管理向け
-public class SK4ConfigUInt64 : SK4ConfigGenerics<UInt64> {
+public class SK4ConfigUInt64: SK4ConfigGenerics<UInt64> {
+
+	/// 値と文字列を相互に変換
 	override public var string: String {
 		get {
 			return String(format: "%016llx", value)
@@ -21,6 +23,7 @@ public class SK4ConfigUInt64 : SK4ConfigGenerics<UInt64> {
 		}
 	}
 
+	/// 初期化
 	override public init(title: String, value: UInt64) {
 		super.init(title: title, value: value)
 	}

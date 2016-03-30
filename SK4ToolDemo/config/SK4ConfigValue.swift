@@ -9,7 +9,7 @@
 import Foundation
 
 /// 設定を管理するための基底クラス
-public class SK4ConfigValue : CustomStringConvertible {
+public class SK4ConfigValue: CustomStringConvertible {
 
 	// /////////////////////////////////////////////////////////////
 	// MARK: - プロパティ＆初期化

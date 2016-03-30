@@ -9,7 +9,9 @@
 import Foundation
 
 /// 値型を管理するためのGenericsクラス
-public class SK4ConfigGenerics<Type : Equatable> : SK4ConfigValue {
+public class SK4ConfigGenerics<Type: Equatable>: SK4ConfigValue {
+
+	/// 実際の値
 	public var value: Type {
 		didSet {
 			if value != oldValue {
@@ -18,6 +20,7 @@ public class SK4ConfigGenerics<Type : Equatable> : SK4ConfigValue {
 		}
 	}
 
+	/// 初期化
 	public init(title: String, value: Type) {
 		self.value = value
 		super.init(title: title)

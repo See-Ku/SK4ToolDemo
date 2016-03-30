@@ -9,7 +9,9 @@
 import UIKit
 
 /// CGFloat型の設定を管理するためのクラス
-public class SK4ConfigCGFloat : SK4ConfigGenerics<CGFloat> {
+public class SK4ConfigCGFloat: SK4ConfigGenerics<CGFloat> {
+
+	/// 値と文字列を相互に変換
 	override public var string: String {
 		get {
 			return String(format: "%0.2f", Double(value))
@@ -21,6 +23,7 @@ public class SK4ConfigCGFloat : SK4ConfigGenerics<CGFloat> {
 		}
 	}
 
+	/// 初期化
 	override public init(title: String, value: CGFloat) {
 		super.init(title: title, value: value)
 	}
