@@ -6,7 +6,7 @@
 //  Copyright (c) 2016 AxeRoad. All rights reserved.
 //
 
-import UIKit
+import Foundation
 
 /// String型の設定を管理するためのクラス
 public class SK4ConfigString: SK4ConfigGenerics<String> {
