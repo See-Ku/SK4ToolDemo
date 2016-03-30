@@ -18,11 +18,11 @@ public class SK4ConfigTableViewAdmin: SK4TableViewAdmin, SK4KeyboardObserver {
 	/// ViewControllerのキャッシュ
 	lazy var dirViewController: SK4ConfigViewController = SK4ConfigViewController()
 	lazy var choiceViewController: SK4ConfigChoiceViewController = SK4ConfigChoiceViewController()
+	lazy var colorViewController: SK4ConfigColorViewController = SK4ConfigColorViewController()
 
 
 /*
 	/// ViewControllerのキャッシュ
-	lazy var colorViewController: SK4ConfigColorViewController = SK4ConfigColorViewController()
 	lazy var dateViewController: SK4ConfigDateViewController = SK4ConfigDateViewController()
 	lazy var pickerViewController: SK4ConfigPickerViewController = SK4ConfigPickerViewController()
 */
