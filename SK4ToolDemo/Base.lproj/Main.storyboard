@@ -56,11 +56,64 @@
                         <segue destination="5Yc-7Q-S1F" kind="show" identifier="ImageCache" id="Mvq-aF-afZ"/>
                         <segue destination="uzA-4O-30N" kind="show" identifier="LazyTimer" id="iEX-FD-cmT"/>
                         <segue destination="BIz-BJ-65R" kind="show" identifier="TextAttributes" id="kkl-6Z-8nF"/>
+                        <segue destination="IZO-dX-dxC" kind="show" identifier="ColorPicker" id="H3u-Rf-HKb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="713" y="-336"/>
+        </scene>
+        <!--ColorPicker-->
+        <scene sceneID="Iw1-SW-6dm">
+            <objects>
+                <viewController id="IZO-dX-dxC" customClass="ColorPickerViewController" customModule="SK4ToolDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="D3q-IR-ceH"/>
+                        <viewControllerLayoutGuide type="bottom" id="mk4-FO-dtx"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="gcy-SC-flM">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tT5-98-bv7" customClass="SK4ColorPicker" customModule="SK4Toolkit">
+                                <rect key="frame" x="20" y="72" width="560" height="240"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="240" id="EdN-iG-Xg3"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="onColorSelect:" destination="IZO-dX-dxC" eventType="valueChanged" id="ALU-eb-Fh6"/>
+                                </connections>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select Color" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JMf-Qu-3pQ">
+                                <rect key="frame" x="200" y="320" width="200" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="6qZ-tL-PUJ"/>
+                                    <constraint firstAttribute="width" constant="200" id="EfX-zE-sl6"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="JMf-Qu-3pQ" firstAttribute="centerX" secondItem="gcy-SC-flM" secondAttribute="centerX" id="RQp-3V-biE"/>
+                            <constraint firstItem="tT5-98-bv7" firstAttribute="trailing" secondItem="gcy-SC-flM" secondAttribute="trailingMargin" id="X2I-KK-FGx"/>
+                            <constraint firstItem="tT5-98-bv7" firstAttribute="top" secondItem="D3q-IR-ceH" secondAttribute="bottom" constant="8" id="aHd-gd-22b"/>
+                            <constraint firstItem="tT5-98-bv7" firstAttribute="leading" secondItem="gcy-SC-flM" secondAttribute="leadingMargin" id="kUC-aB-prM"/>
+                            <constraint firstItem="JMf-Qu-3pQ" firstAttribute="top" secondItem="tT5-98-bv7" secondAttribute="bottom" constant="8" id="uuz-kL-7aZ"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="ColorPicker" id="8H3-BZ-BHR"/>
+                    <connections>
+                        <outlet property="colorPicker" destination="tT5-98-bv7" id="4g7-hR-4YW"/>
+                        <outlet property="selectColorLabel" destination="JMf-Qu-3pQ" id="Nrf-R6-oR1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LrD-p7-BYw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1471" y="138"/>
         </scene>
         <!--TextAttributes-->
         <scene sceneID="bb8-Vt-ZpP">
@@ -99,7 +152,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EiJ-Qm-uWZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1452" y="-58"/>
+            <point key="canvasLocation" x="3692" y="146"/>
         </scene>
         <!--LazyTimer-->
         <scene sceneID="Rva-hl-t3r">

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		870216AE1CABF123006137E9 /* ColorPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 870216AD1CABF123006137E9 /* ColorPickerViewController.swift */; };
 		871F9E871CA3B91D005295FC /* OverlayIndicatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 871F9E861CA3B91D005295FC /* OverlayIndicatorViewController.swift */; };
 		878402171CA36269001C3E0F /* ActionSheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 878402161CA36269001C3E0F /* ActionSheetViewController.swift */; };
 		8784021B1CA39BDE001C3E0F /* BorderButtonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8784021A1CA39BDE001C3E0F /* BorderButtonViewController.swift */; };
@@ -90,6 +91,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		870216AD1CABF123006137E9 /* ColorPickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorPickerViewController.swift; sourceTree = "<group>"; };
 		871F9E861CA3B91D005295FC /* OverlayIndicatorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OverlayIndicatorViewController.swift; sourceTree = "<group>"; };
 		878402161CA36269001C3E0F /* ActionSheetViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActionSheetViewController.swift; sourceTree = "<group>"; };
 		8784021A1CA39BDE001C3E0F /* BorderButtonViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BorderButtonViewController.swift; sourceTree = "<group>"; };
@@ -187,6 +189,7 @@
 				87BB467C1CA354E300F0BC50 /* sk4 */,
 				87BB463E1CA2A86F00F0BC50 /* AppDelegate.swift */,
 				87BB46701CA2AE9900F0BC50 /* MainMenuViewController.swift */,
+				870216AD1CABF123006137E9 /* ColorPickerViewController.swift */,
 				87BB466E1CA2AE7C00F0BC50 /* TableViewController.swift */,
 				87BB46721CA2AFC600F0BC50 /* TableViewAdmin.swift */,
 				87BB467A1CA353A000F0BC50 /* AlertViewController.swift */,
@@ -399,6 +402,7 @@
 				87EE2A301CA6476D00D0A222 /* Notify3ViewController.swift in Sources */,
 				8784021D1CA3A5DE001C3E0F /* ToolbarViewController.swift in Sources */,
 				87EE2A2C1CA6433800D0A222 /* Notify1ViewController.swift in Sources */,
+				870216AE1CABF123006137E9 /* ColorPickerViewController.swift in Sources */,
 				87E236DB1CA7214A00B98DF7 /* CollectionViewCell.swift in Sources */,
 				87E236E11CA75AA600B98DF7 /* PickerTimeViewController.swift in Sources */,
 				87BB46711CA2AE9900F0BC50 /* MainMenuViewController.swift in Sources */,

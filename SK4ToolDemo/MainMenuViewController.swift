@@ -26,6 +26,8 @@ class MainMenuTableAdmin: SK4TableViewAdmin {
 		"ImageCache",
 		"LazyTimer",
 		"TextAttributes",
+
+		"ColorPicker",
 	]
 
 	override func numberOfRows(section: Int) -> Int {
