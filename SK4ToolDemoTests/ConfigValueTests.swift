@@ -12,6 +12,20 @@ import SK4ToolDemo
 class ConfigValueTests: XCTestCase {
 
 
+	func testString() {
+
+		let cv1 = SK4ConfigString(title: "String", value: "testString")
+		XCTAssert(cv1.value == "testString")
+		XCTAssert(cv1.defaultValue == "testString")
+
+		cv1.value += "200"
+		XCTAssert(cv1.value == "testString200")
+		XCTAssert(cv1.string == "testString200")
+
+		cv1.string = "00123456789abcde"
+		XCTAssert(cv1.value == "00123456789abcde")
+	}
+
 	func testUInt64() {
 
 		let cv1 = SK4ConfigUInt64(title: "CGFloat1", value: 0x1234)
