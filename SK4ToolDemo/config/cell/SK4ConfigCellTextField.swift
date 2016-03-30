@@ -20,8 +20,6 @@ public class SK4ConfigCellTextField: SK4ConfigCell {
 		static let baseRect = CGRect(x: 152, y: 7, width: 158, height: 30)
 	}
 
-	let textFieldAdmin = SK4ConfigCellTextFieldAdmin()
-
 	/// 文字列の最大長　※0の時は文字列長の制限をしない
 	public var maxLength = 0
 
@@ -45,6 +43,8 @@ public class SK4ConfigCellTextField: SK4ConfigCell {
 
 		return cell
 	}
+
+	let textFieldAdmin = SK4ConfigCellTextFieldAdmin()
 
 	/// Cellの内容を設定
 	override public func configToCell(cell: UITableViewCell) {
