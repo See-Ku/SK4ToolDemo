@@ -12,9 +12,31 @@ import SK4ToolDemo
 class ConfigValueTests: XCTestCase {
 
 
+	func testIndex() {
+
+		let cv1 = SK4ConfigIndex(title: "Index1", value: 3)
+		cv1.choices = ["Red", "Green", "Blue", "White", "Black"]
+
+		XCTAssert(cv1.value == 3)
+		XCTAssert(cv1.defaultValue == "3")
+		XCTAssert(cv1.selectString == "White")
+
+		cv1.value -= 2
+		XCTAssert(cv1.value == 1)
+		XCTAssert(cv1.selectString == "Green")
+
+		cv1.selectString = "Black"
+		XCTAssert(cv1.value == 4)
+
+		cv1.selectString = "Gray"
+		XCTAssert(cv1.value == -1)
+		XCTAssert(cv1.selectString == nil)
+	}
+
+
 	func testString() {
 
-		let cv1 = SK4ConfigString(title: "String", value: "testString")
+		let cv1 = SK4ConfigString(title: "String1", value: "testString")
 		XCTAssert(cv1.value == "testString")
 		XCTAssert(cv1.defaultValue == "testString")
 
