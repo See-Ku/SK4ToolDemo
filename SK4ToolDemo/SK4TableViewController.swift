@@ -47,8 +47,8 @@ public class SK4TableViewController: UIViewController {
 	// MARK: - その他
 
 	/// 標準のTableViewを作成
-	public func makeDefaultTableView() -> UITableView {
-		let tv = UITableView(frame: view.bounds, style: .Grouped)
+	public func makeDefaultTableView(style: UITableViewStyle = .Grouped) -> UITableView {
+		let tv = UITableView(frame: view.bounds, style: style)
 		tv.rowHeight = UITableViewAutomaticDimension
 		tv.autoresizingMask = [.FlexibleHeight, .FlexibleWidth]
 		view.addSubview(tv)

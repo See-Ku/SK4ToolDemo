@@ -17,19 +17,32 @@ public class SK4ConfigChoiceViewController: SK4TableViewController {
 
 	public var configValue: SK4ConfigValue!
 
-	public override func viewDidLoad() {
-		super.viewDidLoad()
+	override public func viewWillAppear(animated: Bool) {
+		super.viewWillAppear(animated)
 
 		assert(configValue is SK4ConfigIndex, "Wrong config type.")
 
-		let tv = makeDefaultTableView()
-		let admin = SK4ConfigChoiceViewControllerAdmin(tableView: tv, parent: self)
-
 		let cv = configValue as! SK4ConfigIndex
+		let admin = tableAdmin as! SK4ConfigChoiceViewControllerAdmin
 		admin.setupConfigIndex(cv)
-		setup(tableAdmin: admin)
+		tableView.reloadData()
+
+		if cv.value >= 0 {
+			sk4AsyncMain() {
+				let index = NSIndexPath(forRow: cv.value, inSection: 0)
+				self.tableView.scrollToRowAtIndexPath(index, atScrollPosition: .Middle, animated: false)
+			}
+		}
 
 		navigationItem.title = configValue.title
+	}
+
+	public override func viewDidLoad() {
+		super.viewDidLoad()
+
+		let tv = makeDefaultTableView(.Plain)
+		let admin = SK4ConfigChoiceViewControllerAdmin(tableView: tv, parent: self)
+		setup(tableAdmin: admin)
 	}
 }
 
@@ -62,12 +75,8 @@ class SK4ConfigChoiceViewControllerAdmin: SK4TableViewAdmin {
 	// /////////////////////////////////////////////////////////////
 	// MARK: - for override
 
-	override func viewWillAppear() {
-		if configIndex.value >= 0 {
-			let index = NSIndexPath(forRow: configIndex.value, inSection: 0)
-			tableView.scrollToRowAtIndexPath(index, atScrollPosition: .Middle, animated: false)
-		}
-	}
+//	override func viewWillAppear() {
+//	}
 
 	override func numberOfRows(section: Int) -> Int {
 		return configIndex.choices.count
