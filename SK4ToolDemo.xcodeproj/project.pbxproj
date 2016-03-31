@@ -40,6 +40,9 @@
 		878B5F9F1CACA35100A797C3 /* SK4ConfigNSDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 878B5F9E1CACA35100A797C3 /* SK4ConfigNSDate.swift */; };
 		878B5FA21CACA50F00A797C3 /* SK4ConfigCellDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 878B5FA11CACA50F00A797C3 /* SK4ConfigCellDate.swift */; };
 		878B5FA41CACA59600A797C3 /* SK4ConfigDateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 878B5FA31CACA59600A797C3 /* SK4ConfigDateViewController.swift */; };
+		878B5FA61CACAB5E00A797C3 /* SK4ConfigMulti.swift in Sources */ = {isa = PBXBuildFile; fileRef = 878B5FA51CACAB5E00A797C3 /* SK4ConfigMulti.swift */; };
+		878B5FA81CACACA800A797C3 /* SK4ConfigCellPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 878B5FA71CACACA800A797C3 /* SK4ConfigCellPicker.swift */; };
+		878B5FAA1CACAD4300A797C3 /* SK4ConfigPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 878B5FA91CACAD4300A797C3 /* SK4ConfigPickerViewController.swift */; };
 		879E73FB1CA6A9D600C64902 /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879E73FA1CA6A9D600C64902 /* CollectionViewController.swift */; };
 		879E73FD1CA6AA0F00C64902 /* CollectionViewAdmin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879E73FC1CA6AA0F00C64902 /* CollectionViewAdmin.swift */; };
 		87A583B31CA8F82500D0E357 /* SK4Toolkit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87A583B01CA8F80D00D0E357 /* SK4Toolkit.framework */; };
@@ -152,6 +155,9 @@
 		878B5F9E1CACA35100A797C3 /* SK4ConfigNSDate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SK4ConfigNSDate.swift; path = config/value/SK4ConfigNSDate.swift; sourceTree = "<group>"; };
 		878B5FA11CACA50F00A797C3 /* SK4ConfigCellDate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SK4ConfigCellDate.swift; path = config/cell/SK4ConfigCellDate.swift; sourceTree = "<group>"; };
 		878B5FA31CACA59600A797C3 /* SK4ConfigDateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SK4ConfigDateViewController.swift; path = config/vc/SK4ConfigDateViewController.swift; sourceTree = "<group>"; };
+		878B5FA51CACAB5E00A797C3 /* SK4ConfigMulti.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SK4ConfigMulti.swift; path = config/value/SK4ConfigMulti.swift; sourceTree = "<group>"; };
+		878B5FA71CACACA800A797C3 /* SK4ConfigCellPicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SK4ConfigCellPicker.swift; path = config/cell/SK4ConfigCellPicker.swift; sourceTree = "<group>"; };
+		878B5FA91CACAD4300A797C3 /* SK4ConfigPickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SK4ConfigPickerViewController.swift; path = config/vc/SK4ConfigPickerViewController.swift; sourceTree = "<group>"; };
 		879E73FA1CA6A9D600C64902 /* CollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
 		879E73FC1CA6AA0F00C64902 /* CollectionViewAdmin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewAdmin.swift; sourceTree = "<group>"; };
 		87A583AA1CA8F80C00D0E357 /* SK4Toolkit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SK4Toolkit.xcodeproj; path = ../SK4Toolkit/SK4Toolkit.xcodeproj; sourceTree = "<group>"; };
@@ -221,6 +227,7 @@
 				87632DEF1CAC95FC004D31E0 /* SK4ConfigCellChoice.swift */,
 				87632DF51CAC9B53004D31E0 /* SK4ConfigCellColor.swift */,
 				878B5FA11CACA50F00A797C3 /* SK4ConfigCellDate.swift */,
+				878B5FA71CACACA800A797C3 /* SK4ConfigCellPicker.swift */,
 			);
 			name = "config - cell";
 			sourceTree = "<group>";
@@ -238,6 +245,7 @@
 				87632DED1CAC9540004D31E0 /* SK4ConfigIndex.swift */,
 				87632DF31CAC9AD5004D31E0 /* SK4ConfigUIColor.swift */,
 				878B5F9E1CACA35100A797C3 /* SK4ConfigNSDate.swift */,
+				878B5FA51CACAB5E00A797C3 /* SK4ConfigMulti.swift */,
 			);
 			name = "config - value";
 			sourceTree = "<group>";
@@ -334,6 +342,7 @@
 				87632DD31CAC135F004D31E0 /* SK4TableViewController.swift */,
 				87632DC91CAC1081004D31E0 /* SK4ConfigAdmin.swift */,
 				87632DCD1CAC1196004D31E0 /* SK4ConfigTableViewAdmin.swift */,
+				878B5FA91CACAD4300A797C3 /* SK4ConfigPickerViewController.swift */,
 				87632DD51CAC13BF004D31E0 /* SK4ConfigViewController.swift */,
 				87632DF11CAC96C3004D31E0 /* SK4ConfigChoiceViewController.swift */,
 				87632DF71CAC9C2C004D31E0 /* SK4ConfigColorViewController.swift */,
@@ -513,6 +522,7 @@
 				87632DE01CAC8967004D31E0 /* SK4ConfigUInt64.swift in Sources */,
 				87632DCC1CAC1106004D31E0 /* SK4ConfigCell.swift in Sources */,
 				87632DF81CAC9C2C004D31E0 /* SK4ConfigColorViewController.swift in Sources */,
+				878B5FAA1CACAD4300A797C3 /* SK4ConfigPickerViewController.swift in Sources */,
 				87632DC71CAC0FDC004D31E0 /* SK4ConfigValue.swift in Sources */,
 				87EE2A2C1CA6433800D0A222 /* Notify1ViewController.swift in Sources */,
 				87632DD41CAC135F004D31E0 /* SK4TableViewController.swift in Sources */,
@@ -524,7 +534,9 @@
 				87E236E11CA75AA600B98DF7 /* PickerTimeViewController.swift in Sources */,
 				87632DD21CAC12C9004D31E0 /* SK4ConfigCellLabel.swift in Sources */,
 				878B5FA21CACA50F00A797C3 /* SK4ConfigCellDate.swift in Sources */,
+				878B5FA61CACAB5E00A797C3 /* SK4ConfigMulti.swift in Sources */,
 				878B5F9F1CACA35100A797C3 /* SK4ConfigNSDate.swift in Sources */,
+				878B5FA81CACACA800A797C3 /* SK4ConfigCellPicker.swift in Sources */,
 				87BB46711CA2AE9900F0BC50 /* MainMenuViewController.swift in Sources */,
 				87BB467B1CA353A000F0BC50 /* AlertViewController.swift in Sources */,
 				87632DE21CAC8D4D004D31E0 /* SK4ConfigString.swift in Sources */,

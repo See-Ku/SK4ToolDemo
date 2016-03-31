@@ -20,13 +20,7 @@ public class SK4ConfigTableViewAdmin: SK4TableViewAdmin, SK4KeyboardObserver {
 	lazy var choiceViewController: SK4ConfigChoiceViewController = SK4ConfigChoiceViewController()
 	lazy var colorViewController: SK4ConfigColorViewController = SK4ConfigColorViewController()
 	lazy var dateViewController: SK4ConfigDateViewController = SK4ConfigDateViewController()
-
-
-/*
-	/// ViewControllerのキャッシュ
 	lazy var pickerViewController: SK4ConfigPickerViewController = SK4ConfigPickerViewController()
-*/
-
 
 	/// 初期化
 	public convenience init(tableView: UITableView, parent: UIViewController, configAdmin: SK4ConfigAdmin) {

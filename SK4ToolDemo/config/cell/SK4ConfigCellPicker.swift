@@ -1,5 +1,5 @@
 //
-//  SK4ConfigCellDate.swift
+//  SK4ConfigCellPicker.swift
 //  SK4ToolKit
 //
 //  Created by See.Ku on 2016/03/31.
@@ -8,8 +8,8 @@
 
 import UIKit
 
-/// NSDateを選択
-public class SK4ConfigCellDate: SK4ConfigCell {
+/// 複数の値の組み合わせを選択
+public class SK4ConfigCellPicker: SK4ConfigCell {
 
 	/// 初期化
 	override public init() {
@@ -19,8 +19,8 @@ public class SK4ConfigCellDate: SK4ConfigCell {
 
 	/// 移動先のViewController
 	override public func nextViewController() -> UIViewController? {
-		configTable.dateViewController.configValue = configValue
-		return configTable.dateViewController
+		configTable.pickerViewController.configValue = configValue
+		return configTable.pickerViewController
 	}
 }
 

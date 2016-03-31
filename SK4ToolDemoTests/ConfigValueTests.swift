@@ -150,7 +150,43 @@ class ConfigValueTests: XCTestCase {
 		XCTAssert(cv1.value == ref)
 	}
 
+	func testMulti() {
 
+		let cv1 = SK4ConfigMulti(title: "Multi1")
+
+		let ar1 = ["Red", "Green", "Blue", "White", "Black"]
+		cv1.addUnit(ar1, select: 0)
+		cv1.addUnit("x", width: 32)
+		cv1.addUnit(ar1, select: 2)
+
+		XCTAssert(cv1.value == [0, 0, 2])
+		XCTAssert(cv1.string == "Red x Blue")
+
+		// addUnit終了後の値がdefaultValueになる
+		XCTAssert(cv1.defaultValue == "Red x Blue")
+
+		cv1.value = [3, 0, 1]
+		XCTAssert(cv1.string == "White x Green")
+
+		cv1.string = "Green x Black"
+		XCTAssert(cv1.value == [1, 0, 4])
+
+		cv1.value = []
+		XCTAssert(cv1.value == [-1, -1, -1])
+		XCTAssert(cv1.string == "  ")
+
+		// valueへの変更は範囲外の値もそのまま設定される
+		cv1.value = [-10, 2, 2]
+		XCTAssert(cv1.value == [-10, 2, 2])
+
+		// 範囲外を取得する際はブランクになる
+		XCTAssert(cv1.string == "  Blue")
+
+		// stringへの変更は範囲外だと-1になる
+		cv1.string = "AAA BBB CCC"
+		XCTAssert(cv1.value == [-1, -1, -1])
+		XCTAssert(cv1.string == "  ")
+	}
 }
 
 // eof
