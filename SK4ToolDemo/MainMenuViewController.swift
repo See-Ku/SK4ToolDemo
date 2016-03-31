@@ -9,6 +9,19 @@
 import UIKit
 import SK4Toolkit
 
+
+/// バージョン情報を取得
+public func sk4VersionString() -> String {
+	let bundle = NSBundle.mainBundle()
+	if let str = bundle.objectForInfoDictionaryKey("CFBundleShortVersionString") as? String {
+		return str
+	} else {
+		assertionFailure("objectForInfoDictionaryKey error: CFBundleShortVersionString")
+		return ""
+	}
+}
+
+
 class MainMenuTableAdmin: SK4TableViewAdmin {
 
 	let itemArray = [
@@ -49,6 +62,16 @@ class MainMenuTableAdmin: SK4TableViewAdmin {
 class MainMenuViewController: UIViewController {
 
 	@IBOutlet weak var tableView: UITableView!
+
+	@IBAction func onSettings(sender: AnyObject) {
+
+		// 設定画面を開く
+		g_config.openConfigViewController(self) { cancel in
+
+			// cancel: true キャンセルされた
+			print("openConfigViewController - cancel: \(cancel)")
+		}
+	}
 
 	var tableAdmin: MainMenuTableAdmin!
 

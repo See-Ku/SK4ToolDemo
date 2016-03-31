@@ -41,7 +41,13 @@
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="NIW-2x-tIV" secondAttribute="bottom" id="kUX-tu-ydG"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="SK4ToolDemo" id="6CZ-Ie-OVo"/>
+                    <navigationItem key="navigationItem" title="SK4ToolDemo" id="6CZ-Ie-OVo">
+                        <barButtonItem key="leftBarButtonItem" image="settings" id="Xc5-JB-yQL">
+                            <connections>
+                                <action selector="onSettings:" destination="BYZ-38-t0r" id="fg3-vT-huc"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="NIW-2x-tIV" id="fZm-eK-1b6"/>
                         <segue destination="5DV-cK-0qY" kind="show" identifier="TableViewAdmin" id="abT-E8-mSq"/>
@@ -1330,4 +1336,7 @@
             <point key="canvasLocation" x="2915" y="-671"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="settings" width="22" height="22"/>
+    </resources>
 </document>

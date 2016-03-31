@@ -72,6 +72,7 @@
 		87EE2A2C1CA6433800D0A222 /* Notify1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EE2A2B1CA6433800D0A222 /* Notify1ViewController.swift */; };
 		87EE2A2E1CA6476000D0A222 /* Notify2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EE2A2D1CA6476000D0A222 /* Notify2ViewController.swift */; };
 		87EE2A301CA6476D00D0A222 /* Notify3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EE2A2F1CA6476D00D0A222 /* Notify3ViewController.swift */; };
+		87F005701CACF9A8001B6A0F /* GlobalConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87F0056F1CACF9A8001B6A0F /* GlobalConfig.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -197,6 +198,7 @@
 		87EE2A2B1CA6433800D0A222 /* Notify1ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Notify1ViewController.swift; sourceTree = "<group>"; };
 		87EE2A2D1CA6476000D0A222 /* Notify2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Notify2ViewController.swift; sourceTree = "<group>"; };
 		87EE2A2F1CA6476D00D0A222 /* Notify3ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Notify3ViewController.swift; sourceTree = "<group>"; };
+		87F0056F1CACF9A8001B6A0F /* GlobalConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalConfig.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -301,6 +303,7 @@
 				87632DEB1CAC93B2004D31E0 /* config - cell */,
 				87BB463E1CA2A86F00F0BC50 /* AppDelegate.swift */,
 				87632DBE1CAC0716004D31E0 /* KeyboardObserverViewController.swift */,
+				87F0056F1CACF9A8001B6A0F /* GlobalConfig.swift */,
 				87BB46701CA2AE9900F0BC50 /* MainMenuViewController.swift */,
 				870216AD1CABF123006137E9 /* ColorPickerViewController.swift */,
 				87BB466E1CA2AE7C00F0BC50 /* TableViewController.swift */,
@@ -539,6 +542,7 @@
 				87632DF81CAC9C2C004D31E0 /* SK4ConfigColorViewController.swift in Sources */,
 				878B5FAA1CACAD4300A797C3 /* SK4ConfigPickerViewController.swift in Sources */,
 				878B5FB21CACB97700A797C3 /* SK4ConfigCell.swift in Sources */,
+				87F005701CACF9A8001B6A0F /* GlobalConfig.swift in Sources */,
 				87EE2A2C1CA6433800D0A222 /* Notify1ViewController.swift in Sources */,
 				87632DD41CAC135F004D31E0 /* SK4TableViewController.swift in Sources */,
 				870216AE1CABF123006137E9 /* ColorPickerViewController.swift in Sources */,
