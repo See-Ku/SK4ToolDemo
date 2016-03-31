@@ -11,73 +11,6 @@ import SK4ToolDemo
 
 class ConfigValueTests: XCTestCase {
 
-
-	func testIndex() {
-
-		let cv1 = SK4ConfigIndex(title: "Index1", value: 3)
-		cv1.choices = ["Red", "Green", "Blue", "White", "Black"]
-
-		XCTAssert(cv1.value == 3)
-		XCTAssert(cv1.defaultValue == "3")
-		XCTAssert(cv1.selectString == "White")
-
-		cv1.value -= 2
-		XCTAssert(cv1.value == 1)
-		XCTAssert(cv1.selectString == "Green")
-
-		cv1.selectString = "Black"
-		XCTAssert(cv1.value == 4)
-
-		cv1.selectString = "Gray"
-		XCTAssert(cv1.value == -1)
-		XCTAssert(cv1.selectString == nil)
-	}
-
-
-	func testString() {
-
-		let cv1 = SK4ConfigString(title: "String1", value: "testString")
-		XCTAssert(cv1.value == "testString")
-		XCTAssert(cv1.defaultValue == "testString")
-
-		cv1.value += "200"
-		XCTAssert(cv1.value == "testString200")
-		XCTAssert(cv1.string == "testString200")
-
-		cv1.string = "00123456789abcde"
-		XCTAssert(cv1.value == "00123456789abcde")
-	}
-
-	func testUInt64() {
-
-		let cv1 = SK4ConfigUInt64(title: "CGFloat1", value: 0x1234)
-		XCTAssert(cv1.value == 4660)
-		XCTAssert(cv1.defaultValue == "0000000000001234")
-
-		cv1.value -= 200
-		XCTAssert(cv1.value == 4460)
-		XCTAssert(cv1.string == "000000000000116c")
-
-		cv1.string = "00123456789abcde"
-		XCTAssert(cv1.value == 5124095576030430)
-	}
-
-	func testCGFloat() {
-
-		let cv1 = SK4ConfigCGFloat(title: "CGFloat1", value: 123.4)
-		XCTAssert(cv1.value == 123.4)
-		XCTAssert(cv1.defaultValue == "123.40")
-
-		cv1.value -= 200
-		XCTAssert(cv1.value == -76.6)
-		XCTAssert(cv1.string == "-76.60")
-
-		// 文字列表現と内部の値で誤差が出るのは仕様
-		cv1.string = "345.67"
-		XCTAssertEqualWithAccuracy(cv1.value, 345.67, accuracy: 0.01)
-		XCTAssert(cv1.string == "345.67")
-	}
-
 	/// SK4ConfigValueの基本的な要素をテスト
 	func testValue() {
 
@@ -119,6 +52,89 @@ class ConfigValueTests: XCTestCase {
 		cv1.reset()
 		XCTAssert(cv1.value == 100)
 	}
+
+	func testCGFloat() {
+
+		let cv1 = SK4ConfigCGFloat(title: "CGFloat1", value: 123.4)
+		XCTAssert(cv1.value == 123.4)
+		XCTAssert(cv1.defaultValue == "123.40")
+
+		cv1.value -= 200
+		XCTAssert(cv1.value == -76.6)
+		XCTAssert(cv1.string == "-76.60")
+
+		// 文字列表現と内部の値で誤差が出るのは仕様
+		cv1.string = "345.67"
+		XCTAssertEqualWithAccuracy(cv1.value, 345.67, accuracy: 0.01)
+		XCTAssert(cv1.string == "345.67")
+	}
+	
+	func testUInt64() {
+
+		let cv1 = SK4ConfigUInt64(title: "CGFloat1", value: 0x1234)
+		XCTAssert(cv1.value == 4660)
+		XCTAssert(cv1.defaultValue == "0000000000001234")
+
+		cv1.value -= 200
+		XCTAssert(cv1.value == 4460)
+		XCTAssert(cv1.string == "000000000000116c")
+
+		cv1.string = "00123456789abcde"
+		XCTAssert(cv1.value == 5124095576030430)
+	}
+
+	func testString() {
+
+		let cv1 = SK4ConfigString(title: "String1", value: "testString")
+		XCTAssert(cv1.value == "testString")
+		XCTAssert(cv1.defaultValue == "testString")
+
+		cv1.value += "200"
+		XCTAssert(cv1.value == "testString200")
+		XCTAssert(cv1.string == "testString200")
+
+		cv1.string = "00123456789abcde"
+		XCTAssert(cv1.value == "00123456789abcde")
+	}
+	
+	func testIndex() {
+
+		let cv1 = SK4ConfigIndex(title: "Index1", value: 3)
+		cv1.choices = ["Red", "Green", "Blue", "White", "Black"]
+
+		XCTAssert(cv1.value == 3)
+		XCTAssert(cv1.defaultValue == "3")
+		XCTAssert(cv1.selectString == "White")
+
+		cv1.value -= 2
+		XCTAssert(cv1.value == 1)
+		XCTAssert(cv1.selectString == "Green")
+
+		cv1.selectString = "Black"
+		XCTAssert(cv1.value == 4)
+
+		cv1.selectString = "Gray"
+		XCTAssert(cv1.value == -1)
+		XCTAssert(cv1.selectString == nil)
+	}
+	
+	func testUIColor() {
+
+		let cv1 = SK4ConfigUIColor(title: "UIColor1", value: UIColor.redColor())
+		XCTAssert(cv1.value == UIColor.redColor())
+		XCTAssert(cv1.string == "R:1.000 G:0.000 B:0.000 A:1.000")
+		XCTAssert(cv1.defaultValue == "R:1.000 G:0.000 B:0.000 A:1.000")
+
+		cv1.value = UIColor.blueColor()
+		XCTAssert(cv1.string == "R:0.000 G:0.000 B:1.000 A:1.000")
+
+		cv1.string = "R:0.000 G:1.000 B:0.000 A:1.000"
+		XCTAssert(cv1.value == UIColor.greenColor())
+	}
+	
+
+
+
 }
 
 // eof

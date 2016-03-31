@@ -37,6 +37,9 @@
 		878402171CA36269001C3E0F /* ActionSheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 878402161CA36269001C3E0F /* ActionSheetViewController.swift */; };
 		8784021B1CA39BDE001C3E0F /* BorderButtonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8784021A1CA39BDE001C3E0F /* BorderButtonViewController.swift */; };
 		8784021D1CA3A5DE001C3E0F /* ToolbarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8784021C1CA3A5DE001C3E0F /* ToolbarViewController.swift */; };
+		878B5F9F1CACA35100A797C3 /* SK4ConfigNSDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 878B5F9E1CACA35100A797C3 /* SK4ConfigNSDate.swift */; };
+		878B5FA21CACA50F00A797C3 /* SK4ConfigCellDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 878B5FA11CACA50F00A797C3 /* SK4ConfigCellDate.swift */; };
+		878B5FA41CACA59600A797C3 /* SK4ConfigDateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 878B5FA31CACA59600A797C3 /* SK4ConfigDateViewController.swift */; };
 		879E73FB1CA6A9D600C64902 /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879E73FA1CA6A9D600C64902 /* CollectionViewController.swift */; };
 		879E73FD1CA6AA0F00C64902 /* CollectionViewAdmin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879E73FC1CA6AA0F00C64902 /* CollectionViewAdmin.swift */; };
 		87A583B31CA8F82500D0E357 /* SK4Toolkit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87A583B01CA8F80D00D0E357 /* SK4Toolkit.framework */; };
@@ -146,6 +149,9 @@
 		878402161CA36269001C3E0F /* ActionSheetViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActionSheetViewController.swift; sourceTree = "<group>"; };
 		8784021A1CA39BDE001C3E0F /* BorderButtonViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BorderButtonViewController.swift; sourceTree = "<group>"; };
 		8784021C1CA3A5DE001C3E0F /* ToolbarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToolbarViewController.swift; sourceTree = "<group>"; };
+		878B5F9E1CACA35100A797C3 /* SK4ConfigNSDate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SK4ConfigNSDate.swift; path = config/value/SK4ConfigNSDate.swift; sourceTree = "<group>"; };
+		878B5FA11CACA50F00A797C3 /* SK4ConfigCellDate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SK4ConfigCellDate.swift; path = config/cell/SK4ConfigCellDate.swift; sourceTree = "<group>"; };
+		878B5FA31CACA59600A797C3 /* SK4ConfigDateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SK4ConfigDateViewController.swift; path = config/vc/SK4ConfigDateViewController.swift; sourceTree = "<group>"; };
 		879E73FA1CA6A9D600C64902 /* CollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
 		879E73FC1CA6AA0F00C64902 /* CollectionViewAdmin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewAdmin.swift; sourceTree = "<group>"; };
 		87A583AA1CA8F80C00D0E357 /* SK4Toolkit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SK4Toolkit.xcodeproj; path = ../SK4Toolkit/SK4Toolkit.xcodeproj; sourceTree = "<group>"; };
@@ -214,6 +220,7 @@
 				87632DE91CAC931E004D31E0 /* SK4ConfigCellSwitch.swift */,
 				87632DEF1CAC95FC004D31E0 /* SK4ConfigCellChoice.swift */,
 				87632DF51CAC9B53004D31E0 /* SK4ConfigCellColor.swift */,
+				878B5FA11CACA50F00A797C3 /* SK4ConfigCellDate.swift */,
 			);
 			name = "config - cell";
 			sourceTree = "<group>";
@@ -230,6 +237,7 @@
 				87632DE71CAC928C004D31E0 /* SK4ConfigBool.swift */,
 				87632DED1CAC9540004D31E0 /* SK4ConfigIndex.swift */,
 				87632DF31CAC9AD5004D31E0 /* SK4ConfigUIColor.swift */,
+				878B5F9E1CACA35100A797C3 /* SK4ConfigNSDate.swift */,
 			);
 			name = "config - value";
 			sourceTree = "<group>";
@@ -329,6 +337,7 @@
 				87632DD51CAC13BF004D31E0 /* SK4ConfigViewController.swift */,
 				87632DF11CAC96C3004D31E0 /* SK4ConfigChoiceViewController.swift */,
 				87632DF71CAC9C2C004D31E0 /* SK4ConfigColorViewController.swift */,
+				878B5FA31CACA59600A797C3 /* SK4ConfigDateViewController.swift */,
 			);
 			name = sk4;
 			sourceTree = "<group>";
@@ -500,6 +509,7 @@
 				87632DEA1CAC931E004D31E0 /* SK4ConfigCellSwitch.swift in Sources */,
 				87632DDE1CAC8595004D31E0 /* SK4ConfigCGFloat.swift in Sources */,
 				8784021D1CA3A5DE001C3E0F /* ToolbarViewController.swift in Sources */,
+				878B5FA41CACA59600A797C3 /* SK4ConfigDateViewController.swift in Sources */,
 				87632DE01CAC8967004D31E0 /* SK4ConfigUInt64.swift in Sources */,
 				87632DCC1CAC1106004D31E0 /* SK4ConfigCell.swift in Sources */,
 				87632DF81CAC9C2C004D31E0 /* SK4ConfigColorViewController.swift in Sources */,
@@ -513,6 +523,8 @@
 				87632DE81CAC928C004D31E0 /* SK4ConfigBool.swift in Sources */,
 				87E236E11CA75AA600B98DF7 /* PickerTimeViewController.swift in Sources */,
 				87632DD21CAC12C9004D31E0 /* SK4ConfigCellLabel.swift in Sources */,
+				878B5FA21CACA50F00A797C3 /* SK4ConfigCellDate.swift in Sources */,
+				878B5F9F1CACA35100A797C3 /* SK4ConfigNSDate.swift in Sources */,
 				87BB46711CA2AE9900F0BC50 /* MainMenuViewController.swift in Sources */,
 				87BB467B1CA353A000F0BC50 /* AlertViewController.swift in Sources */,
 				87632DE21CAC8D4D004D31E0 /* SK4ConfigString.swift in Sources */,
