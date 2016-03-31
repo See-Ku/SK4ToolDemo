@@ -47,6 +47,7 @@
 		878B5FB41CACB99600A797C3 /* SK4ConfigValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 878B5FB31CACB99600A797C3 /* SK4ConfigValue.swift */; };
 		878B5FB61CACB9C400A797C3 /* SK4ConfigViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 878B5FB51CACB9C400A797C3 /* SK4ConfigViewController.swift */; };
 		878B5FB81CACBA1800A797C3 /* SK4ConfigUserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 878B5FB71CACBA1800A797C3 /* SK4ConfigUserDefaults.swift */; };
+		878B5FBA1CACBAC700A797C3 /* ConfigAdminTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 878B5FB91CACBAC700A797C3 /* ConfigAdminTests.swift */; };
 		879E73FB1CA6A9D600C64902 /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879E73FA1CA6A9D600C64902 /* CollectionViewController.swift */; };
 		879E73FD1CA6AA0F00C64902 /* CollectionViewAdmin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879E73FC1CA6AA0F00C64902 /* CollectionViewAdmin.swift */; };
 		87A583B31CA8F82500D0E357 /* SK4Toolkit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87A583B01CA8F80D00D0E357 /* SK4Toolkit.framework */; };
@@ -166,6 +167,7 @@
 		878B5FB31CACB99600A797C3 /* SK4ConfigValue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SK4ConfigValue.swift; path = config/value/SK4ConfigValue.swift; sourceTree = "<group>"; };
 		878B5FB51CACB9C400A797C3 /* SK4ConfigViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SK4ConfigViewController.swift; path = config/vc/SK4ConfigViewController.swift; sourceTree = "<group>"; };
 		878B5FB71CACBA1800A797C3 /* SK4ConfigUserDefaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SK4ConfigUserDefaults.swift; path = config/SK4ConfigUserDefaults.swift; sourceTree = "<group>"; };
+		878B5FB91CACBAC700A797C3 /* ConfigAdminTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfigAdminTests.swift; sourceTree = "<group>"; };
 		879E73FA1CA6A9D600C64902 /* CollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
 		879E73FC1CA6AA0F00C64902 /* CollectionViewAdmin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewAdmin.swift; sourceTree = "<group>"; };
 		87A583AA1CA8F80C00D0E357 /* SK4Toolkit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SK4Toolkit.xcodeproj; path = ../SK4Toolkit/SK4Toolkit.xcodeproj; sourceTree = "<group>"; };
@@ -333,6 +335,7 @@
 			children = (
 				87BB46531CA2A86F00F0BC50 /* SK4ToolDemoTests.swift */,
 				87632DDB1CAC8411004D31E0 /* ConfigValueTests.swift */,
+				878B5FB91CACBAC700A797C3 /* ConfigAdminTests.swift */,
 				87BB46551CA2A86F00F0BC50 /* Info.plist */,
 			);
 			path = SK4ToolDemoTests;
@@ -584,6 +587,7 @@
 			files = (
 				87BB46541CA2A86F00F0BC50 /* SK4ToolDemoTests.swift in Sources */,
 				87632DDC1CAC8411004D31E0 /* ConfigValueTests.swift in Sources */,
+				878B5FBA1CACBAC700A797C3 /* ConfigAdminTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

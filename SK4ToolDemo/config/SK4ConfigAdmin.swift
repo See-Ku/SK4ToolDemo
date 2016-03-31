@@ -136,9 +136,9 @@ public class SK4ConfigAdmin: SK4ConfigValue {
 		/// セクションの名称
 		public let name: String
 
+		/// セクションの情報
 		public var header: String?
 		public var footer: String?
-		//		public var hideFooter = false
 
 		weak var configAdmin: SK4ConfigAdmin!
 		var configArray = [SK4ConfigValue]()
@@ -184,7 +184,7 @@ public class SK4ConfigAdmin: SK4ConfigValue {
 	// MARK: - まとめて処理
 
 	/// 全ての設定に対して、まとめて処理を行う
-	func execConfig(all all: Bool, path: String = "", @noescape exec: (String, SK4ConfigValue) -> Void) {
+	public func execConfig(all all: Bool, path: String = "", @noescape exec: (String, SK4ConfigValue) -> Void) {
 		let path = "\(path)/\(identifier)"
 		for section in userSection {
 			execSection(all: all, path: path, section: section, exec: exec)
