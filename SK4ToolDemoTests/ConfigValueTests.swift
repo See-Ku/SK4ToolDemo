@@ -132,7 +132,23 @@ class ConfigValueTests: XCTestCase {
 		XCTAssert(cv1.value == UIColor.greenColor())
 	}
 	
+	func testNSDate() {
 
+		let date = NSDate(timeIntervalSinceReferenceDate: 0)
+
+		let cv1 = SK4ConfigNSDate(title: "NSDate1", value: date)
+		XCTAssert(cv1.value == NSDate(timeIntervalSinceReferenceDate: 0))
+		XCTAssert(cv1.string == "Jan 1, 2001")
+		XCTAssert(cv1.defaultValue == "Jan 1, 2001")
+
+		cv1.value = NSDate(timeIntervalSince1970: 0)
+		XCTAssert(cv1.string == "Jan 1, 1970")
+
+		// 手を抜くためにここで時差を吸収
+		let ref = NSDate(timeIntervalSinceReferenceDate: (24-9)*60*60)
+		cv1.string = "Jan 2, 2001"
+		XCTAssert(cv1.value == ref)
+	}
 
 
 }

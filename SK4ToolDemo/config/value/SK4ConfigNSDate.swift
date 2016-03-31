@@ -41,6 +41,7 @@ public class SK4ConfigNSDate: SK4ConfigGenerics<NSDate> {
 		self.pickerMode = pickerMode
 		setupFormatterStyle()
 
+		self.defaultValue = self.string
 		self.cell = SK4ConfigCellDate()
 	}
 
