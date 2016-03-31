@@ -36,7 +36,7 @@ public class SK4ConfigNSDate: SK4ConfigGenerics<NSDate> {
 	}
 
 	/// 初期化
-	public init(title: String, value: NSDate, pickerMode: UIDatePickerMode = .Date) {
+	public init(title: String, value: NSDate, pickerMode: UIDatePickerMode) {
 		super.init(title: title, value: value)
 		self.pickerMode = pickerMode
 		setupFormatterStyle()

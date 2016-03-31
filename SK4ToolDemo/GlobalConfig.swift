@@ -13,10 +13,7 @@ class GlobalConfig: SK4ConfigUserDefaults {
 	override func onSetup() {
 		title = "Test Config"
 
-
-		testBool()
-		testIndex()
-		testIndexSegmented()
+		testDate()
 
 
 		testInt()
@@ -24,6 +21,10 @@ class GlobalConfig: SK4ConfigUserDefaults {
 		testUInt64()
 		testString()
 
+		testBool()
+		testIndex()
+		testIndexSegmented()
+		testColor()
 
 
 
@@ -169,6 +170,40 @@ class GlobalConfig: SK4ConfigUserDefaults {
 		stringSegmented3.choices = ["Red", "Blue", "Green"]
 		stringSegmented3.readOnly = true
 	}
+
+	// /////////////////////////////////////////////////////////////
+	// for SK4ConfigUIColor
+
+	let color1 = SK4ConfigUIColor(title: "Color 1", value: UIColor.orangeColor())
+	let color2 = SK4ConfigUIColor(title: "ReadOnly", value: UIColor.greenColor())
+
+	func testColor() {
+		let sec = addUserSection("Test Color")
+		sec.addConfig(color1)
+		sec.addConfig(color2)
+
+		color2.readOnly = true
+	}
+
+	// /////////////////////////////////////////////////////////////
+	// for SK4ConfigNSDate
+
+	let date1 = SK4ConfigNSDate(title: "Date", value: NSDate(), pickerMode: .Date)
+	let date2 = SK4ConfigNSDate(title: "Time", value: NSDate(), pickerMode: .Time)
+	let date3 = SK4ConfigNSDate(title: "Date&Time", value: NSDate(), pickerMode: .DateAndTime)
+	let date4 = SK4ConfigNSDate(title: "Date(ReadOnly)", value: NSDate(), pickerMode: .Date)
+
+	func testDate() {
+		let sec = addUserSection("Test Date")
+		sec.addConfig(date1)
+		sec.addConfig(date2)
+		sec.addConfig(date3)
+		sec.addConfig(date4)
+
+		date1.annotation = "Set Date"
+		date4.readOnly = true
+	}
+
 
 
 
