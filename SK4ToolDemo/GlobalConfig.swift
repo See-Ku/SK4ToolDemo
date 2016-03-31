@@ -7,14 +7,14 @@
 //
 
 import UIKit
+import SK4Toolkit
 
 class GlobalConfig: SK4ConfigUserDefaults {
 
 	override func onSetup() {
 		title = "Test Config"
 
-		testDate()
-
+		commonInfo()
 
 		testInt()
 		testCGFloat()
@@ -26,10 +26,10 @@ class GlobalConfig: SK4ConfigUserDefaults {
 		testIndexSegmented()
 		testColor()
 
-
-
-
-		commonInfo()
+		testDate()
+		testMulti()
+		testDirectory()
+		testAction()
 	}
 
 	// /////////////////////////////////////////////////////////////
@@ -204,8 +204,96 @@ class GlobalConfig: SK4ConfigUserDefaults {
 		date4.readOnly = true
 	}
 
+	// /////////////////////////////////////////////////////////////
+	// for SK4ConfigMulti
 
+	let multi1 = SK4ConfigMulti(title: "Multi")
+	let multi2 = SK4ConfigMulti(title: "Multi(ReadOnly)")
 
+	func testMulti() {
+		let sec = addUserSection("Test Multi")
+		sec.addConfig(multi1)
+		sec.addConfig(multi2)
+
+		let ar1 = (5...20).map() { no in String(no) }
+		let ar2 = (21...40).map() { no in String(no) }
+
+		multi1.annotation = "width x height"
+		multi1.addUnit(ar1, select: 5)
+		multi1.addUnit("x", width: 24)
+		multi1.addUnit(ar2, select: 5)
+
+		multi2.annotation = "left x right"
+		multi2.addUnit(ar1, select: 5)
+		multi2.addUnit("x", width: 24)
+		multi2.addUnit(ar2, select: 5)
+		multi2.readOnly = true
+	}
+
+	// /////////////////////////////////////////////////////////////
+	// for SK4ConfigAdmin (Directory)
+
+	let dir1 = SK4ConfigAdmin(title: "Directory")
+	let dirString3 = SK4ConfigString(title: "String", value: "Max 12", maxLength: 12)
+	let dirBool4 = SK4ConfigBool(title: "Select", value: false)
+
+	func testDirectory() {
+		let sec = addUserSection("Test Directory")
+		sec.addConfig(dir1)
+
+		let sub = dir1.addUserSection("")
+		sub.addConfig(dirString3)
+		sub.addConfig(dirBool4)
+	}
+
+	// /////////////////////////////////////////////////////////////
+	// for SK4ConfigAction
+
+	let action1 = SK4ConfigAction(title: "Exec Handler")
+	let action2 = SK4ConfigAction(title: "Alert Controller")
+	let action3 = SK4ConfigAction(title: "Reset Settings")
+	let action4 = SK4ConfigAction(title: "Random Settings")
+
+	func testAction() {
+		let sec = addUserSection("Test Action")
+		sec.addConfig(action1)
+		sec.addConfig(action2)
+		sec.addConfig(action3)
+		sec.addConfig(action4)
+
+		// onActionで何か処理を行う
+		// →　テストとして、無理矢理アラートを表示してみる
+		action1.onAction = { vc in
+			sk4AlertView(title: "action1", message: "message1", vc: vc)
+		}
+
+		// 普通にアラートを表示
+		let normal = SK4AlertController(title: "action2", message: "message2")
+		normal.addDefault("OK")
+		action2.alertController = normal.getAlertController()
+
+		// 設定をリセット
+		let reset = SK4AlertController(title: "Reset Settings", message: "Reset OK?")
+		reset.addCancel("Cancel")
+		reset.addDefault("OK") { [weak self] alert in
+
+			print("reset()")
+			self?.reset()
+			self?.action3.reloadTable()
+		}
+		action3.alertController = reset.getAlertController()
+
+		// ランダム化
+		let random = SK4AlertController(title: "Random Settings", message: "Randomize OK?")
+		random.addCancel("Cancel")
+		random.addDefault("OK") { [weak self] alert in
+
+			print("random()")
+			self?.random()
+			self?.action4.reloadTable()
+		}
+		action4.alertController = random.getAlertController()
+	}
 
 	// /////////////////////////////////////////////////////////////
 	// for common info
@@ -224,8 +312,6 @@ class GlobalConfig: SK4ConfigUserDefaults {
 		info.addConfig(version)
 		version.value = sk4VersionString()
 	}
-
-
 }
 
 // eof
