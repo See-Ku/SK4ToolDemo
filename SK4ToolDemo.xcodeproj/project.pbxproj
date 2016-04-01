@@ -196,8 +196,8 @@
 			children = (
 				87BB463E1CA2A86F00F0BC50 /* AppDelegate.swift */,
 				87F0056F1CACF9A8001B6A0F /* GlobalConfig.swift */,
-				87632DBE1CAC0716004D31E0 /* KeyboardObserverViewController.swift */,
 				87BB46701CA2AE9900F0BC50 /* MainMenuViewController.swift */,
+				87632DBE1CAC0716004D31E0 /* KeyboardObserverViewController.swift */,
 				870216AD1CABF123006137E9 /* ColorPickerViewController.swift */,
 				87BB466E1CA2AE7C00F0BC50 /* TableViewController.swift */,
 				87BB46721CA2AFC600F0BC50 /* TableViewAdmin.swift */,

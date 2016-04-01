@@ -9,19 +9,6 @@
 import UIKit
 import SK4Toolkit
 
-
-/// バージョン情報を取得
-public func sk4VersionString() -> String {
-	let bundle = NSBundle.mainBundle()
-	if let str = bundle.objectForInfoDictionaryKey("CFBundleShortVersionString") as? String {
-		return str
-	} else {
-		assertionFailure("objectForInfoDictionaryKey error: CFBundleShortVersionString")
-		return ""
-	}
-}
-
-
 class MainMenuTableAdmin: SK4TableViewAdmin {
 
 	let itemArray = [
