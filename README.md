@@ -17,6 +17,14 @@ https://github.com/See-Ku/SK4Toolkit
 |Date	|2016/4/1		|
 
 
+## 動作画面
+
+見た目が面白そうな画面はこれぐらいです。
+
+![デモ画像1](https://raw.github.com/wiki/See-Ku/SK4ToolDemo/img/demo10.png)
+![デモ画像2](https://raw.github.com/wiki/See-Ku/SK4ToolDemo/img/demo11.png)
+
+
 ## 説明書
 
 まずは適当に使ってみて下さい。気になるところがあれば、ソースコードを参照で。
