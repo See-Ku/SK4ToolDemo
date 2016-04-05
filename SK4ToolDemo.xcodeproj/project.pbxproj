@@ -7,10 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6CB8DEB3F98F6DB2B2E5B5DE /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B729C9C5CECA5316BE2DBC0B /* Pods.framework */; };
+		54122F2F05F3FB7A85ABE547 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8850AFC050E3348E3883ED60 /* Pods.framework */; };
 		870216AE1CABF123006137E9 /* ColorPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 870216AD1CABF123006137E9 /* ColorPickerViewController.swift */; };
 		871F9E871CA3B91D005295FC /* OverlayIndicatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 871F9E861CA3B91D005295FC /* OverlayIndicatorViewController.swift */; };
 		87632DBF1CAC0716004D31E0 /* KeyboardObserverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87632DBE1CAC0716004D31E0 /* KeyboardObserverViewController.swift */; };
+		877009321CB3CC5F00109310 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 877009311CB3CC5F00109310 /* MainView.swift */; };
 		878402171CA36269001C3E0F /* ActionSheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 878402161CA36269001C3E0F /* ActionSheetViewController.swift */; };
 		8784021B1CA39BDE001C3E0F /* BorderButtonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8784021A1CA39BDE001C3E0F /* BorderButtonViewController.swift */; };
 		8784021D1CA3A5DE001C3E0F /* ToolbarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8784021C1CA3A5DE001C3E0F /* ToolbarViewController.swift */; };
@@ -37,6 +38,9 @@
 		87EE2A2E1CA6476000D0A222 /* Notify2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EE2A2D1CA6476000D0A222 /* Notify2ViewController.swift */; };
 		87EE2A301CA6476D00D0A222 /* Notify3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EE2A2F1CA6476D00D0A222 /* Notify3ViewController.swift */; };
 		87F005701CACF9A8001B6A0F /* GlobalConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87F0056F1CACF9A8001B6A0F /* GlobalConfig.swift */; };
+		87F7540F1CB3A26E0030264D /* DivideLayoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87F7540E1CB3A26D0030264D /* DivideLayoutViewController.swift */; };
+		87F754131CB3A3CB0030264D /* default-iPad.divlay in Resources */ = {isa = PBXBuildFile; fileRef = 87F754111CB3A3CB0030264D /* default-iPad.divlay */; };
+		87F754141CB3A3CB0030264D /* default-iPhone.divlay in Resources */ = {isa = PBXBuildFile; fileRef = 87F754121CB3A3CB0030264D /* default-iPhone.divlay */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,10 +74,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		5B4021CB2D936F4B5E0ADC8C /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		1FC367A66B951D039552F1A1 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		454CF1B3C57725A2EEB6854B /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		870216AD1CABF123006137E9 /* ColorPickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorPickerViewController.swift; sourceTree = "<group>"; };
 		871F9E861CA3B91D005295FC /* OverlayIndicatorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OverlayIndicatorViewController.swift; sourceTree = "<group>"; };
 		87632DBE1CAC0716004D31E0 /* KeyboardObserverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardObserverViewController.swift; sourceTree = "<group>"; };
+		877009311CB3CC5F00109310 /* MainView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		878402161CA36269001C3E0F /* ActionSheetViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActionSheetViewController.swift; sourceTree = "<group>"; };
 		8784021A1CA39BDE001C3E0F /* BorderButtonViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BorderButtonViewController.swift; sourceTree = "<group>"; };
 		8784021C1CA3A5DE001C3E0F /* ToolbarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToolbarViewController.swift; sourceTree = "<group>"; };
@@ -106,8 +112,10 @@
 		87EE2A2D1CA6476000D0A222 /* Notify2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Notify2ViewController.swift; sourceTree = "<group>"; };
 		87EE2A2F1CA6476D00D0A222 /* Notify3ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Notify3ViewController.swift; sourceTree = "<group>"; };
 		87F0056F1CACF9A8001B6A0F /* GlobalConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalConfig.swift; sourceTree = "<group>"; };
-		B729C9C5CECA5316BE2DBC0B /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		C1E33A08E5489001C51A7A2E /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		87F7540E1CB3A26D0030264D /* DivideLayoutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DivideLayoutViewController.swift; sourceTree = "<group>"; };
+		87F754111CB3A3CB0030264D /* default-iPad.divlay */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "default-iPad.divlay"; path = "layout/default-iPad.divlay"; sourceTree = "<group>"; };
+		87F754121CB3A3CB0030264D /* default-iPhone.divlay */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "default-iPhone.divlay"; path = "layout/default-iPhone.divlay"; sourceTree = "<group>"; };
+		8850AFC050E3348E3883ED60 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,7 +123,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6CB8DEB3F98F6DB2B2E5B5DE /* Pods.framework in Frameworks */,
+				54122F2F05F3FB7A85ABE547 /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -136,13 +144,12 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		13FC85B43FBD4678E37687B3 /* Pods */ = {
+		25ADBBE4EBAE301F4679A25D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				C1E33A08E5489001C51A7A2E /* Pods.debug.xcconfig */,
-				5B4021CB2D936F4B5E0ADC8C /* Pods.release.xcconfig */,
+				8850AFC050E3348E3883ED60 /* Pods.framework */,
 			);
-			name = Pods;
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		87BB46321CA2A86F00F0BC50 = {
@@ -152,8 +159,8 @@
 				87BB46521CA2A86F00F0BC50 /* SK4ToolDemoTests */,
 				87BB465D1CA2A86F00F0BC50 /* SK4ToolDemoUITests */,
 				87BB463C1CA2A86F00F0BC50 /* Products */,
-				13FC85B43FBD4678E37687B3 /* Pods */,
-				DE8C9410F0B7974788E13E41 /* Frameworks */,
+				F21152FB112480BBF30F615A /* Pods */,
+				25ADBBE4EBAE301F4679A25D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -173,6 +180,7 @@
 				87BB463E1CA2A86F00F0BC50 /* AppDelegate.swift */,
 				87F0056F1CACF9A8001B6A0F /* GlobalConfig.swift */,
 				87BB46701CA2AE9900F0BC50 /* MainMenuViewController.swift */,
+				87F754101CB3A3B90030264D /* DivideLayout */,
 				87632DBE1CAC0716004D31E0 /* KeyboardObserverViewController.swift */,
 				870216AD1CABF123006137E9 /* ColorPickerViewController.swift */,
 				87BB466E1CA2AE7C00F0BC50 /* TableViewController.swift */,
@@ -220,12 +228,24 @@
 			path = SK4ToolDemoUITests;
 			sourceTree = "<group>";
 		};
-		DE8C9410F0B7974788E13E41 /* Frameworks */ = {
+		87F754101CB3A3B90030264D /* DivideLayout */ = {
 			isa = PBXGroup;
 			children = (
-				B729C9C5CECA5316BE2DBC0B /* Pods.framework */,
+				87F754111CB3A3CB0030264D /* default-iPad.divlay */,
+				87F754121CB3A3CB0030264D /* default-iPhone.divlay */,
+				87F7540E1CB3A26D0030264D /* DivideLayoutViewController.swift */,
+				877009311CB3CC5F00109310 /* MainView.swift */,
 			);
-			name = Frameworks;
+			name = DivideLayout;
+			sourceTree = "<group>";
+		};
+		F21152FB112480BBF30F615A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1FC367A66B951D039552F1A1 /* Pods.debug.xcconfig */,
+				454CF1B3C57725A2EEB6854B /* Pods.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -235,13 +255,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 87BB46631CA2A86F00F0BC50 /* Build configuration list for PBXNativeTarget "SK4ToolDemo" */;
 			buildPhases = (
-				B074CA45E040E26BCA2AB7AF /* Check Pods Manifest.lock */,
+				3514E35929BDAB27C2652394 /* Check Pods Manifest.lock */,
 				87BB46371CA2A86F00F0BC50 /* Sources */,
 				87BB46381CA2A86F00F0BC50 /* Frameworks */,
 				87BB46391CA2A86F00F0BC50 /* Resources */,
 				87A583B71CA8F82500D0E357 /* Embed Frameworks */,
-				B91AD9E0796B991B51C00A2B /* Embed Pods Frameworks */,
-				D1194EEAC7B399B21692FC70 /* Copy Pods Resources */,
+				2159684F48251E51A2A83AE4 /* Embed Pods Frameworks */,
+				B60B7F883891F95AED55D9AD /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -337,7 +357,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				87BB46491CA2A86F00F0BC50 /* LaunchScreen.storyboard in Resources */,
+				87F754141CB3A3CB0030264D /* default-iPhone.divlay in Resources */,
 				87BB46461CA2A86F00F0BC50 /* Assets.xcassets in Resources */,
+				87F754131CB3A3CB0030264D /* default-iPad.divlay in Resources */,
 				87BB46441CA2A86F00F0BC50 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -359,22 +381,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		B074CA45E040E26BCA2AB7AF /* Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		B91AD9E0796B991B51C00A2B /* Embed Pods Frameworks */ = {
+		2159684F48251E51A2A83AE4 /* Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -389,7 +396,22 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		D1194EEAC7B399B21692FC70 /* Copy Pods Resources */ = {
+		3514E35929BDAB27C2652394 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		B60B7F883891F95AED55D9AD /* Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -412,6 +434,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				87E236E91CA78AAA00B98DF7 /* ImageCacheViewController.swift in Sources */,
+				877009321CB3CC5F00109310 /* MainView.swift in Sources */,
 				87EE2A301CA6476D00D0A222 /* Notify3ViewController.swift in Sources */,
 				87632DBF1CAC0716004D31E0 /* KeyboardObserverViewController.swift in Sources */,
 				8784021D1CA3A5DE001C3E0F /* ToolbarViewController.swift in Sources */,
@@ -422,6 +445,7 @@
 				87E236E11CA75AA600B98DF7 /* PickerTimeViewController.swift in Sources */,
 				87BB46711CA2AE9900F0BC50 /* MainMenuViewController.swift in Sources */,
 				87BB467B1CA353A000F0BC50 /* AlertViewController.swift in Sources */,
+				87F7540F1CB3A26E0030264D /* DivideLayoutViewController.swift in Sources */,
 				8784021B1CA39BDE001C3E0F /* BorderButtonViewController.swift in Sources */,
 				87BB463F1CA2A86F00F0BC50 /* AppDelegate.swift in Sources */,
 				87EE2A2E1CA6476000D0A222 /* Notify2ViewController.swift in Sources */,
@@ -576,7 +600,7 @@
 		};
 		87BB46641CA2A86F00F0BC50 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C1E33A08E5489001C51A7A2E /* Pods.debug.xcconfig */;
+			baseConfigurationReference = 1FC367A66B951D039552F1A1 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = SK4ToolDemo/Info.plist;
@@ -588,7 +612,7 @@
 		};
 		87BB46651CA2A86F00F0BC50 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5B4021CB2D936F4B5E0ADC8C /* Pods.release.xcconfig */;
+			baseConfigurationReference = 454CF1B3C57725A2EEB6854B /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = SK4ToolDemo/Info.plist;

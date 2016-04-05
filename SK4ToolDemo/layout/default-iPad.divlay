@@ -1,0 +1,215 @@
+{
+  "landscape" : {
+    "type" : "divide",
+    "divide.wx" : 1,
+    "units" : [
+      {
+        "type" : "statusBar",
+        "unit_size" : [
+          0,
+          20
+        ]
+      },
+      {
+        "type" : "navigationBar",
+        "unit_size" : [
+          0,
+          44
+        ]
+      },
+      {
+        "type" : "divide",
+        "divide.wx" : 2,
+        "units" : [
+          {
+            "type" : "divide",
+            "divide.wx" : 1,
+            "units" : [
+              {
+                "type" : "title",
+                "unit_size" : [
+                  0,
+                  32
+                ]
+              },
+              {
+                "margin" : [
+                  8,
+                  8,
+                  8,
+                  8
+                ],
+                "type" : "main"
+              },
+              {
+                "type" : "divide",
+                "unit_size" : [
+                  0,
+                  64
+                ],
+                "divide.wx" : 2,
+                "units" : [
+                  {
+                    "type" : "info"
+                  },
+                  {
+                    "type" : "clear",
+                    "unit_size" : [
+                      64,
+                      0
+                    ]
+                  }
+                ],
+                "divide.wy" : 1
+              }
+            ],
+            "divide.wy" : 3
+          },
+          {
+            "type" : "divide",
+            "unit_size" : [
+              64,
+              0
+            ],
+            "divide.wx" : 1,
+            "units" : [
+              {
+                "type" : "space"
+              },
+              {
+                "type" : "divide",
+                "unit_size" : [
+                  0,
+                  320
+                ],
+                "divide.wx" : 1,
+                "units" : [
+                  {
+                    "type" : "unit"
+                  },
+                  {
+                    "type" : "unit"
+                  },
+                  {
+                    "type" : "unit"
+                  },
+                  {
+                    "type" : "unit"
+                  },
+                  {
+                    "type" : "unit"
+                  }
+                ],
+                "divide.wy" : 5
+              },
+              {
+                "type" : "space"
+              }
+            ],
+            "divide.wy" : 3
+          }
+        ],
+        "divide.wy" : 1
+      }
+    ],
+    "divide.wy" : 3
+  },
+  "portrait" : {
+    "type" : "divide",
+    "divide.wx" : 1,
+    "units" : [
+      {
+        "type" : "statusBar",
+        "unit_size" : [
+          0,
+          20
+        ]
+      },
+      {
+        "type" : "navigationBar",
+        "unit_size" : [
+          0,
+          44
+        ]
+      },
+      {
+        "type" : "divide",
+        "divide.wx" : 1,
+        "units" : [
+          {
+            "type" : "title",
+            "unit_size" : [
+              0,
+              32
+            ]
+          },
+          {
+            "margin" : [
+              8,
+              8,
+              8,
+              8
+            ],
+            "type" : "main"
+          },
+          {
+            "type" : "divide",
+            "unit_size" : [
+              0,
+              64
+            ],
+            "divide.wx" : 2,
+            "units" : [
+              {
+                "type" : "divide",
+                "divide.wx" : 2,
+                "units" : [
+                  {
+                    "type" : "info"
+                  },
+                  {
+                    "type" : "clear",
+                    "unit_size" : [
+                      64,
+                      0
+                    ]
+                  }
+                ],
+                "divide.wy" : 1
+              },
+              {
+                "type" : "divide",
+                "unit_size" : [
+                  320,
+                  0
+                ],
+                "divide.wx" : 5,
+                "units" : [
+                  {
+                    "type" : "unit"
+                  },
+                  {
+                    "type" : "unit"
+                  },
+                  {
+                    "type" : "unit"
+                  },
+                  {
+                    "type" : "unit"
+                  },
+                  {
+                    "type" : "unit"
+                  }
+                ],
+                "divide.wy" : 1
+              }
+            ],
+            "divide.wy" : 1
+          }
+        ],
+        "divide.wy" : 3
+      }
+    ],
+    "divide.wy" : 3
+  }
+}

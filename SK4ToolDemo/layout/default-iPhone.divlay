@@ -1,0 +1,187 @@
+{
+  "portrait" : {
+    "divide.wx" : 1,
+    "divide.wy" : 3,
+    "units" : [
+      {
+        "type" : "statusBar"
+      },
+      {
+        "type" : "navigationBar",
+        "unit_size" : [
+          0,
+          32
+        ]
+      },
+      {
+        "divide.wx" : 1,
+        "divide.wy" : 3,
+        "units" : [
+          {
+            "divide.wx" : 1,
+            "divide.wy" : 2,
+            "units" : [
+              {
+                "type" : "title",
+                "unit_size" : [
+                  0,
+                  32
+                ]
+              },
+              {
+                "type" : "main",
+                "margin" : [
+                  8,
+                  8,
+                  8,
+                  8
+                ]
+              }
+            ],
+            "type" : "divide"
+          },
+          {
+            "divide.wx" : 5,
+            "divide.wy" : 1,
+            "unit_size" : [
+              0,
+              48
+            ],
+            "type" : "divide",
+            "units" : [
+              {
+                "type" : "unit"
+              },
+              {
+                "type" : "unit"
+              },
+              {
+                "type" : "unit"
+              },
+              {
+                "type" : "unit"
+              },
+              {
+                "type" : "unit"
+              }
+            ]
+          },
+          {
+            "divide.wx" : 2,
+            "divide.wy" : 1,
+            "unit_size" : [
+              0,
+              64
+            ],
+            "type" : "divide",
+            "units" : [
+              {
+                "type" : "info"
+              },
+              {
+                "type" : "clear",
+                "unit_size" : [
+                  64,
+                  0
+                ]
+              }
+            ]
+          }
+        ],
+        "type" : "divide"
+      }
+    ],
+    "type" : "divide"
+  },
+  "landscape" : {
+    "divide.wx" : 1,
+    "divide.wy" : 2,
+    "units" : [
+      {
+        "type" : "navigationBar",
+        "unit_size" : [
+          0,
+          32
+        ]
+      },
+      {
+        "divide.wx" : 2,
+        "divide.wy" : 1,
+        "units" : [
+          {
+            "divide.wx" : 1,
+            "divide.wy" : 3,
+            "units" : [
+              {
+                "type" : "title",
+                "unit_size" : [
+                  0,
+                  32
+                ]
+              },
+              {
+                "type" : "main",
+                "margin" : [
+                  8,
+                  8,
+                  8,
+                  8
+                ]
+              },
+              {
+                "divide.wx" : 2,
+                "divide.wy" : 1,
+                "unit_size" : [
+                  0,
+                  40
+                ],
+                "type" : "divide",
+                "units" : [
+                  {
+                    "type" : "info"
+                  },
+                  {
+                    "type" : "clear",
+                    "unit_size" : [
+                      64,
+                      0
+                    ]
+                  }
+                ]
+              }
+            ],
+            "type" : "divide"
+          },
+          {
+            "divide.wx" : 1,
+            "divide.wy" : 5,
+            "unit_size" : [
+              48,
+              0
+            ],
+            "type" : "divide",
+            "units" : [
+              {
+                "type" : "unit"
+              },
+              {
+                "type" : "unit"
+              },
+              {
+                "type" : "unit"
+              },
+              {
+                "type" : "unit"
+              },
+              {
+                "type" : "unit"
+              }
+            ]
+          }
+        ],
+        "type" : "divide"
+      }
+    ],
+    "type" : "divide"
+  }
+}

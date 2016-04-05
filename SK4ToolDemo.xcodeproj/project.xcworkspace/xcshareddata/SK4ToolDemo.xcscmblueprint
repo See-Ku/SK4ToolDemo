@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "5B6C9850FA92B2812BD03B973152B6FE6AD46700",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "6CF7353A56941F65946AD8BFCDB3B6B293E89261" : 0,
+    "5B6C9850FA92B2812BD03B973152B6FE6AD46700" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "C845B11D-AA97-4EE1-879A-678AEFBADA2B",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "6CF7353A56941F65946AD8BFCDB3B6B293E89261" : "SK4Toolkit\/",
+    "5B6C9850FA92B2812BD03B973152B6FE6AD46700" : "SK4ToolDemo\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "SK4ToolDemo",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "SK4ToolDemo.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/See-Ku\/SK4ToolDemo.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "5B6C9850FA92B2812BD03B973152B6FE6AD46700"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/See-Ku\/SK4ToolKit.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "6CF7353A56941F65946AD8BFCDB3B6B293E89261"
+    }
+  ]
+}
