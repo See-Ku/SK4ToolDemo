@@ -207,8 +207,8 @@ class GlobalConfig: SK4ConfigUserDefaults {
 	// /////////////////////////////////////////////////////////////
 	// for SK4ConfigMulti
 
-	let multi1 = SK4ConfigMulti(title: "Multi")
-	let multi2 = SK4ConfigMulti(title: "Multi(ReadOnly)")
+	let multi1 = SK4ConfigMulti(title: "Multi", separater: " ")
+	let multi2 = SK4ConfigMulti(title: "Multi(ReadOnly)", separater: " ")
 
 	func testMulti() {
 		let sec = addUserSection("Test Multi")
