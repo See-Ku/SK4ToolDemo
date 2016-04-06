@@ -9,12 +9,13 @@ https://github.com/See-Ku/SK4Toolkit
 
 ## 動作環境
 
-|環境	|情報			|
-|-------|---------------|
-|Xcode	|7.3 (7D175)	|
-|iOS	|9.0			|
-|Swift	|2.2			|
-|Date	|2016/4/1		|
+|環境		|情報			|
+|-------	|---------------|
+|Xcode		|7.3 (7D175)	|
+|iOS		|9.0			|
+|Swift		|2.2			|
+|SK4Toolkit	|2.7.2			|
+|Date		|2016/4/6		|
 
 
 ## 動作画面
@@ -23,6 +24,10 @@ https://github.com/See-Ku/SK4Toolkit
 
 ![デモ画像1](https://raw.github.com/wiki/See-Ku/SK4ToolDemo/img/demo10.png)
 ![デモ画像2](https://raw.github.com/wiki/See-Ku/SK4ToolDemo/img/demo11.png)
+
+DivideLayoutのデモが追加になりました
+
+![DivideLayoutデモ](https://raw.github.com/wiki/See-Ku/SK4ToolDemo/img/demo12.png)
 
 
 ## 説明書
