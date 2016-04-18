@@ -17,6 +17,17 @@
 		8784021D1CA3A5DE001C3E0F /* ToolbarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8784021C1CA3A5DE001C3E0F /* ToolbarViewController.swift */; };
 		87909E561CC4F450009C9724 /* InterpolationColorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87909E551CC4F450009C9724 /* InterpolationColorViewController.swift */; };
 		87909E581CC50558009C9724 /* SendMailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87909E571CC50558009C9724 /* SendMailViewController.swift */; };
+		87909E6B1CC50B83009C9724 /* AudioPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87909E6A1CC50B83009C9724 /* AudioPlayerViewController.swift */; };
+		87909E741CC50D81009C9724 /* powerup01.caf in Resources */ = {isa = PBXBuildFile; fileRef = 87909E6C1CC50D80009C9724 /* powerup01.caf */; };
+		87909E751CC50D81009C9724 /* powerup02.caf in Resources */ = {isa = PBXBuildFile; fileRef = 87909E6D1CC50D80009C9724 /* powerup02.caf */; };
+		87909E761CC50D81009C9724 /* powerup03.caf in Resources */ = {isa = PBXBuildFile; fileRef = 87909E6E1CC50D80009C9724 /* powerup03.caf */; };
+		87909E771CC50D81009C9724 /* powerup04.caf in Resources */ = {isa = PBXBuildFile; fileRef = 87909E6F1CC50D80009C9724 /* powerup04.caf */; };
+		87909E781CC50D81009C9724 /* powerup05.caf in Resources */ = {isa = PBXBuildFile; fileRef = 87909E701CC50D80009C9724 /* powerup05.caf */; };
+		87909E791CC50D81009C9724 /* powerup06.caf in Resources */ = {isa = PBXBuildFile; fileRef = 87909E711CC50D80009C9724 /* powerup06.caf */; };
+		87909E7A1CC50D81009C9724 /* powerup07.caf in Resources */ = {isa = PBXBuildFile; fileRef = 87909E721CC50D80009C9724 /* powerup07.caf */; };
+		87909E7B1CC50D81009C9724 /* powerup08.caf in Resources */ = {isa = PBXBuildFile; fileRef = 87909E731CC50D81009C9724 /* powerup08.caf */; };
+		87909E7E1CC5112F009C9724 /* Gyuuuuuu.caf in Resources */ = {isa = PBXBuildFile; fileRef = 87909E7C1CC5112F009C9724 /* Gyuuuuuu.caf */; };
+		87909E7F1CC5112F009C9724 /* Purururururu.caf in Resources */ = {isa = PBXBuildFile; fileRef = 87909E7D1CC5112F009C9724 /* Purururururu.caf */; };
 		879E73FB1CA6A9D600C64902 /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879E73FA1CA6A9D600C64902 /* CollectionViewController.swift */; };
 		879E73FD1CA6AA0F00C64902 /* CollectionViewAdmin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879E73FC1CA6AA0F00C64902 /* CollectionViewAdmin.swift */; };
 		87B634F01CA7F2B5004501B2 /* LazyTimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87B634EF1CA7F2B4004501B2 /* LazyTimerViewController.swift */; };
@@ -87,6 +98,17 @@
 		8784021C1CA3A5DE001C3E0F /* ToolbarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToolbarViewController.swift; sourceTree = "<group>"; };
 		87909E551CC4F450009C9724 /* InterpolationColorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InterpolationColorViewController.swift; sourceTree = "<group>"; };
 		87909E571CC50558009C9724 /* SendMailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SendMailViewController.swift; sourceTree = "<group>"; };
+		87909E6A1CC50B83009C9724 /* AudioPlayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioPlayerViewController.swift; sourceTree = "<group>"; };
+		87909E6C1CC50D80009C9724 /* powerup01.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = powerup01.caf; path = sound/powerup01.caf; sourceTree = "<group>"; };
+		87909E6D1CC50D80009C9724 /* powerup02.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = powerup02.caf; path = sound/powerup02.caf; sourceTree = "<group>"; };
+		87909E6E1CC50D80009C9724 /* powerup03.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = powerup03.caf; path = sound/powerup03.caf; sourceTree = "<group>"; };
+		87909E6F1CC50D80009C9724 /* powerup04.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = powerup04.caf; path = sound/powerup04.caf; sourceTree = "<group>"; };
+		87909E701CC50D80009C9724 /* powerup05.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = powerup05.caf; path = sound/powerup05.caf; sourceTree = "<group>"; };
+		87909E711CC50D80009C9724 /* powerup06.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = powerup06.caf; path = sound/powerup06.caf; sourceTree = "<group>"; };
+		87909E721CC50D80009C9724 /* powerup07.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = powerup07.caf; path = sound/powerup07.caf; sourceTree = "<group>"; };
+		87909E731CC50D81009C9724 /* powerup08.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = powerup08.caf; path = sound/powerup08.caf; sourceTree = "<group>"; };
+		87909E7C1CC5112F009C9724 /* Gyuuuuuu.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Gyuuuuuu.caf; path = sound/Gyuuuuuu.caf; sourceTree = "<group>"; };
+		87909E7D1CC5112F009C9724 /* Purururururu.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Purururururu.caf; path = sound/Purururururu.caf; sourceTree = "<group>"; };
 		879E73FA1CA6A9D600C64902 /* CollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
 		879E73FC1CA6AA0F00C64902 /* CollectionViewAdmin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewAdmin.swift; sourceTree = "<group>"; };
 		87B634EF1CA7F2B4004501B2 /* LazyTimerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LazyTimerViewController.swift; sourceTree = "<group>"; };
@@ -156,6 +178,24 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		87909E591CC50A1D009C9724 /* AudioPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				87909E7C1CC5112F009C9724 /* Gyuuuuuu.caf */,
+				87909E7D1CC5112F009C9724 /* Purururururu.caf */,
+				87909E6C1CC50D80009C9724 /* powerup01.caf */,
+				87909E6D1CC50D80009C9724 /* powerup02.caf */,
+				87909E6E1CC50D80009C9724 /* powerup03.caf */,
+				87909E6F1CC50D80009C9724 /* powerup04.caf */,
+				87909E701CC50D80009C9724 /* powerup05.caf */,
+				87909E711CC50D80009C9724 /* powerup06.caf */,
+				87909E721CC50D80009C9724 /* powerup07.caf */,
+				87909E731CC50D81009C9724 /* powerup08.caf */,
+				87909E6A1CC50B83009C9724 /* AudioPlayerViewController.swift */,
+			);
+			name = AudioPlayer;
+			sourceTree = "<group>";
+		};
 		87BB46321CA2A86F00F0BC50 = {
 			isa = PBXGroup;
 			children = (
@@ -184,6 +224,7 @@
 				87BB463E1CA2A86F00F0BC50 /* AppDelegate.swift */,
 				87F0056F1CACF9A8001B6A0F /* GlobalConfig.swift */,
 				87BB46701CA2AE9900F0BC50 /* MainMenuViewController.swift */,
+				87909E591CC50A1D009C9724 /* AudioPlayer */,
 				87909E571CC50558009C9724 /* SendMailViewController.swift */,
 				87909E551CC4F450009C9724 /* InterpolationColorViewController.swift */,
 				87F754101CB3A3B90030264D /* DivideLayout */,
@@ -363,10 +404,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				87BB46491CA2A86F00F0BC50 /* LaunchScreen.storyboard in Resources */,
+				87909E771CC50D81009C9724 /* powerup04.caf in Resources */,
 				87F754141CB3A3CB0030264D /* default-iPhone.divlay in Resources */,
+				87909E761CC50D81009C9724 /* powerup03.caf in Resources */,
 				87BB46461CA2A86F00F0BC50 /* Assets.xcassets in Resources */,
 				87F754131CB3A3CB0030264D /* default-iPad.divlay in Resources */,
+				87909E7E1CC5112F009C9724 /* Gyuuuuuu.caf in Resources */,
+				87909E781CC50D81009C9724 /* powerup05.caf in Resources */,
+				87909E7F1CC5112F009C9724 /* Purururururu.caf in Resources */,
+				87909E741CC50D81009C9724 /* powerup01.caf in Resources */,
+				87909E7B1CC50D81009C9724 /* powerup08.caf in Resources */,
 				87BB46441CA2A86F00F0BC50 /* Main.storyboard in Resources */,
+				87909E791CC50D81009C9724 /* powerup06.caf in Resources */,
+				87909E7A1CC50D81009C9724 /* powerup07.caf in Resources */,
+				87909E751CC50D81009C9724 /* powerup02.caf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -456,6 +507,7 @@
 				87BB463F1CA2A86F00F0BC50 /* AppDelegate.swift in Sources */,
 				87EE2A2E1CA6476000D0A222 /* Notify2ViewController.swift in Sources */,
 				87BB46731CA2AFC600F0BC50 /* TableViewAdmin.swift in Sources */,
+				87909E6B1CC50B83009C9724 /* AudioPlayerViewController.swift in Sources */,
 				879E73FB1CA6A9D600C64902 /* CollectionViewController.swift in Sources */,
 				87B634F01CA7F2B5004501B2 /* LazyTimerViewController.swift in Sources */,
 				87909E581CC50558009C9724 /* SendMailViewController.swift in Sources */,

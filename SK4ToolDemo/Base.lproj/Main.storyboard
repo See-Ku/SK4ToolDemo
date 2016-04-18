@@ -67,11 +67,102 @@
                         <segue destination="Szq-OR-19Q" kind="show" identifier="DivideLayout" id="9cG-c8-zXH"/>
                         <segue destination="xTM-FD-Ald" kind="show" identifier="InterpolationColor" id="5k8-a3-yMC"/>
                         <segue destination="5rC-mx-dfy" kind="show" identifier="SendMail" id="7zd-tv-AXt"/>
+                        <segue destination="HcV-Pn-Hbw" kind="show" identifier="AudioPlayer" id="9vA-Nf-rpl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="713" y="-336"/>
+        </scene>
+        <!--AudioPlayer-->
+        <scene sceneID="g6E-qF-86a">
+            <objects>
+                <viewController id="HcV-Pn-Hbw" customClass="AudioPlayerViewController" customModule="SK4ToolDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jd6-ts-bIj"/>
+                        <viewControllerLayoutGuide type="bottom" id="Trg-E5-l7d"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="eGt-FM-ujs">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minimumValue="1" maximumValue="8" translatesAutoresizingMaskIntoConstraints="NO" id="kD4-73-NRK">
+                                <rect key="frame" x="92" y="72" width="94" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="29" id="oUr-DZ-efY"/>
+                                    <constraint firstAttribute="width" constant="94" id="qDY-uh-oev"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="onPlay:" destination="HcV-Pn-Hbw" eventType="valueChanged" id="h0L-uY-n9u"/>
+                                </connections>
+                            </stepper>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No.1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gYa-Ck-bjf">
+                                <rect key="frame" x="20" y="76" width="64" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="64" id="Zla-e9-9R8"/>
+                                    <constraint firstAttribute="height" constant="21" id="dTg-UP-aQz"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="57R-iO-5iN">
+                                <rect key="frame" x="20" y="120" width="80" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="t68-Nz-jOb"/>
+                                    <constraint firstAttribute="width" constant="80" id="vGo-3Z-3Eb"/>
+                                </constraints>
+                                <state key="normal" title="Play"/>
+                                <connections>
+                                    <action selector="onPlay:" destination="HcV-Pn-Hbw" eventType="touchUpInside" id="j1m-HT-YYt"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aTm-49-XPR">
+                                <rect key="frame" x="20" y="200" width="80" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="VOL-0W-f3H"/>
+                                    <constraint firstAttribute="width" constant="80" id="dPQ-SZ-WqB"/>
+                                </constraints>
+                                <state key="normal" title="Gyuuuuuu"/>
+                                <connections>
+                                    <action selector="onGyuuuuuu:" destination="HcV-Pn-Hbw" eventType="touchUpInside" id="KA6-hd-cJl"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ruH-89-Oj8">
+                                <rect key="frame" x="108" y="200" width="80" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="f2m-UY-ldU"/>
+                                    <constraint firstAttribute="width" constant="80" id="v2L-d5-pqO"/>
+                                </constraints>
+                                <state key="normal" title="Purururu"/>
+                                <connections>
+                                    <action selector="onPurururururu:" destination="HcV-Pn-Hbw" eventType="touchUpInside" id="twb-Ye-tUC"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="57R-iO-5iN" firstAttribute="top" secondItem="kD4-73-NRK" secondAttribute="bottom" constant="19" id="1s2-un-2c5"/>
+                            <constraint firstItem="aTm-49-XPR" firstAttribute="leading" secondItem="eGt-FM-ujs" secondAttribute="leadingMargin" id="1se-hP-fsJ"/>
+                            <constraint firstItem="gYa-Ck-bjf" firstAttribute="leading" secondItem="eGt-FM-ujs" secondAttribute="leadingMargin" id="3JG-t2-v9V"/>
+                            <constraint firstItem="gYa-Ck-bjf" firstAttribute="top" secondItem="jd6-ts-bIj" secondAttribute="bottom" constant="12" id="568-dL-TM5"/>
+                            <constraint firstItem="ruH-89-Oj8" firstAttribute="leading" secondItem="aTm-49-XPR" secondAttribute="trailing" constant="8" id="A2R-Yj-lDW"/>
+                            <constraint firstItem="ruH-89-Oj8" firstAttribute="top" secondItem="kD4-73-NRK" secondAttribute="bottom" constant="99" id="EY7-vL-9oS"/>
+                            <constraint firstItem="57R-iO-5iN" firstAttribute="leading" secondItem="eGt-FM-ujs" secondAttribute="leadingMargin" id="NXD-gu-Ebu"/>
+                            <constraint firstItem="kD4-73-NRK" firstAttribute="leading" secondItem="gYa-Ck-bjf" secondAttribute="trailing" constant="8" id="dM4-Zc-ud2"/>
+                            <constraint firstItem="aTm-49-XPR" firstAttribute="top" secondItem="57R-iO-5iN" secondAttribute="bottom" constant="50" id="plf-R7-v9X"/>
+                            <constraint firstItem="kD4-73-NRK" firstAttribute="top" secondItem="jd6-ts-bIj" secondAttribute="bottom" constant="8" id="w20-7s-neE"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="AudioPlayer" id="A3O-S8-5XG"/>
+                    <connections>
+                        <outlet property="numberLabel" destination="gYa-Ck-bjf" id="R6I-vj-OUk"/>
+                        <outlet property="numberStepper" destination="kD4-73-NRK" id="5mL-aB-FCo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Vz7-O7-u8I" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="993" y="553"/>
         </scene>
         <!--Send Mail-->
         <scene sceneID="Fwu-vP-fDJ">
@@ -99,7 +190,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Knz-3z-wic" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1136" y="639"/>
+            <point key="canvasLocation" x="4276" y="999"/>
         </scene>
         <!--Interpolation Color-->
         <scene sceneID="JEc-Sj-YF5">

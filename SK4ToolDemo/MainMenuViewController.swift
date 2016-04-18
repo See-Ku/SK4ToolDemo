@@ -8,6 +8,7 @@
 
 import UIKit
 import SK4Toolkit
+import SK4SpareKit
 
 class MainMenuTableAdmin: SK4TableViewAdmin {
 
@@ -33,6 +34,7 @@ class MainMenuTableAdmin: SK4TableViewAdmin {
 		"InterpolationColor",
 
 		"SendMail",
+		"AudioPlayer",
 	]
 
 	override func numberOfRows(section: Int) -> Int {
@@ -61,6 +63,13 @@ class MainMenuViewController: UIViewController {
 
 			// cancel: true キャンセルされた
 			print("openConfigViewController - cancel: \(cancel)")
+
+			if cancel {
+				return
+			}
+
+			let admin = SK4AudioPlayerAdmin.defaultAdmin
+			admin.setup(enable: g_config.soundeEffect.value)
 		}
 	}
 
@@ -68,6 +77,9 @@ class MainMenuViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
+		let admin = SK4AudioPlayerAdmin.defaultAdmin
+		admin.setup(enable: g_config.soundeEffect.value)
 
 		tableAdmin = MainMenuTableAdmin(tableView: tableView, parent: self)
 
