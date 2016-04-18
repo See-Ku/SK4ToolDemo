@@ -15,6 +15,7 @@
 		878402171CA36269001C3E0F /* ActionSheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 878402161CA36269001C3E0F /* ActionSheetViewController.swift */; };
 		8784021B1CA39BDE001C3E0F /* BorderButtonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8784021A1CA39BDE001C3E0F /* BorderButtonViewController.swift */; };
 		8784021D1CA3A5DE001C3E0F /* ToolbarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8784021C1CA3A5DE001C3E0F /* ToolbarViewController.swift */; };
+		87909E561CC4F450009C9724 /* InterpolationColorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87909E551CC4F450009C9724 /* InterpolationColorViewController.swift */; };
 		879E73FB1CA6A9D600C64902 /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879E73FA1CA6A9D600C64902 /* CollectionViewController.swift */; };
 		879E73FD1CA6AA0F00C64902 /* CollectionViewAdmin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879E73FC1CA6AA0F00C64902 /* CollectionViewAdmin.swift */; };
 		87B634F01CA7F2B5004501B2 /* LazyTimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87B634EF1CA7F2B4004501B2 /* LazyTimerViewController.swift */; };
@@ -83,6 +84,7 @@
 		878402161CA36269001C3E0F /* ActionSheetViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActionSheetViewController.swift; sourceTree = "<group>"; };
 		8784021A1CA39BDE001C3E0F /* BorderButtonViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BorderButtonViewController.swift; sourceTree = "<group>"; };
 		8784021C1CA3A5DE001C3E0F /* ToolbarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToolbarViewController.swift; sourceTree = "<group>"; };
+		87909E551CC4F450009C9724 /* InterpolationColorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InterpolationColorViewController.swift; sourceTree = "<group>"; };
 		879E73FA1CA6A9D600C64902 /* CollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
 		879E73FC1CA6AA0F00C64902 /* CollectionViewAdmin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewAdmin.swift; sourceTree = "<group>"; };
 		87B634EF1CA7F2B4004501B2 /* LazyTimerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LazyTimerViewController.swift; sourceTree = "<group>"; };
@@ -180,6 +182,7 @@
 				87BB463E1CA2A86F00F0BC50 /* AppDelegate.swift */,
 				87F0056F1CACF9A8001B6A0F /* GlobalConfig.swift */,
 				87BB46701CA2AE9900F0BC50 /* MainMenuViewController.swift */,
+				87909E551CC4F450009C9724 /* InterpolationColorViewController.swift */,
 				87F754101CB3A3B90030264D /* DivideLayout */,
 				87632DBE1CAC0716004D31E0 /* KeyboardObserverViewController.swift */,
 				870216AD1CABF123006137E9 /* ColorPickerViewController.swift */,
@@ -456,6 +459,7 @@
 				879E73FD1CA6AA0F00C64902 /* CollectionViewAdmin.swift in Sources */,
 				871F9E871CA3B91D005295FC /* OverlayIndicatorViewController.swift in Sources */,
 				87E236DF1CA7553F00B98DF7 /* PickerSizeViewController.swift in Sources */,
+				87909E561CC4F450009C9724 /* InterpolationColorViewController.swift in Sources */,
 				87BB466F1CA2AE7C00F0BC50 /* TableViewController.swift in Sources */,
 				87B634F21CA7F579004501B2 /* TextAttributesViewController.swift in Sources */,
 				878402171CA36269001C3E0F /* ActionSheetViewController.swift in Sources */,

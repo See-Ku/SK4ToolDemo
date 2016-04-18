@@ -65,11 +65,56 @@
                         <segue destination="IZO-dX-dxC" kind="show" identifier="ColorPicker" id="H3u-Rf-HKb"/>
                         <segue destination="bE8-f0-xYw" kind="show" identifier="KeyboardObserver" id="9BA-3u-GP7"/>
                         <segue destination="Szq-OR-19Q" kind="show" identifier="DivideLayout" id="9cG-c8-zXH"/>
+                        <segue destination="xTM-FD-Ald" kind="show" identifier="InterpolationColor" id="5k8-a3-yMC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="713" y="-336"/>
+        </scene>
+        <!--Interpolation Color-->
+        <scene sceneID="JEc-Sj-YF5">
+            <objects>
+                <viewController id="xTM-FD-Ald" customClass="InterpolationColorViewController" customModule="SK4ToolDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="fAL-Pe-ahI"/>
+                        <viewControllerLayoutGuide type="bottom" id="HGp-EL-d1E"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="IES-1r-clj">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="hCb-CC-Orp">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" id="ItF-SF-aNi">
+                                        <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ItF-SF-aNi" id="3Iw-dR-V81">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="hCb-CC-Orp" firstAttribute="top" secondItem="IES-1r-clj" secondAttribute="top" id="6gF-Hf-oD7"/>
+                            <constraint firstItem="HGp-EL-d1E" firstAttribute="top" secondItem="hCb-CC-Orp" secondAttribute="bottom" id="gsn-Al-xHY"/>
+                            <constraint firstItem="hCb-CC-Orp" firstAttribute="leading" secondItem="IES-1r-clj" secondAttribute="leading" id="mWY-aA-Mq9"/>
+                            <constraint firstAttribute="trailing" secondItem="hCb-CC-Orp" secondAttribute="trailing" id="y4c-mj-tJF"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Interpolation Color" id="l8v-9C-efR"/>
+                    <connections>
+                        <outlet property="tableView" destination="hCb-CC-Orp" id="IuF-1p-Sr6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DYT-0u-Mq2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="899" y="575"/>
         </scene>
         <!--DivideLayout-->
         <scene sceneID="Vqn-uu-xK6">
@@ -173,7 +218,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Z04-75-rcA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1466" y="146"/>
+            <point key="canvasLocation" x="2938" y="838"/>
         </scene>
         <!--KeyboardObserver-->
         <scene sceneID="tXa-Hy-H4f">
@@ -241,7 +286,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dWo-Ws-xUX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5012" y="286"/>
+            <point key="canvasLocation" x="2268" y="782"/>
         </scene>
         <!--ColorPicker-->
         <scene sceneID="Iw1-SW-6dm">
