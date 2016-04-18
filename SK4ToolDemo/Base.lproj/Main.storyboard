@@ -66,11 +66,40 @@
                         <segue destination="bE8-f0-xYw" kind="show" identifier="KeyboardObserver" id="9BA-3u-GP7"/>
                         <segue destination="Szq-OR-19Q" kind="show" identifier="DivideLayout" id="9cG-c8-zXH"/>
                         <segue destination="xTM-FD-Ald" kind="show" identifier="InterpolationColor" id="5k8-a3-yMC"/>
+                        <segue destination="5rC-mx-dfy" kind="show" identifier="SendMail" id="7zd-tv-AXt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="713" y="-336"/>
+        </scene>
+        <!--Send Mail-->
+        <scene sceneID="Fwu-vP-fDJ">
+            <objects>
+                <viewController id="5rC-mx-dfy" customClass="SendMailViewController" customModule="SK4ToolDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Xw0-fF-3Te"/>
+                        <viewControllerLayoutGuide type="bottom" id="w5c-bY-q78"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8aU-YT-xnm">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cvi-we-Lio">
+                                <rect key="frame" x="20" y="100" width="120" height="30"/>
+                                <state key="normal" title="Send Mail"/>
+                                <connections>
+                                    <action selector="onSendMail:" destination="5rC-mx-dfy" eventType="touchUpInside" id="WNF-r9-BvS"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Send Mail" id="DgH-Qu-Rpg"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Knz-3z-wic" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1136" y="639"/>
         </scene>
         <!--Interpolation Color-->
         <scene sceneID="JEc-Sj-YF5">
@@ -114,7 +143,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DYT-0u-Mq2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="899" y="575"/>
+            <point key="canvasLocation" x="3583" y="927"/>
         </scene>
         <!--DivideLayout-->
         <scene sceneID="Vqn-uu-xK6">
