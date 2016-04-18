@@ -4,5 +4,7 @@ platform :ios, '9.0'
 # Uncomment this line if you're using Swift
 use_frameworks!
 
-pod 'SK4Toolkit', :git => 'https://github.com/See-Ku/SK4Toolkit.git'
+pod 'SK4Toolkit'
+pod 'SK4ConfigKit'
+pod 'SK4SpareKit'
 

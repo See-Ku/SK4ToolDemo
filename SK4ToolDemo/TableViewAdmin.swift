@@ -27,7 +27,7 @@ class TableViewAdmin: SK4TableViewAdmin {
 	override func setup(tableView tableView: UITableView, parent: UIViewController) {
 		super.setup(tableView: tableView, parent: parent)
 
-		clearSeparator()
+		tableView.sk4ClearSeparator()
 	}
 
 	override func numberOfRows(section: Int) -> Int {

@@ -8,6 +8,7 @@
 
 import UIKit
 import SK4Toolkit
+import SK4ConfigKit
 
 class GlobalConfig: SK4ConfigUserDefaults {
 

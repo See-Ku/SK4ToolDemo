@@ -1,19 +1,18 @@
 PODS:
-  - SK4Toolkit (2.7.2)
+  - SK4ConfigKit (1.0.2):
+    - SK4Toolkit (~> 2.8)
+  - SK4SpareKit (1.0.1):
+    - SK4Toolkit (~> 2.8)
+  - SK4Toolkit (2.8.0)
 
 DEPENDENCIES:
-  - SK4Toolkit (from `https://github.com/See-Ku/SK4Toolkit.git`)
-
-EXTERNAL SOURCES:
-  SK4Toolkit:
-    :git: https://github.com/See-Ku/SK4Toolkit.git
-
-CHECKOUT OPTIONS:
-  SK4Toolkit:
-    :commit: 7cb94220dec21a01f36f887e4012f45db3a8fed1
-    :git: https://github.com/See-Ku/SK4Toolkit.git
+  - SK4ConfigKit
+  - SK4SpareKit
+  - SK4Toolkit
 
 SPEC CHECKSUMS:
-  SK4Toolkit: 72053e5f57f2b722d47ac96cfac1d84a2ca5bbe0
+  SK4ConfigKit: a3340431898575276cf8d1b0b7b87e9554bc7cb7
+  SK4SpareKit: 328d737aeed2387dba11c154a8c34145fb20e83f
+  SK4Toolkit: d3c130c8c3dcc89261e72cf54d914e325ec0f3e6
 
 COCOAPODS: 0.39.0

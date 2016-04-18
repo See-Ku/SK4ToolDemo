@@ -14,8 +14,8 @@ https://github.com/See-Ku/SK4Toolkit
 |Xcode		|7.3 (7D175)	|
 |iOS		|9.0			|
 |Swift		|2.2			|
-|SK4Toolkit	|2.7.2			|
-|Date		|2016/4/6		|
+|SK4Toolkit	|2.8.0			|
+|Date		|2016/4/18		|
 
 
 ## 動作画面
