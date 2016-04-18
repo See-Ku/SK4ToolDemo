@@ -1,10 +1,16 @@
 
 # SK4ToolDemo
 
-SK4ToolDemoはSK4Toolkitのデモです。
+SK4ToolDemoは、SK4Toolkitフレームワークのデモです。たぶん。
 
-See-Ku/SK4Toolkit:  
+See-Ku/SK4Toolkit  
 https://github.com/See-Ku/SK4Toolkit
+
+See-Ku/SK4ConfigKit  
+https://github.com/See-Ku/SK4ConfigKit
+
+See-Ku/SK4SpareKit  
+https://github.com/See-Ku/SK4SpareKit
 
 
 ## 動作環境

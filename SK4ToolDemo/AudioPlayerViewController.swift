@@ -24,13 +24,15 @@ class AudioPlayerViewController: UIViewController {
 		let no = Int(numberStepper.value)
 		numberLabel.text = "No.\(no)"
 
+		// nameを指定して再生
 		let name = String(format: "powerup%02d", no)
 		let admin = SK4AudioPlayerAdmin.defaultAdmin
 		admin.play(name)
 	}
 
-
 	@IBAction func onGyuuuuuu(sender: AnyObject) {
+
+		// enum経由で再生
 		SoundEffect.Gyuuuuuu.play()
 	}
 

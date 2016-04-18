@@ -26,8 +26,8 @@
 		87909E791CC50D81009C9724 /* powerup06.caf in Resources */ = {isa = PBXBuildFile; fileRef = 87909E711CC50D80009C9724 /* powerup06.caf */; };
 		87909E7A1CC50D81009C9724 /* powerup07.caf in Resources */ = {isa = PBXBuildFile; fileRef = 87909E721CC50D80009C9724 /* powerup07.caf */; };
 		87909E7B1CC50D81009C9724 /* powerup08.caf in Resources */ = {isa = PBXBuildFile; fileRef = 87909E731CC50D81009C9724 /* powerup08.caf */; };
-		87909E7E1CC5112F009C9724 /* Gyuuuuuu.caf in Resources */ = {isa = PBXBuildFile; fileRef = 87909E7C1CC5112F009C9724 /* Gyuuuuuu.caf */; };
-		87909E7F1CC5112F009C9724 /* Purururururu.caf in Resources */ = {isa = PBXBuildFile; fileRef = 87909E7D1CC5112F009C9724 /* Purururururu.caf */; };
+		87909E821CC5155C009C9724 /* Gyuuuuuu.caf in Resources */ = {isa = PBXBuildFile; fileRef = 87909E801CC5155C009C9724 /* Gyuuuuuu.caf */; };
+		87909E831CC5155C009C9724 /* Purururururu.caf in Resources */ = {isa = PBXBuildFile; fileRef = 87909E811CC5155C009C9724 /* Purururururu.caf */; };
 		879E73FB1CA6A9D600C64902 /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879E73FA1CA6A9D600C64902 /* CollectionViewController.swift */; };
 		879E73FD1CA6AA0F00C64902 /* CollectionViewAdmin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879E73FC1CA6AA0F00C64902 /* CollectionViewAdmin.swift */; };
 		87B634F01CA7F2B5004501B2 /* LazyTimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87B634EF1CA7F2B4004501B2 /* LazyTimerViewController.swift */; };
@@ -107,8 +107,8 @@
 		87909E711CC50D80009C9724 /* powerup06.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = powerup06.caf; path = sound/powerup06.caf; sourceTree = "<group>"; };
 		87909E721CC50D80009C9724 /* powerup07.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = powerup07.caf; path = sound/powerup07.caf; sourceTree = "<group>"; };
 		87909E731CC50D81009C9724 /* powerup08.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = powerup08.caf; path = sound/powerup08.caf; sourceTree = "<group>"; };
-		87909E7C1CC5112F009C9724 /* Gyuuuuuu.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Gyuuuuuu.caf; path = sound/Gyuuuuuu.caf; sourceTree = "<group>"; };
-		87909E7D1CC5112F009C9724 /* Purururururu.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Purururururu.caf; path = sound/Purururururu.caf; sourceTree = "<group>"; };
+		87909E801CC5155C009C9724 /* Gyuuuuuu.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Gyuuuuuu.caf; path = sound/Gyuuuuuu.caf; sourceTree = "<group>"; };
+		87909E811CC5155C009C9724 /* Purururururu.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Purururururu.caf; path = sound/Purururururu.caf; sourceTree = "<group>"; };
 		879E73FA1CA6A9D600C64902 /* CollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
 		879E73FC1CA6AA0F00C64902 /* CollectionViewAdmin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewAdmin.swift; sourceTree = "<group>"; };
 		87B634EF1CA7F2B4004501B2 /* LazyTimerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LazyTimerViewController.swift; sourceTree = "<group>"; };
@@ -181,8 +181,8 @@
 		87909E591CC50A1D009C9724 /* AudioPlayer */ = {
 			isa = PBXGroup;
 			children = (
-				87909E7C1CC5112F009C9724 /* Gyuuuuuu.caf */,
-				87909E7D1CC5112F009C9724 /* Purururururu.caf */,
+				87909E801CC5155C009C9724 /* Gyuuuuuu.caf */,
+				87909E811CC5155C009C9724 /* Purururururu.caf */,
 				87909E6C1CC50D80009C9724 /* powerup01.caf */,
 				87909E6D1CC50D80009C9724 /* powerup02.caf */,
 				87909E6E1CC50D80009C9724 /* powerup03.caf */,
@@ -409,9 +409,9 @@
 				87909E761CC50D81009C9724 /* powerup03.caf in Resources */,
 				87BB46461CA2A86F00F0BC50 /* Assets.xcassets in Resources */,
 				87F754131CB3A3CB0030264D /* default-iPad.divlay in Resources */,
-				87909E7E1CC5112F009C9724 /* Gyuuuuuu.caf in Resources */,
+				87909E821CC5155C009C9724 /* Gyuuuuuu.caf in Resources */,
 				87909E781CC50D81009C9724 /* powerup05.caf in Resources */,
-				87909E7F1CC5112F009C9724 /* Purururururu.caf in Resources */,
+				87909E831CC5155C009C9724 /* Purururururu.caf in Resources */,
 				87909E741CC50D81009C9724 /* powerup01.caf in Resources */,
 				87909E7B1CC50D81009C9724 /* powerup08.caf in Resources */,
 				87BB46441CA2A86F00F0BC50 /* Main.storyboard in Resources */,
